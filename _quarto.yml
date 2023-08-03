@@ -1,0 +1,30 @@
+project:
+  type: book
+
+book:
+  title: "Beispielsammlung"
+  subtitle: "Komplettiert die Vorlesung Baudynamik"
+  author: "Pascal Gitz & Dr. Stephan Gollob"
+  date: "2023-08-02"
+  date-format: full
+  chapters:
+    - index.qmd
+    - U1_rayleigh.ipynb
+    - U2_EMS.ipynb
+    - references.qmd
+
+bibliography: references.bib
+
+
+format:
+  html:
+    theme: cosmo
+
+
+  pdf:
+    documentclass: scrreprt
+    # lof: True
+    toc-depth: 2
+    fig-pos: 'H'
+    fig-format: svg
+    lang: de

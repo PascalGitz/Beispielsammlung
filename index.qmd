@@ -1,0 +1,3 @@
+# Vorwort
+
+Die folgenden Beispiele umfassen die wesentlichen Aspekte der im Rahmen der Vorlesung Baudynamik vorgestellten Theorie. Anhand von numerischen Beispielen werden die Grundlagen der Baudynamik vertieft behandelt.
