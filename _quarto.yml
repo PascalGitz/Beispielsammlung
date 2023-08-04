@@ -22,7 +22,7 @@ format:
     documentclass: scrreprt
     toc-depth: 2
     fig-pos: 'H'
-    fig-format: pdf
+    fig-format: svg
     lang: de
     execute:
       echo: false
