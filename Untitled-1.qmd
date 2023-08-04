@@ -1,0 +1,18 @@
+---
+title: "test"
+format: pdf
+execute:
+  echo: false
+  warning: false
+---
+
+## Results
+
+```{python}
+#| echo: false
+#| label: fig-mew
+#| fig-cap: Awesome figure.
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3], [1, 2, 3])
+plt.show()
+```

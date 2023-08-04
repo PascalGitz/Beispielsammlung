@@ -11,20 +11,19 @@ book:
     - index.qmd
     - U1_rayleigh.ipynb
     - U2_EMS.ipynb
+    - U3_MMS.ipynb
     - references.qmd
 
 bibliography: references.bib
 
 
 format:
-  html:
-    theme: cosmo
-
-
   pdf:
     documentclass: scrreprt
-    # lof: True
     toc-depth: 2
     fig-pos: 'H'
-    fig-format: svg
+    fig-format: pdf
     lang: de
+    execute:
+      echo: false
+      warning: false
