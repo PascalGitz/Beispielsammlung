@@ -12,10 +12,10 @@ book:
     - U1_rayleigh.ipynb
     - U2_EMS.ipynb
     - U3_MMS.ipynb
+    - U4_EKV.ipynb
     - references.qmd
 
-bibliography: references.bib
-
+bibliography: literatur_Beispielsammlung.bib
 
 format:
   pdf:
@@ -27,3 +27,6 @@ format:
     execute:
       echo: false
       warning: false
+    csl: apa-eu.csl
+    link-citations: True
+    tbl-colwidths: True
