@@ -4,15 +4,26 @@ project:
 book:
   title: "Beispielsammlung"
   subtitle: "Komplettiert die Vorlesung Baudynamik"
-  author: "Pascal Gitz & Dr. Stephan Gollob"
+  author: "Dr. Stephan Gollob & Pascal Gitz"
   date: "2023-08-02"
   date-format: full
   chapters:
     - index.qmd
-    - U1_rayleigh.ipynb
-    - U2_EMS.ipynb
-    - U3_MMS.ipynb
-    - U4_EKV.ipynb
+    - part: "Rayleigh - Quotient"
+      chapters:
+        - rayleigh_01.ipynb
+        - rayleigh_02.ipynb
+        - rayleigh_03.ipynb
+    - part: "Einmassenschwinger"
+      chapters:
+        - U2_EMS.ipynb
+    - part: "Mehrmassenschwinger"
+      chapters:
+        - U3_MMS.ipynb
+        - 3_MMS.ipynb
+    - part: "Ersatzkraftverfahren"
+      chapters:
+        - U4_EKV.ipynb
     - references.qmd
 
 bibliography: literatur_Beispielsammlung.bib
@@ -30,3 +41,6 @@ format:
     csl: apa-eu.csl
     link-citations: True
     tbl-colwidths: True
+
+    include-in-header:
+    - "packages_style.tex"
