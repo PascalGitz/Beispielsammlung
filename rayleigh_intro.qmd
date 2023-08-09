@@ -1,0 +1,7 @@
+---
+title: "Rayleigh-Quotient"
+
+---
+
+Der folgende Abschnitt beschreibt verscheidene Anwendungsfälle des Rayleigh-Quotienten. 
+
