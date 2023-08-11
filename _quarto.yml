@@ -16,11 +16,22 @@ book:
         - rayleigh_03.ipynb
     - part: "Einmassenschwinger"
       chapters:
-        - U2_EMS.ipynb
+        - ems_01.ipynb
+        - ems_02.ipynb
+        - ems_03.ipynb
+        - ems_04.ipynb
+        - ems_05.ipynb
+        - ems_06.ipynb
+        - ems_07.ipynb
+
     - part: "Mehrmassenschwinger"
       chapters:
-        - U3_MMS.ipynb
-        - 3_MMS.ipynb
+        - mms_02.ipynb
+        - mms_01.ipynb
+        - mms_03.ipynb
+        - mms_04.ipynb
+        - mms_05.ipynb
+        - mms_06.ipynb
     - part: "Ersatzkraftverfahren"
       chapters:
         - U4_EKV.ipynb
@@ -41,6 +52,10 @@ format:
     csl: apa-eu.csl
     link-citations: True
     tbl-colwidths: True
+    latex:
+      preamble: |
+        \usepackage{palatino}
+
 
     include-in-header:
     - "packages_style.tex"

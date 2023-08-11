@@ -5,4 +5,5 @@ Die folgenden Beispiele umfassen die wesentlichen Aspekte der im Rahmen der Vorl
 **To-Dos**
 
 - Bilder mit CAD zeichnen
-- Gleichung nummerieren (ja/nein)?
+- Kontrolle ob verwendete Parameter in ML mit Aufgabenstellung übereinstimmen.
+- Symbole müssen mit Skizzen und berechnungen übereinstimmen.
