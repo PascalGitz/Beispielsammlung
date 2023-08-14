@@ -194,11 +194,11 @@
 \makeatother
 \subtitle{Komplettiert die Vorlesung Baudynamik}
 \author{Dr.~Stephan Gollob \& Pascal Gitz}
-\date{Mittwoch, 2. August 2023}
+\date{Freitag, 11. August 2023}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 {
@@ -229,6 +229,11 @@ Beispielen werden die Grundlagen der Baudynamik vertieft behandelt.
   übereinstimmen.
 \item
   Symbole müssen mit Skizzen und berechnungen übereinstimmen.
+\item
+  Bestimmung Steifigkeitsmatrix Gleichgewicht der ``alleinstehenden
+  Federkraft''
+\item
+  Generalisierte Grössen Höhe des EMS.
 \end{itemize}
 
 \part{Rayleigh - Quotient}
@@ -371,10 +376,6 @@ Aufgabenstellung resultiert die Grundfrequenz zu:
 \begin{equation}\omega_{1} = \frac{\sqrt{2} \pi^{2} \sqrt{\frac{E I}{M \left(1 - \frac{\sqrt{2}}{2}\right)^{2} + M}}}{8 L^{\frac{3}{2}}}\end{equation}
 
 \begin{equation}\omega_{1} = \frac{1.67 \sqrt{\frac{E I}{M}}}{L^{\frac{3}{2}}}\end{equation}
-
-\begin{verbatim}
-: 
-\end{verbatim}
 
 Die exakte erste Eigenfrequenz eines Zweimassenschwingers mit konstanter
 Steifigkeit und gleichen Massen, mit enstsprechenden Randbedingungen
@@ -2335,9 +2336,8 @@ der approximierten Anregungsfunktion bestimmt werden.}
 
 \begin{equation}\frac{d^{2}}{d t^{2}} u_{max} = \frac{0.00781 \text{m}}{\text{s}^{2}}\end{equation}
 
-\hypertarget{beispiel-balken-ohne-tilger}{%
-\chapter{Beispiel: Balken ohne
-Tilger}\label{beispiel-balken-ohne-tilger}}
+\hypertarget{sec-ems_untilg}{%
+\chapter{Beispiel: Balken ohne Tilger}\label{sec-ems_untilg}}
 
 \hypertarget{aufgabenstellung-9}{%
 \section{Aufgabenstellung}\label{aufgabenstellung-9}}
@@ -2424,7 +2424,7 @@ Parameter
 \(k\)}{Steifigkeit k}}\label{steifigkeit-k}}
 
 Zuerst wird die Steifigkeit des Systems ermittelt, für einen
-Einmassenschwinger entspricht dies der Biegesteifigkeit des Balkens.
+Einmassenschwinger entspricht diese der Biegesteifigkeit des Balkens.
 
 \begin{equation}k_{H} = \frac{6 E I}{L^{3}}\end{equation}
 
@@ -2448,7 +2448,7 @@ Die Eigekreisfrequenz kann mit der bekannten Formel ermittelt werden:
 
 Da lediglich die Stationäre Antwort von Interesse ist, kann mittels
 Vergrösserungsfaktor diese ermittelt werden. Der Verlauf entspricht der
-Anregungsfunktion. Amplitude definiert sich aus der statischen
+Anregungsfunktion. Die Amplitude definiert sich aus der statischen
 Deformation mit dem Vergrösserungsfaktor multipliziert.
 
 \begin{equation}V{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{n}^{2}} + \left(- \frac{\omega^{2}}{\omega_{n}^{2}} + 1\right)^{2}}}\end{equation}
@@ -2500,9 +2500,9 @@ Systems}
 
 \part{Mehrmassenschwinger}
 
-\hypertarget{beispiel-eigenvektoren-mit-direkt-bestimmter-steifigkeitsmatrix}{%
+\hypertarget{sec-mms_steif}{%
 \chapter{Beispiel: Eigenvektoren mit direkt bestimmter
-Steifigkeitsmatrix}\label{beispiel-eigenvektoren-mit-direkt-bestimmter-steifigkeitsmatrix}}
+Steifigkeitsmatrix}\label{sec-mms_steif}}
 
 \hypertarget{aufgabenstellung-10}{%
 \section{Aufgabenstellung}\label{aufgabenstellung-10}}
@@ -2554,8 +2554,8 @@ Gegeben:
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-8}{%
-\section{Musterlösung}\label{musterluxf6sung-8}}
+\hypertarget{sec-mms_steif_ML}{%
+\section{Musterlösung}\label{sec-mms_steif_ML}}
 
 \hypertarget{tbl-parameter_mms2}{}
 \begin{longtable}[]{@{}
@@ -2587,9 +2587,9 @@ Parameter
 \hypertarget{eigenkreisfrequenzen}{%
 \subsection{Eigenkreisfrequenzen}\label{eigenkreisfrequenzen}}
 
-\hypertarget{steifigkeitsmatrix-mathbfk}{%
+\hypertarget{sec-mms_steif_kmatrix}{%
 \subsubsection{\texorpdfstring{Steifigkeitsmatrix
-\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{steifigkeitsmatrix-mathbfk}}
+\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{sec-mms_steif_kmatrix}}
 
 Zur Bestimmung der Steifigkeitsmatrix ist das System an jedem
 Freiheitsgrad auszulenken, wie in
@@ -2784,8 +2784,8 @@ Gegeben:
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-9}{%
-\section{Musterlösung}\label{musterluxf6sung-9}}
+\hypertarget{musterluxf6sung-8}{%
+\section{Musterlösung}\label{musterluxf6sung-8}}
 
 \hypertarget{tbl-parameter_mms1}{}
 \begin{longtable}[]{@{}
@@ -2965,8 +2965,9 @@ normieren, bzw. diesen auf 1 zu setzen.
 \subsubsection{Orthogonalitätsbedingung}\label{sec-mms_nach_ortho}}
 
 Um eine modale Analyse des Systems durchzuführen, gilt es die
-Orthogonalität der Eigenvektoren zu gewährleisten. Die modale Analyse
-wird in folgenden Beispielen angewendet.
+Orthogonalität der Eigenvektoren zu gewährleisten. Die Modale Analyse
+wird in folgenden Beispielen ,wie in Kapitel~\ref{sec-tilger},
+angewendet.
 
 Dies gilt es für die Massenmatrix zu kontrollieren:
 
@@ -3068,18 +3069,20 @@ mehr möglich.
 \hypertarget{aufgabenstellung-12}{%
 \section{Aufgabenstellung}\label{aufgabenstellung-12}}
 
-Ein einfacher Balken mit einer Einzelmasse, welcher in dieser Aufgabe
-mit Tilger ausgestattet ist, ist in Abbildung~\ref{fig-tilger}
-dargestellt. Die Masse erfährt eine dynamische Einwirkung durch die
-Funktion \(F(t)\).
+Das Beispiel ist die Weiterführung der Aufgabe in
+Kapitel~\ref{sec-ems_untilg}. Ein einfacher Balken mit einer
+Einzelmasse, welcher in dieser Aufgabe mit Tilger ausgestattet ist, ist
+in Abbildung~\ref{fig-mms_tilg_tilger} dargestellt. Die Masse erfährt
+eine dynamische Einwirkung durch die Funktion \(F(t)\).
 
 \begin{figure}[H]
 
-{\centering \includegraphics{bilder/mms4system.jpg}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_tilg_system.pdf}
 
 }
 
-\caption{\label{fig-tilger}Statisches System des Balkens mit Tilger}
+\caption{\label{fig-mms_tilg_tilger}Statisches System des Balkens mit
+Tilger}
 
 \end{figure}
 
@@ -3087,6 +3090,8 @@ Gesucht:
 
 \begin{itemize}
 \tightlist
+\item
+  Normierte Eigenform
 \item
   Maximale dynamische Verformung mittels stationärer Lösung
 \item
@@ -3102,17 +3107,9 @@ Gegeben:
 \item
   Flächenträgheitsmoment des Stabs \(I = 2 \cdot 10^8 \text{mm}^4\)
 \item
-  Punktmasse \(m_H = 2000 \text{kg}\)
+  Punktmasse \(M_H = 2000 \text{kg}\)
 \item
-  Tilgermasse \(m_T = 150 \text{kg}\)
-\item
-  Eigenformen - Normierung auf \[\phi_1^T = 
-  \begin{bmatrix}
-   1 &  \\
-  \end{bmatrix} \] \[\phi_2^T =
-  \begin{bmatrix}
-   1 &  \\
-  \end{bmatrix}\]
+  Tilgermasse \(M_T = 150 \text{kg}\)
 \end{itemize}
 
 \[
@@ -3121,8 +3118,8 @@ F(t) = F_0 \cdot \sin(\omega\cdot t) = 0.8 \text{kN} \cdot (12.6 \frac{\text{rad
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-10}{%
-\section{Musterlösung}\label{musterluxf6sung-10}}
+\hypertarget{musterluxf6sung-9}{%
+\section{Musterlösung}\label{musterluxf6sung-9}}
 
 \hypertarget{tbl-parameter_mms4}{}
 \begin{longtable}[]{@{}
@@ -3147,11 +3144,10 @@ Parameter
 \endlastfoot
 \(E = \frac{200000 \text{N}}{\text{mm}^{2}}\) &
 \(F_{0} = 800.0 \text{N}\) \\
-\(I = 200000000 \text{mm}^{4}\) &
-\(k_{T} = \frac{90000 \text{N}}{\text{m}}\) \\
-\(l = 5 \text{m}\) &
-\(m_{H} = \frac{2000 \text{N} \text{s}^{2}}{\text{m}}\) \\
-\(m_{T} = \frac{100 \text{N} \text{s}^{2}}{\text{m}}\) &
+\(I = 200000000 \text{mm}^{4}\) & \(L = 5 \text{m}\) \\
+\(M_{H} = \frac{2000 \text{N} \text{s}^{2}}{\text{m}}\) &
+\(M_{T} = \frac{150 \text{N} \text{s}^{2}}{\text{m}}\) \\
+\(k_{T} = \frac{90000 \text{N}}{\text{m}}\) &
 \(\omega = \frac{12.6}{\text{s}}\) \\
 \(\phi_{11} = 1\) & \(\phi_{12} = 1\) \\
 \(\zeta = 0.0\) & \\
@@ -3168,24 +3164,28 @@ Die Auslegung des Tilgers kann folgender massen geschehen:
   Tilgermasse \(5\%\) von der Masse des Hauptträgers.
 \item
   Optimale Frequenz bestimmen:
-  \[f_{T,opt} =\frac{f_H}{1+\frac{m_T}{m_H}}\]
+  \begin{equation}\protect\hypertarget{eq-mms_tilg_optimale_frequenz}{}{
+  f_{T,opt} =\frac{f_H}{1+\frac{M_T}{M_H}}
+  }\label{eq-mms_tilg_optimale_frequenz}\end{equation}
 \item
-  Daraus die optimale Steifigkeit
-  bestimmen:\[k_{T,opt} = (2 \pi f_{T,opt})^2\]
+  Daraus die optimale Steifigkeit bestimmen:
+  \begin{equation}\protect\hypertarget{eq-mms_tilg_optimale_steif}{}{
+  k_{T,opt} = (2 \pi f_{T,opt})^2
+  }\label{eq-mms_tilg_optimale_steif}\end{equation}
 \end{itemize}
 
-\hypertarget{steifigkeitsmatrix-mathbfk-1}{%
+\hypertarget{steifigkeitsmatrix-mathbfk}{%
 \subsection{\texorpdfstring{Steifigkeitsmatrix
-\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{steifigkeitsmatrix-mathbfk-1}}
+\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{steifigkeitsmatrix-mathbfk}}
 
 \begin{figure}[H]
 
-{\centering \includegraphics{bilder/mms3_steifigkeit.jpg}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_tilg_auslenk2.pdf}
 
 }
 
-\caption{\label{fig-verformungen}Verformungen an den beiden
-Freiheitsgraden}
+\caption{\label{fig-mms_tilg_auslenkung_1}Verformungen am ersten
+Freiheitsgrad}
 
 \end{figure}
 
@@ -3208,9 +3208,20 @@ folgendes:
   Vorzeichen sind gegen der Bewegungsrichtig positiv.
 \end{itemize}
 
-\begin{equation*}K = \left[\begin{matrix}k_{H} + k_{T} & - k_{T}\\- k_{T} & k_{T}\end{matrix}\right]\end{equation*}
+\begin{figure}[H]
 
-\begin{equation*}K = \left[\begin{matrix}\frac{2010000 \text{N}}{\text{m}} & - \frac{90000 \text{N}}{\text{m}}\\- \frac{90000 \text{N}}{\text{m}} & \frac{90000 \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_tilg_auslenk1.pdf}
+
+}
+
+\caption{\label{fig-mms_tilg_auslenkung_2}Verformungen am zweiten
+Freiheitsgrad}
+
+\end{figure}
+
+\begin{equation}K = \left[\begin{matrix}k_{H} + k_{T} & - k_{T}\\- k_{T} & k_{T}\end{matrix}\right]\end{equation}
+
+\begin{equation}K = \left[\begin{matrix}\frac{2010000 \text{N}}{\text{m}} & - \frac{90000 \text{N}}{\text{m}}\\- \frac{90000 \text{N}}{\text{m}} & \frac{90000 \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenvektoren-2}{%
 \subsection{Eigenvektoren}\label{eigenvektoren-2}}
@@ -3221,11 +3232,12 @@ folgendes:
 
 Die Massenmatrix folgt dem gleichen Aufbau der Steifigkeitsmatrix. Es
 gelten die gleichen Vorzeichenregelungen. Die Einträge beziehen sich auf
-Abbildung~\ref{fig-verformungen} .
+Abbildung~\ref{fig-mms_tilg_auslenkung_2} und
+Abbildung~\ref{fig-mms_tilg_auslenkung_1}.
 
-\begin{equation*}M = \left[\begin{matrix}m_{H} & 0\\0 & m_{T}\end{matrix}\right]\end{equation*}
+\begin{equation}M = \left[\begin{matrix}M_{H} & 0\\0 & M_{T}\end{matrix}\right]\end{equation}
 
-\begin{equation*}M = \left[\begin{matrix}\frac{2000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{100 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}M = \left[\begin{matrix}\frac{2000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{150 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenkreisfrequenzen-3}{%
 \subsubsection{Eigenkreisfrequenzen}\label{eigenkreisfrequenzen-3}}
@@ -3234,79 +3246,67 @@ Bei einem Mehrmassenschwinger gibt es entsprechend den Freiheitsgraden
 Eigenkreisfrequenzen \(\omega_n\). Diese lassen sich anhand folgender
 Gleichung bestimmen:
 
-\[\det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}\]
+\begin{equation}\protect\hypertarget{eq-mms_tilg_eigenkreisfrequenzen}{}{
+\det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}
+}\label{eq-mms_tilg_eigenkreisfrequenzen}\end{equation}
 
-\begin{equation*}\omega_{1} = \frac{27.3}{\text{s}}\end{equation*}
+\begin{equation}\omega_{1} = \frac{23.3}{\text{s}}\end{equation}
 
-\begin{equation*}\omega_{2} = \frac{34.1}{\text{s}}\end{equation*}
+\begin{equation}\omega_{2} = \frac{32.6}{\text{s}}\end{equation}
 
 \hypertarget{eigenvektoren-mathbfphi}{%
 \subsubsection{\texorpdfstring{Eigenvektoren
 \(\mathbf{\phi}\)}{Eigenvektoren \textbackslash mathbf\{\textbackslash phi\}}}\label{eigenvektoren-mathbfphi}}
 
-\[
+\begin{equation}\protect\hypertarget{eq-mms_tilg_eigenvek}{}{
 \phi_n = \begin{bmatrix}
 \phi_{1n}\\
 \phi_{2n} 
 \end{bmatrix}
-\] \[
+}\label{eq-mms_tilg_eigenvek}\end{equation}
+\begin{equation}\protect\hypertarget{eq-mms_tilg_eigenvek_eq}{}{
 [\mathbf{K}-\omega_n^2 \mathbf{M}]\cdot \begin{bmatrix}
 \phi_{1n}\\
 \phi_{2n} 
 \end{bmatrix}
-=0\]
+=0}\label{eq-mms_tilg_eigenvek_eq}\end{equation}
 
 Dazu ist die entsprechende Normierung aus der Aufgabenstellung zu
 berücksichtigen.
 
-\begin{equation*}\left[\begin{matrix}\frac{- k_{T} m_{T} \phi_{21} + \frac{\phi_{11} \left(- k_{T} m_{H} + m_{T} \left(k_{H} + k_{T}\right) + \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{T}}\\\frac{- k_{T} m_{H} \phi_{11} + \frac{\phi_{21} \left(k_{T} m_{H} - m_{T} \left(k_{H} + k_{T}\right) + \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}\frac{- M_{T} k_{T} \phi_{21} + \frac{\phi_{11} \left(- M_{H} k_{T} + M_{T} \left(k_{H} + k_{T}\right) + \sqrt{M_{H}^{2} k_{T}^{2} - 2 M_{H} M_{T} k_{H} k_{T} + 2 M_{H} M_{T} k_{T}^{2} + M_{T}^{2} k_{H}^{2} + 2 M_{T}^{2} k_{H} k_{T} + M_{T}^{2} k_{T}^{2}}\right)}{2}}{M_{T}}\\\frac{- M_{H} k_{T} \phi_{11} - \frac{\phi_{21} \left(- M_{H} k_{T} + M_{T} \left(k_{H} + k_{T}\right) - \sqrt{M_{H}^{2} k_{T}^{2} - 2 M_{H} M_{T} k_{H} k_{T} + 2 M_{H} M_{T} k_{T}^{2} + M_{T}^{2} k_{H}^{2} + 2 M_{T}^{2} k_{H} k_{T} + M_{T}^{2} k_{T}^{2}}\right)}{2}}{M_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{1} = \left[\begin{matrix}1.0\\5.79\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1} = \left[\begin{matrix}1.0\\10.3\end{matrix}\right]\end{equation}
 
-\begin{equation*}\left[\begin{matrix}\frac{- k_{T} m_{T} \phi_{22} + \frac{\phi_{12} \left(- k_{T} m_{H} + m_{T} \left(k_{H} + k_{T}\right) - \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{T}}\\\frac{- k_{T} m_{H} \phi_{12} + \frac{\phi_{22} \left(k_{T} m_{H} - m_{T} \left(k_{H} + k_{T}\right) - \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}\frac{- M_{T} k_{T} \phi_{22} + \frac{\phi_{12} \left(- M_{H} k_{T} + M_{T} \left(k_{H} + k_{T}\right) - \sqrt{M_{H}^{2} k_{T}^{2} - 2 M_{H} M_{T} k_{H} k_{T} + 2 M_{H} M_{T} k_{T}^{2} + M_{T}^{2} k_{H}^{2} + 2 M_{T}^{2} k_{H} k_{T} + M_{T}^{2} k_{T}^{2}}\right)}{2}}{M_{T}}\\\frac{- M_{H} k_{T} \phi_{12} - \frac{\phi_{22} \left(- M_{H} k_{T} + M_{T} \left(k_{H} + k_{T}\right) + \sqrt{M_{H}^{2} k_{T}^{2} - 2 M_{H} M_{T} k_{H} k_{T} + 2 M_{H} M_{T} k_{T}^{2} + M_{T}^{2} k_{H}^{2} + 2 M_{T}^{2} k_{H} k_{T} + M_{T}^{2} k_{T}^{2}}\right)}{2}}{M_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{2} = \left[\begin{matrix}1.0\\-3.46\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{2} = \left[\begin{matrix}1.0\\-1.3\end{matrix}\right]\end{equation}
 
 \hypertarget{orthogonalituxe4tsbedingung-1}{%
 \subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-1}}
 
-Zur effektiven Entkoppelung der Gleichungen muss die
-Orthogonalitätsbedingung eingehalten sein. Dies gilt es für die
-Massenmatrix zu kontrollieren:
+Zur Entkoppelung des Systems wird die Orthogonalität der Eigenvektoren
+kontrolliert. Siehe Kapitel~\ref{sec-mms_nach_ortho} für eine
+ausführliche Erklärung.
 
-\[\phi_1^T \mathbf{ M } \phi_1 \neq 0\]
+\begin{equation}\phi_{1}^{T} M \phi_{1} = \left[\begin{matrix}\frac{1.79 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\[\phi_2^T \mathbf{ M } \phi_2 \neq 0\]
+\begin{equation}\phi_{2}^{T} M \phi_{2} = \left[\begin{matrix}\frac{2.25 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\[\phi_2^T \mathbf{ M } \phi_1 = 0\]
+\begin{equation}\phi_{2}^{T} M \phi_{1} = \left[\begin{matrix}\frac{6.103516 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-Sowohl auch für die Steifigkeitsmatrix:
+\begin{equation}\phi_{1}^{T} M \phi_{2} = \left[\begin{matrix}\frac{6.103516 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\[\phi_1^T \mathbf{ K } \phi_1 \neq 0\]
+Es ist eine kleine numerische Differenz zu erkennen welche nicht
+relevant sind.
 
-\[\phi_2^T \mathbf{ K } \phi_2 \neq 0\]
+\begin{equation}\phi_{1}^{T} K \phi_{1} = \left[\begin{matrix}\frac{9.7 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\[\phi_2^T \mathbf{ K } \phi_1 = 0\]
+\begin{equation}\phi_{2}^{T} K \phi_{2} = \left[\begin{matrix}\frac{2.39 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-Angewendet auf die Aufgabe:
+\begin{equation}\phi_{2}^{T} K \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{1}^{T} M \phi_{1} = \left[\begin{matrix}\frac{5.35 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} M \phi_{2} = \left[\begin{matrix}\frac{3.19 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} M \phi_{1} = \left[\begin{matrix}\frac{3.051758 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{1}^{T} M \phi_{2} = \left[\begin{matrix}\frac{3.051758 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-Es ist eine kleine numerische Differenz zu erkennen.
-
-\begin{equation*}\phi_{1}^{T} K \phi_{1} = \left[\begin{matrix}\frac{3.98 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} K \phi_{2} = \left[\begin{matrix}\frac{3.71 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} K \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
 \hypertarget{modale-analyse}{%
 \subsection{Modale Analyse}\label{modale-analyse}}
@@ -3314,7 +3314,9 @@ Es ist eine kleine numerische Differenz zu erkennen.
 Die Bewegungsgleichung für einen ungedämpften, periodisch, harmonisch
 angeregten Mehrmassenschwinger lässt sich folgend beschreiben:
 
-\[\mathbf{M u''(t) + K u = F(t)}\]
+\begin{equation}\protect\hypertarget{eq-mms_tilg_bewegungsgleichung_nohomo}{}{
+\mathbf{M u''(t) + K u = F(t)}
+}\label{eq-mms_tilg_bewegungsgleichung_nohomo}\end{equation}
 
 Die Matrix-Gleichung beschreibt ein System aus Differentialgleichungen.
 Die Modale Analyse zielt darauf ab, diese zu entkoppeln. Bezogen auf den
@@ -3329,10 +3331,10 @@ Spektralmatrix}\label{modal--und-spektralmatrix}}
 Mittels der Modal- und Spektralmatrix können die generalisierten Grössen
 ermittelt werden. Diese sind die eigenschaften der einzelnen
 Einmassenschwinger. Die generalisierten Werte besitzen keine
-physikalischen Werte, sie sind abhängig von der Wahl der Eigenvektoren,
-welche bekanntlich von der Normierung abhängen.
+physikalischen Bedeutung, sie sind abhängig von der Wahl der
+Eigenvektoren, welche bekanntlich von der Normierung abhängen.
 
-Aufgrund der Bewegungsgleichung können die generalisierten Grössen
+Anhand der Bewegungsgleichung können die generalisierten Grössen
 bestimmt werden, es gilt:
 
 \[\Phi^T M \Phi u''(t) + \Phi^T K \Phi u(t) = \Phi^T F(t)\]
@@ -3342,36 +3344,36 @@ bestimmt werden, es gilt:
 Alle \(N\)-Eigenwerte und alle \(N\)-Eigenvektoren können kompakt mit
 Matrizen ausgedrückt werden:
 
-\begin{equation*}Modalmatrix = \Phi\end{equation*}
+\begin{equation}Modalmatrix = \Phi\end{equation}
 
-\begin{equation*}\Phi = \left[\begin{matrix}1.0 & 1.0\\5.788 & -3.455\end{matrix}\right]\end{equation*}
+\begin{equation}\Phi = \left[\begin{matrix}1.0 & 1.0\\10.3 & -1.295\end{matrix}\right]\end{equation}
 
-\begin{equation*}Spektralmatrix = \Omega^{2}\end{equation*}
+\begin{equation}Spektralmatrix = \Omega^{2}\end{equation}
 
-\begin{equation*}\Omega^{2} = \left[\begin{matrix}\frac{744.5}{\text{s}^{2}} & 0\\0 & \frac{1160.0}{\text{s}^{2}}\end{matrix}\right]\end{equation*}
+\begin{equation}\Omega^{2} = \left[\begin{matrix}\frac{541.7}{\text{s}^{2}} & 0\\0 & \frac{1063.0}{\text{s}^{2}}\end{matrix}\right]\end{equation}
 
 \hypertarget{generalisierte-gruxf6ssen}{%
 \subsubsection{Generalisierte Grössen}\label{generalisierte-gruxf6ssen}}
 
-\begin{equation*}M^{\star} = \left[\begin{matrix}\frac{5350.6 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{3193.8 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}M^{\star} = \left[\begin{matrix}\frac{17898.0 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{2251.6 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}K^{\star} = \left[\begin{matrix}\frac{3.9837 \cdot 10^{6} \text{N}}{\text{m}} & 0\\0 & \frac{3.7063 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}K^{\star} = \left[\begin{matrix}\frac{9.6959 \cdot 10^{6} \text{N}}{\text{m}} & 0\\0 & \frac{2.3941 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}F(t) = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\0\end{matrix}\right]\end{equation*}
+\begin{equation}F(t) = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\0\end{matrix}\right]\end{equation}
 
-\begin{equation*}F(t)^{\star} = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}F(t)^{\star} = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\end{matrix}\right]\end{equation}
 
 \hypertarget{kontrolle-der-modalen-transformation}{%
 \subsubsection{Kontrolle der modalen
 Transformation}\label{kontrolle-der-modalen-transformation}}
 
-\begin{equation*}\omega_{1} = \frac{27.3}{\text{s}}\end{equation*}
+\begin{equation}\omega_{1} = \frac{23.3}{\text{s}}\end{equation}
 
-\begin{equation*}\omega_{1 modal} = \frac{27.3}{\text{s}}\end{equation*}
+\begin{equation}\omega_{1 modal} = \frac{23.3}{\text{s}}\end{equation}
 
-\begin{equation*}\omega_{2} = \frac{34.07}{\text{s}}\end{equation*}
+\begin{equation}\omega_{2} = \frac{32.61}{\text{s}}\end{equation}
 
-\begin{equation*}\omega_{2 modal} = \frac{34.07}{\text{s}}\end{equation*}
+\begin{equation}\omega_{2 modal} = \frac{32.61}{\text{s}}\end{equation}
 
 \hypertarget{stationuxe4re-antwort-2}{%
 \subsection{Stationäre Antwort}\label{stationuxe4re-antwort-2}}
@@ -3380,34 +3382,44 @@ Die stationäre Antwort wird mittels des Vergrösserungsfaktors bestimmt.
 
 Die entkoppelte Differentialgleichung ist nun die folgende:
 
-\[m^\star_1 q_1''(t) + k^\star_1 q_1(t) = F^\star_1(t) = F^\star_1 \sin(\omega t)\]
+\begin{equation}\protect\hypertarget{eq-mms_tilger_erste_bewegungsgleichung}{}{
+m^\star_1 q_1''(t) + k^\star_1 q_1(t) = F^\star_1(t) = F^\star_1 \sin(\omega t)
+}\label{eq-mms_tilger_erste_bewegungsgleichung}\end{equation}
 
-\[m^\star_2 q_2''(t) + k^\star_2 q_2(t) = F^\star_2(t) = F^\star_2 \sin(\omega t)\]
+\begin{equation}\protect\hypertarget{eq-mms_tilger_zweite_bewegungsgleichung}{}{
+m^\star_2 q_2''(t) + k^\star_2 q_2(t) = F^\star_2(t) = F^\star_2 \sin(\omega t)
+}\label{eq-mms_tilger_zweite_bewegungsgleichung}\end{equation}
 
 Lösen lässt sich dies mit dem bekannten Ansatz:
 
-\[q_n(t) = A_n \sin(\omega t) + B_n \cos(\omega)\]
+\begin{equation}\protect\hypertarget{eq-mms_tilger_ansatzfunktion}{}{
+q_n(t) = A_n \sin(\omega t) + B_n \cos(\omega)
+}\label{eq-mms_tilger_ansatzfunktion}\end{equation}
 
 Hier wird jedoch mit dem Vorgehen des Vergrösserungsfaktors verfahren:
 
 \hypertarget{verformung}{%
 \subsubsection{Verformung}\label{verformung}}
 
-\begin{equation*}V_{1}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{1}^{2}} + \left(- \frac{\omega^{2}}{\omega_{1}^{2}} + 1\right)^{2}}}\end{equation*}
+\begin{equation}V_{1}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{1}^{2}} + \left(- \frac{\omega^{2}}{\omega_{1}^{2}} + 1\right)^{2}}}\end{equation}
 
-\begin{equation*}V_{1}{\left(\omega \right)} = 1.27\end{equation*}
+\begin{equation}V_{1}{\left(\omega \right)} = 1.41\end{equation}
 
-\begin{equation*}q_{1 stat} = 0.201 \text{mm}\end{equation*}
+\begin{equation}q_{1 stat} = 0.0825 \text{mm}\end{equation}
 
-\begin{equation*}q_{1 max} = 0.255 \text{mm}\end{equation*}
+\begin{equation}q_{1 max} = q_{1 stat} V_{1}{\left(\omega \right)}\end{equation}
 
-\begin{equation*}V_{2}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{2}^{2}} + \left(- \frac{\omega^{2}}{\omega_{2}^{2}} + 1\right)^{2}}}\end{equation*}
+\begin{equation}q_{1 max} = 0.117 \text{mm}\end{equation}
 
-\begin{equation*}V_{2}{\left(\omega \right)} = 1.16\end{equation*}
+\begin{equation}V_{2}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{2}^{2}} + \left(- \frac{\omega^{2}}{\omega_{2}^{2}} + 1\right)^{2}}}\end{equation}
 
-\begin{equation*}q_{2 stat} = 0.216 \text{mm}\end{equation*}
+\begin{equation}V_{2}{\left(\omega \right)} = 1.18\end{equation}
 
-\begin{equation*}q_{2 max} = 0.25 \text{mm}\end{equation*}
+\begin{equation}q_{2 stat} = 0.334 \text{mm}\end{equation}
+
+\begin{equation}q_{2 max} = q_{2 stat} V_{2}{\left(\omega \right)}\end{equation}
+
+\begin{equation}q_{2 max} = 0.393 \text{mm}\end{equation}
 
 \hypertarget{effektive-deformation}{%
 \paragraph{Effektive Deformation}\label{effektive-deformation}}
@@ -3415,76 +3427,106 @@ Hier wird jedoch mit dem Vorgehen des Vergrösserungsfaktors verfahren:
 Die effektiven Grössen resultieren durch Multiplikation mit dem
 Eigenvektor. Für die erste Eigenkreisfrequenz:
 
-\begin{equation*}u_{1 stat} = \phi_{1} q_{1 max}\end{equation*}
+\begin{equation}u_{1 stat} = \phi_{1} q_{1 max}\end{equation}
 
-\begin{equation*}\left[\begin{matrix}u_{11stat}\\u_{21stat}\end{matrix}\right] = \left[\begin{matrix}0.255 \text{mm}\\1.48 \text{mm}\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}u_{11stat}\\u_{21stat}\end{matrix}\right] = \left[\begin{matrix}0.117 \text{mm}\\1.2 \text{mm}\end{matrix}\right]\end{equation}
 
 Sowie für die zweite Eigenkreisfrequenz:
 
-\begin{equation*}u_{2 stat} = \phi_{2} q_{2 max}\end{equation*}
+\begin{equation}u_{2 stat} = \phi_{2} q_{2 max}\end{equation}
 
-\begin{equation*}\left[\begin{matrix}u_{12stat}\\u_{22stat}\end{matrix}\right] = \left[\begin{matrix}0.25 \text{mm}\\- 0.864 \text{mm}\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}u_{12stat}\\u_{22stat}\end{matrix}\right] = \left[\begin{matrix}0.393 \text{mm}\\- 0.509 \text{mm}\end{matrix}\right]\end{equation}
 
-Durch Addition der beiden Verformungen:
+Durch Addition der beiden Verformungen: \ul{Sollte hier die SRSS-Regel
+verwendet werden?}
 
-\begin{equation*}u_{stat} = u_{1 stat} + u_{2 stat}\end{equation*}
+\begin{equation}u_{stat} = u_{1 stat} + u_{2 stat}\end{equation}
 
-\begin{equation*}\left[\begin{matrix}u_{1max}\\u_{2max}\end{matrix}\right] = \left[\begin{matrix}0.505 \text{mm}\\0.613 \text{mm}\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}u_{1max}\\u_{2max}\end{matrix}\right] = \left[\begin{matrix}0.51 \text{mm}\\0.693 \text{mm}\end{matrix}\right]\end{equation}
 
 \hypertarget{beschleunigung}{%
 \subsubsection{Beschleunigung}\label{beschleunigung}}
 
-\begin{equation*}V_{a1 \omega} = \frac{V_{1 \omega} \omega^{2}}{\omega_{1}^{2}}\end{equation*}
+\begin{equation}V_{a1 \omega} = \frac{V_{1 \omega} \omega^{2}}{\omega_{1}^{2}}\end{equation}
 
-\begin{equation*}V_{a1}{\left(\omega \right)} = 0.271\end{equation*}
+\begin{equation}V_{a1}{\left(\omega \right)} = 0.415\end{equation}
 
-\begin{equation*}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0405 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{equation}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0185 \text{m}}{\text{s}^{2}}\end{equation}
 
-\begin{equation*}V_{a2}{\left(\omega \right)} = 0.158\end{equation*}
+\begin{equation}V_{a2}{\left(\omega \right)} = 0.176\end{equation}
 
-\begin{equation*}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0397 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{equation}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0624 \text{m}}{\text{s}^{2}}\end{equation}
 
 \hypertarget{effektive-beschleunigung}{%
 \paragraph{Effektive Beschleunigung}\label{effektive-beschleunigung}}
 
 Gleiches Vorgehen wie bei der Deformation.
 
-\begin{equation*}\left[\begin{matrix}\frac{d^{2}}{d t^{2}} u_{1max}\\\frac{d^{2}}{d t^{2}} u_{2max}\end{matrix}\right] = \left[\begin{matrix}\frac{0.0802 \text{m}}{\text{s}^{2}}\\\frac{0.0975 \text{m}}{\text{s}^{2}}\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}\frac{d^{2}}{d t^{2}} u_{1max}\\\frac{d^{2}}{d t^{2}} u_{2max}\end{matrix}\right] = \left[\begin{matrix}\frac{0.0809 \text{m}}{\text{s}^{2}}\\\frac{0.11 \text{m}}{\text{s}^{2}}\end{matrix}\right]\end{equation}
 
 \hypertarget{beispiel-antwortspektrenverfahren-an-einem-dreistuxf6ckigen-gebuxe4ude}{%
 \chapter{Beispiel: Antwortspektrenverfahren an einem dreistöckigen
 Gebäude}\label{beispiel-antwortspektrenverfahren-an-einem-dreistuxf6ckigen-gebuxe4ude}}
 
-\begin{figure}[H]
-
-{\centering \includegraphics[width=\textwidth,height=0.5\textheight]{bilder/mms_7_modell.png}
-
-}
-
-\caption{\label{fig-3mms}Dreigeschossiges Gebäude}
-
-\end{figure}
-
-\newpage{}
-
-\hypertarget{musterluxf6sung-11}{%
-\section{Musterlösung}\label{musterluxf6sung-11}}
+Das System in Abbildung~\ref{fig-mms_3er_system} zeigt eine
+dreistöckiges Gebäude. Modelliert wird dies als Dreimassenschwinger.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=\textwidth,height=50mm]{bilder/system_mms3.png}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_3er_system.pdf}
 
 }
 
-\caption{Gebäude modelliert als Mehrmassenschwinger}
+\caption{\label{fig-mms_3er_system}Statisches System des
+dreigeschossigen Gebäude}
 
 \end{figure}
+
+Gesucht:
+
+\begin{itemize}
+\tightlist
+\item
+  Bestimme die Steifigkeits- und Massenmatrix
+\item
+  Bestimme die Eigenkreisfrequenzen
+\item
+  Ermittle die daraus resultierenden Eigenvektoren
+\item
+  Führe eine modale Analyse durch
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Kontrolliere die Orthogonalität der transformierten Matrizen
+  \item
+    Bestimme die Partizipationsfaktoren
+  \end{itemize}
+\item
+  Ermittle die Pseudobeschleunigung anhand des Antwortspektrums der
+  SIA261:2020
+\item
+  Ermittle die daraus resultierende Deformationen (Überlagere mittels
+  SRSS-Regel)
+\item
+  Zeichne die maximalen Schnittkraftverläufe
+\end{itemize}
+
+Gegeben:
+
+\begin{itemize}
+\tightlist
+\item
+  Baugrundklasse \(E\)
+\item
+  Erdbebenzone \(Z2\)
+\end{itemize}
 
 \hypertarget{tbl-parameter_mms6}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\caption{\label{tbl-parameter_mms6}Verwendete Parameter}\tabularnewline
+\caption{\label{tbl-parameter_mms6}Parameter der Aufgabe}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Parameter
@@ -3501,15 +3543,20 @@ Parameter
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(EI_{1} = 2100000.0 \text{m}^{2} \text{N}\) &
-\(EI_{2} = 2100000.0 \text{m}^{2} \text{N}\) \\
-\(EI_{3} = 1500000.0 \text{m}^{2} \text{N}\) &
+\(EI_{1} = 1150000.0 \text{m}^{2} \text{N}\) &
+\(EI_{2} = 766666.0 \text{m}^{2} \text{N}\) \\
+\(EI_{3} = 1150000.0 \text{m}^{2} \text{N}\) &
 \(H_{1} = 4.5 \text{m}\) \\
-\(H_{2} = 4.25 \text{m}\) & \(H_{3} = 4.25 \text{m}\) \\
-\(m_{1} = \frac{12000 \text{N} \text{s}^{2}}{\text{m}}\) &
-\(m_{2} = \frac{12000 \text{N} \text{s}^{2}}{\text{m}}\) \\
-\(m_{3} = \frac{8000 \text{N} \text{s}^{2}}{\text{m}}\) & \\
+\(H_{2} = 3.5 \text{m}\) & \(H_{3} = 3.5 \text{m}\) \\
+\(m_{1} = \frac{5000 \text{N} \text{s}^{2}}{\text{m}}\) &
+\(m_{2} = \frac{4000 \text{N} \text{s}^{2}}{\text{m}}\) \\
+\(m_{3} = \frac{4000 \text{N} \text{s}^{2}}{\text{m}}\) & \\
 \end{longtable}
+
+\newpage{}
+
+\hypertarget{musterluxf6sung-10}{%
+\section{Musterlösung}\label{musterluxf6sung-10}}
 
 \hypertarget{massenmatrix-m}{%
 \subsection{\texorpdfstring{Massenmatrix
@@ -3517,17 +3564,18 @@ Parameter
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=\textwidth,height=50mm]{bilder/matrix_3mms.png}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_3er_auslenk.pdf}
 
 }
 
-\caption{System an jeder Punktmasse ausgelenkt}
+\caption{\label{fig-mms_3er_steifigkeit}Auslenkung der Massen zur
+Ermittlung der Matrizen}
 
 \end{figure}
 
 \begin{equation}M = \left[\begin{matrix}m_{1} & 0 & 0\\0 & m_{2} & 0\\0 & 0 & m_{3}\end{matrix}\right]\end{equation}
 
-\begin{equation}M = \left[\begin{matrix}\frac{12000 \text{N} \text{s}^{2}}{\text{m}} & 0 & 0\\0 & \frac{12000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & 0 & \frac{8000 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+\begin{equation}M = \left[\begin{matrix}\frac{5000 \text{N} \text{s}^{2}}{\text{m}} & 0 & 0\\0 & \frac{4000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & 0 & \frac{4000 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{steifigkeitsmatrix-k}{%
 \subsection{\texorpdfstring{Steifigkeitsmatrix
@@ -3539,23 +3587,23 @@ Stockwerke}\label{steifigkeit-der-stockwerke}}
 
 \begin{equation}k_{1} = \frac{24 EI_{1}}{H_{1}^{3}}\end{equation}
 
-\begin{equation}k_{1} = \frac{5.53 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
+\begin{equation}k_{1} = \frac{3.03 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
 
-\begin{equation}k_{2} = \frac{24 EI_{2}}{H_{2}^{3}}\end{equation}
+\begin{equation}k_{2} = \frac{36 EI_{2}}{H_{2}^{3}}\end{equation}
 
-\begin{equation}k_{2} = \frac{6.57 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
+\begin{equation}k_{2} = \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
 
 \begin{equation}k_{3} = \frac{24 EI_{3}}{H_{3}^{3}}\end{equation}
 
-\begin{equation}k_{3} = \frac{4.69 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
+\begin{equation}k_{3} = \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}
 
 Abgefüllt in die Steifigkeitsmatrix
 
 \begin{equation}K = \left[\begin{matrix}k_{1} + k_{2} & - k_{2} & 0\\- k_{2} & k_{2} + k_{3} & - k_{3}\\0 & - k_{3} & k_{3}\end{matrix}\right]\end{equation}
 
-\begin{equation}K = \left[\begin{matrix}\frac{24 EI_{1}}{H_{1}^{3}} + \frac{24 EI_{2}}{H_{2}^{3}} & - \frac{24 EI_{2}}{H_{2}^{3}} & 0\\- \frac{24 EI_{2}}{H_{2}^{3}} & \frac{24 EI_{2}}{H_{2}^{3}} + \frac{24 EI_{3}}{H_{3}^{3}} & - \frac{24 EI_{3}}{H_{3}^{3}}\\0 & - \frac{24 EI_{3}}{H_{3}^{3}} & \frac{24 EI_{3}}{H_{3}^{3}}\end{matrix}\right]\end{equation}
+\begin{equation}K = \left[\begin{matrix}\frac{24 EI_{1}}{H_{1}^{3}} + \frac{36 EI_{2}}{H_{2}^{3}} & - \frac{36 EI_{2}}{H_{2}^{3}} & 0\\- \frac{36 EI_{2}}{H_{2}^{3}} & \frac{36 EI_{2}}{H_{2}^{3}} + \frac{24 EI_{3}}{H_{3}^{3}} & - \frac{24 EI_{3}}{H_{3}^{3}}\\0 & - \frac{24 EI_{3}}{H_{3}^{3}} & \frac{24 EI_{3}}{H_{3}^{3}}\end{matrix}\right]\end{equation}
 
-\begin{equation}K = \left[\begin{matrix}\frac{1.21 \cdot 10^{6} \text{N}}{\text{m}} & - \frac{6.57 \cdot 10^{5} \text{N}}{\text{m}} & 0\\- \frac{6.57 \cdot 10^{5} \text{N}}{\text{m}} & \frac{1.13 \cdot 10^{6} \text{N}}{\text{m}} & - \frac{4.69 \cdot 10^{5} \text{N}}{\text{m}}\\0 & - \frac{4.69 \cdot 10^{5} \text{N}}{\text{m}} & \frac{4.69 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+\begin{equation}K = \left[\begin{matrix}\frac{9.47 \cdot 10^{5} \text{N}}{\text{m}} & - \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}} & 0\\- \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}} & \frac{1.29 \cdot 10^{6} \text{N}}{\text{m}} & - \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}}\\0 & - \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}} & \frac{6.44 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenvektoren-3}{%
 \subsection{Eigenvektoren}\label{eigenvektoren-3}}
@@ -3567,15 +3615,15 @@ Bei einem Mehrmassenschwinger gibt es entsprechend den Freiheitsgraden
 Eigenkreisfrequenzen \(\omega_n\). Diese lassen sich anhand folgender
 Gleichung bestimmen:
 
-\begin{equation}\protect\hypertarget{eq-eigenkreisfreqs}{}{
+\begin{equation}\protect\hypertarget{eq-mms_3er_eigenkreisfreqs}{}{
 \det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}
-}\label{eq-eigenkreisfreqs}\end{equation}
+}\label{eq-mms_3er_eigenkreisfreqs}\end{equation}
 
-\begin{equation}\omega_{1} = \frac{3.4}{\text{s}}\end{equation}
+\begin{equation}\omega_{1} = \frac{4.31}{\text{s}}\end{equation}
 
-\begin{equation}\omega_{2} = \frac{8.84}{\text{s}}\end{equation}
+\begin{equation}\omega_{2} = \frac{13.3}{\text{s}}\end{equation}
 
-\begin{equation}\omega_{3} = \frac{12.8}{\text{s}}\end{equation}
+\begin{equation}\omega_{3} = \frac{21.8}{\text{s}}\end{equation}
 
 \begin{figure}[H]
 
@@ -3584,7 +3632,7 @@ Gleichung bestimmen:
 }
 
 \caption{\label{fig-loesung_eigenkreisfrequenzen}Nullstellen der
-Gleichung~\ref{eq-eigenkreisfreqs}}
+Gleichung~\ref{eq-mms_3er_eigenkreisfreqs}}
 
 \end{figure}
 
@@ -3597,21 +3645,425 @@ Eigenvektoren bestimmen. Die Einträge des Eigenvektors sind voneinander
 abhängig und lassen sich dem entsprechen beliebig definieren.
 Grundsätzlich wird der maximale Eigenwert zu \(1\) gesetzt.
 
-\[\mathbf{K} - \omega_n^2 \mathbf{M} \phi_n= 0\]
+\begin{equation}\protect\hypertarget{eq-mms_3er_mms_3_eigenvek}{}{
+\mathbf{K} - \omega_n^2 \mathbf{M} \phi_n= 0
+}\label{eq-mms_3er_mms_3_eigenvek}\end{equation}
 
-\begin{verbatim}
-NameError: name 'phi_1' is not defined
-\end{verbatim}
+\begin{equation}\phi_{1} = \left[\begin{matrix}0.667\\0.885\\1.0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\left[ 0.0, \  0.0, \  0.0\right]\end{equation*}
+\begin{equation}\phi_{2} = \left[\begin{matrix}1.0\\0.0933\\-0.916\end{matrix}\right]\end{equation}
 
-\begin{equation*}\left\{ \phi_{11} : 0.0, \  \phi_{21} : 0.0, \  \phi_{31} : 0.0\right\}\end{equation*}
+\begin{equation}\phi_{3} = \left[\begin{matrix}0.449\\-1.0\\0.51\end{matrix}\right]\end{equation}
 
-\begin{equation*}\text{False}\end{equation*}
+\hypertarget{modale-analyse-1}{%
+\subsection{Modale Analyse}\label{modale-analyse-1}}
 
-\begin{verbatim}
-ShapeError: Matrix size mismatch: (3, 3) * (2, 1).
-\end{verbatim}
+Die Modale Analyse zielt darauf ab, den Mehrmassenschwinger zu
+entkoppeln. Dazu wird in einem ersten Schritt die
+Orthogonalitätsbedingung kontrolliert. Diese muss erfüllt sein um eine
+Entkoppelung durchzuführen. Siehe Kapitel~\ref{sec-mms_nach_ortho} für
+eine ausführliche Erklärung.
+
+\hypertarget{orthogonalituxe4tsbedingung-2}{%
+\subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-2}}
+
+Angewendet auf die Massenmatrix: Es zeigen sich kleine numerische
+Unreinheiten, welche vernachlässigt werden können.
+
+\begin{equation}\phi_{1}^{T} M \phi_{1} = \left[\begin{matrix}\frac{9.35 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} M \phi_{1} = \left[\begin{matrix}- \frac{6.37 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} M \phi_{1} = \left[\begin{matrix}- \frac{3.18 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{1}^{T} M \phi_{2} = \left[\begin{matrix}- \frac{6.37 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} M \phi_{2} = \left[\begin{matrix}\frac{8.39 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} M \phi_{2} = \left[\begin{matrix}\frac{1.8 \cdot 10^{-11} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{1}^{T} M \phi_{3} = \left[\begin{matrix}- \frac{3.18 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} M \phi_{3} = \left[\begin{matrix}\frac{1.8 \cdot 10^{-11} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} M \phi_{3} = \left[\begin{matrix}\frac{6.05 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+Für die Steifigkeitsmatrix:
+
+\begin{equation}\phi_{1}^{T} K \phi_{1} = \left[\begin{matrix}\frac{1.74 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} K \phi_{1} = \left[\begin{matrix}- \frac{6.4 \cdot 10^{-10} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} K \phi_{1} = \left[\begin{matrix}- \frac{6.55 \cdot 10^{-11} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}- \frac{6.4 \cdot 10^{-10} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} K \phi_{2} = \left[\begin{matrix}\frac{1.49 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} K \phi_{2} = \left[\begin{matrix}\frac{3.73 \cdot 10^{-9} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{1}^{T} K \phi_{3} = \left[\begin{matrix}- \frac{6.55 \cdot 10^{-11} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{2}^{T} K \phi_{3} = \left[\begin{matrix}\frac{3.73 \cdot 10^{-9} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}\phi_{3}^{T} K \phi_{3} = \left[\begin{matrix}\frac{2.88 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\hypertarget{modal--und-spektralmatrix-1}{%
+\subsubsection{Modal- und
+Spektralmatrix}\label{modal--und-spektralmatrix-1}}
+
+Mittels der Modal- und Spektralmatrix lassen sich die generalisierten
+Grössen effizient ermitteln.
+
+\begin{equation}Modalmatrix = \Phi\end{equation}
+
+\begin{equation}\Phi = \left[\begin{matrix}0.667 & 1.0 & 0.4487\\0.8846 & 0.09327 & -1.0\\1.0 & -0.9162 & 0.5104\end{matrix}\right]\end{equation}
+
+\begin{equation}Spektralmatrix = \Omega^{2}\end{equation}
+
+\begin{equation}\Omega^{2} = \left[\begin{matrix}\frac{18.58}{\text{s}^{2}} & 0 & 0\\0 & \frac{177.3}{\text{s}^{2}} & 0\\0 & 0 & \frac{476.2}{\text{s}^{2}}\end{matrix}\right]\end{equation}
+
+\hypertarget{generalisierte-gruxf6ssen-1}{%
+\subsubsection{Generalisierte
+Grössen}\label{generalisierte-gruxf6ssen-1}}
+
+Zur Reduktion des Rechenaufwands werden die numerischen Unreinheiten zu
+Null gesetzt.
+
+\begin{equation}M^{\star} = \left[\begin{matrix}\frac{9354.1 \text{N} \text{s}^{2}}{\text{m}} & 0 & 0\\0 & \frac{8392.7 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & 0 & \frac{6049.0 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}K^{\star} = \left[\begin{matrix}\frac{1.7379 \cdot 10^{5} \text{N}}{\text{m}} & 0 & 0\\0 & \frac{1.4881 \cdot 10^{6} \text{N}}{\text{m}} & 0\\0 & 0 & \frac{2.8807 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\hypertarget{modale-huxf6hen}{%
+\subsubsection{Modale Höhen}\label{modale-huxf6hen}}
+
+Die modalen Höhen bestimmen sich aus
+Gleichung~\ref{eq-mms_3er_modale_hoehe}:
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_modale_hoehe}{}{
+H_n = \frac{L_n^\theta}{L_n}
+}\label{eq-mms_3er_modale_hoehe}\end{equation}
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_L_n}{}{
+L_n = \phi_n^T \cdot \mathbf{M 1}
+}\label{eq-mms_3er_L_n}\end{equation}
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_L_n_theta}{}{
+L_n^\theta = \sum_{j=1}^N H_j \cdot m_j \cdot \phi_{jn}
+}\label{eq-mms_3er_L_n_theta}\end{equation}
+
+Angewendet auf das Beispiel folgt:
+
+\begin{equation}H = \left[\begin{matrix}H_{1}\\H_{2}\\H_{3}\end{matrix}\right]\end{equation}
+
+\begin{equation}H = \left[\begin{matrix}\frac{H_{1} m_{1} \phi_{11} + H_{2} m_{2} \phi_{21} + H_{3} m_{3} \phi_{31}}{m_{1} \phi_{11} + m_{1} \phi_{21} + m_{1} \phi_{31}}\\\frac{H_{1} m_{1} \phi_{12} + H_{2} m_{2} \phi_{22} + H_{3} m_{3} \phi_{32}}{m_{2} \phi_{12} + m_{2} \phi_{22} + m_{2} \phi_{32}}\\\frac{H_{1} m_{1} \phi_{13} + H_{2} m_{2} \phi_{23} + H_{3} m_{3} \phi_{33}}{m_{3} \phi_{13} + m_{3} \phi_{23} + m_{3} \phi_{33}}\end{matrix}\right]\end{equation}
+
+\begin{equation}H = \left[\begin{matrix}3.24 \text{m}\\15.5 \text{m}\\- 19.9 \text{m}\end{matrix}\right]\end{equation}
+
+Modalen Höhen kleiner als null sind zu vernachlässigen.
+
+\hypertarget{kontrolle-der-modalen-transformation-1}{%
+\subsubsection{Kontrolle der modalen
+Transformation}\label{kontrolle-der-modalen-transformation-1}}
+
+Die Eigenkreisfrequenzen ändern sich durch die Transformation nicht.
+
+\begin{equation}\omega_{1} = \frac{4.31}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{1 modal} = \frac{4.31}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{2} = \frac{13.32}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{2 modal} = \frac{13.32}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{3} = \frac{21.82}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{3 modal} = \frac{21.82}{\text{s}}\end{equation}
+
+\hypertarget{partizipationsfaktor-gamma}{%
+\subsubsection{\texorpdfstring{Partizipationsfaktor
+\(\Gamma\)}{Partizipationsfaktor \textbackslash Gamma}}\label{partizipationsfaktor-gamma}}
+
+Die Verteilung des Partizipationsfaktor gibt einen direkten Hinweis,
+welcher Eigenmode an der Gesamtanwort den grössten Einfluss (beteiligt
+bzw. partizipiert) hat.
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_part}{}{
+\Gamma_n = \frac{\Phi_n^T \mathbf{M 1}}{\Phi_n^T \mathbf{M}\Phi_n}
+}\label{eq-mms_3er_part}\end{equation}
+
+In allgemeiner Form lautet der Partizipationsfaktor:
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_split_part}{}{
+\Gamma_n = \frac{\Phi_n^T \mathbf{M r^\star}}{\Phi_n^T \mathbf{M}\Phi_n}
+}\label{eq-mms_3er_split_part}\end{equation}
+
+\(\mathbf{r^\star}\) beschreibt die Starrkörperverschiebung infolge der
+Erdbebenanregung \(u_g\) am Fusspunkt des Gesamtsystems.
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_starrkoerperverschiebung}{}{
+\mathbf{r^\star} = \begin{bmatrix}
+FHG_1 \\
+FHG_2 
+\end{bmatrix}=
+\begin{bmatrix}
+\cos(0) \\
+\cos(0) 
+\end{bmatrix}=
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}= \mathbf{1}
+}\label{eq-mms_3er_starrkoerperverschiebung}\end{equation}
+
+Die Partizipationsmatrix lässt sich direkt durch folgende Gleichung
+ermitteln:
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_matrix_part}{}{
+\Gamma = M^{\star-1} \cdot \Phi^T \cdot M \cdot 1
+}\label{eq-mms_3er_matrix_part}\end{equation}
+
+Gelöst mit Gleichung~\ref{eq-mms_3er_matrix_part}:
+
+\begin{equation}\Gamma = \left[\begin{matrix}1.16\\0.204\\0.0472\end{matrix}\right]\end{equation}
+
+Gelöst mit Gleichung~\ref{eq-mms_3er_split_part}:
+
+\begin{equation}\Gamma_{1} = \frac{m_{1} \phi_{11} + m_{2} \phi_{21} + m_{3} \phi_{31}}{m_{1} \phi_{11}^{2} + m_{2} \phi_{21}^{2} + m_{3} \phi_{31}^{2}}\end{equation}
+
+\begin{equation}\Gamma_{1} = 1.16\end{equation}
+
+\begin{equation}\Gamma_{2} = \frac{m_{1} \phi_{12} + m_{2} \phi_{22} + m_{3} \phi_{32}}{m_{1} \phi_{12}^{2} + m_{2} \phi_{22}^{2} + m_{3} \phi_{32}^{2}}\end{equation}
+
+\begin{equation}\Gamma_{2} = 0.204\end{equation}
+
+\begin{equation}\Gamma_{3} = \frac{m_{1} \phi_{13} + m_{2} \phi_{23} + m_{3} \phi_{33}}{m_{1} \phi_{13}^{2} + m_{2} \phi_{23}^{2} + m_{3} \phi_{33}^{2}}\end{equation}
+
+\begin{equation}\Gamma_{3} = 0.0472\end{equation}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{index_files/mediabag/mms_04_files/figure-pdf/fig-mms_3_modale_ems-output-1.pdf}
+
+}
+
+\caption{\label{fig-mms_3_modale_ems}Darstellung der entkoppelten
+Einmassenschwinger}
+
+\end{figure}
+
+\hypertarget{elastisches-antwortspektrum}{%
+\subsection{Elastisches
+Antwortspektrum}\label{elastisches-antwortspektrum}}
+
+Aus der Aufgabenstellung darf nach
+(\protect\hyperlink{ref-SIA261_2020}{Schweizerischer Ingenieur- und
+Architektenverein (SIA), 2020}) Abs. 16.2.3.1 Kurve \(E\) gewählt
+werden.
+
+\hypertarget{grundschwingzeit}{%
+\subsubsection{Grundschwingzeit}\label{grundschwingzeit}}
+
+Die Grundschwingzeit kann anhand der bereits ermittelten
+Eigenkreisfrequenzen ermittelt werden.
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_eigenperiode}{}{
+T = \frac{2 \pi}{\omega}
+}\label{eq-mms_3er_eigenperiode}\end{equation}
+
+\begin{equation}T_{1} = 1.46 \text{s}\end{equation}
+
+\begin{equation}T_{2} = 0.472 \text{s}\end{equation}
+
+\begin{equation}T_{3} = 0.288 \text{s}\end{equation}
+
+\hypertarget{elastisches-antwortspektrum-1}{%
+\subsubsection{Elastisches
+Antwortspektrum}\label{elastisches-antwortspektrum-1}}
+
+Es wird für sämtliche Eigenperioden die Pseudobeschleunigung bestimmt.
+Siehe dazu Schweizerischer Ingenieur- und Architektenverein (SIA)
+(\protect\hyperlink{ref-SIA261_2020}{2020}).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S = 1.7\) & \(T_{B} = 0.1 \text{s}\) \\
+\(T_{C} = 0.5 \text{s}\) & \(T_{D} = 2.0 \text{s}\) \\
+\(\eta = 1\) & \\
+\end{longtable}
+
+\begin{equation}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation}
+
+\begin{equation}S_{e 1} = \frac{1.46 \text{m}}{\text{s}^{2}}\end{equation}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S = 1.7\) & \(T_{B} = 0.1 \text{s}\) \\
+\(T_{C} = 0.5 \text{s}\) & \(T_{D} = 2.0 \text{s}\) \\
+\(\eta = 1\) & \\
+\end{longtable}
+
+\begin{equation}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation}
+
+\begin{equation}S_{e 2} = \frac{4.25 \text{m}}{\text{s}^{2}}\end{equation}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S = 1.7\) & \(T_{B} = 0.1 \text{s}\) \\
+\(T_{C} = 0.5 \text{s}\) & \(T_{D} = 2.0 \text{s}\) \\
+\(\eta = 1\) & \\
+\end{longtable}
+
+\begin{equation}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation}
+
+\begin{equation}S_{e 3} = \frac{4.25 \text{m}}{\text{s}^{2}}\end{equation}
+
+\hypertarget{maximale-deformation}{%
+\subsection{Maximale Deformation}\label{maximale-deformation}}
+
+Die maximale Deformation resultiert aus der Beschleunigung \(S_e\) und
+der Eigenkreisfrequenz \(\omega_n^2\). Für die Modalen EMS gilt es diese
+anhand der Partizipationsfaktoren zu gewichten. Zur effektiven
+Bestimmung der Auslenkung sind die Resultate der EMS mittels SRSS-Regel
+zu überlagern.
+
+\begin{equation}q_{1 max} = \frac{\Gamma_{1} S_{e 1}}{\omega_{1}^{2}}\end{equation}
+
+\begin{equation}q_{1 max} = 0.0912 \text{m}\end{equation}
+
+\begin{equation}q_{2 max} = \frac{\Gamma_{2} S_{e 2}}{\omega_{2}^{2}}\end{equation}
+
+\begin{equation}q_{2 max} = 0.00488 \text{m}\end{equation}
+
+\begin{equation}q_{3 max} = \frac{\Gamma_{3} S_{e 3}}{\omega_{3}^{2}}\end{equation}
+
+\begin{equation}q_{3 max} = 0.000421 \text{m}\end{equation}
+
+Um die Entkoppelung rückzuführen gilt es die erhaltenen Resultate zu
+überlagern. Dabei gibt es unterschiedliche Ansätze. Bei weit auseinander
+liegenden Eigenfrequenzen kann die SRSS-Überlagerung (Square-root of the
+sum of squares) verwendet werden.
+
+\begin{equation}\protect\hypertarget{eq-mms_3er_srss}{}{
+u_{max} = \sqrt{\sum_{n=1}^2 (q_{n} \cdot \phi_n)^2}
+}\label{eq-mms_3er_srss}\end{equation}
+
+\begin{equation}u_{max} = \left[\begin{matrix}0.061 \text{m}\\0.0807 \text{m}\\0.0913 \text{m}\end{matrix}\right]\end{equation}
+
+\ul{Stephan, wieso multiplizierst du die SRSS- Überlagerung nochmals
+mit} \(phi_1\)
+
+\begin{figure}[H]
+
+{\centering \includegraphics{bilder/Frage_1.png}
+
+}
+
+\caption{Frage}
+
+\end{figure}
+
+\hypertarget{maximale-schnittkruxe4fte}{%
+\subsection{Maximale Schnittkräfte}\label{maximale-schnittkruxe4fte}}
+
+\hypertarget{querkruxe4fte}{%
+\subsubsection{Querkräfte}\label{querkruxe4fte}}
+
+Die Einwirkungen resultieren aus der Masse multipliziert mit der
+Beschleunigung aus dem Antwortspektrum. Dazu sind in einem ersten
+Schritt die beiden entkoppelten EMS von einander getrennt zu betrachten.
+Die Überlagerung erfolgt erst bei den ermittelten Querkräften.
+
+\[
+m_1 = \Gamma \cdot M \cdot \phi_1
+\]
+
+\[
+F_{1max} = m_1 \cdot S_{e1}
+\]
+
+Aus dem ersten EMS folgt:
+
+\begin{equation}m_{1} = \left[\begin{matrix}\frac{3876.5 \text{N} \text{s}^{2}}{\text{m}}\\\frac{4112.8 \text{N} \text{s}^{2}}{\text{m}}\\\frac{4649.6 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}F_{1 max} = \left[\begin{matrix}5652.3 \text{N}\\5996.8 \text{N}\\6779.5 \text{N}\end{matrix}\right]\end{equation}
+
+\begin{equation}V_{1} = \left[\begin{matrix}18429.0 \text{N}\\12776.0 \text{N}\\6779.5 \text{N}\end{matrix}\right]\end{equation}
+
+Aus dem zweiten EMS folglich:
+
+\begin{equation}m_{2} = \left[\begin{matrix}\frac{1017.6 \text{N} \text{s}^{2}}{\text{m}}\\\frac{75.929 \text{N} \text{s}^{2}}{\text{m}}\\- \frac{745.91 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}F_{2 max} = \left[\begin{matrix}4325.0 \text{N}\\322.7 \text{N}\\- 3170.1 \text{N}\end{matrix}\right]\end{equation}
+
+\begin{equation}V_{2} = \left[\begin{matrix}1477.5 \text{N}\\- 2847.4 \text{N}\\- 3170.1 \text{N}\end{matrix}\right]\end{equation}
+
+Aus dem dritten EMS folglich:
+
+\begin{equation}m_{3} = \left[\begin{matrix}\frac{105.86 \text{N} \text{s}^{2}}{\text{m}}\\- \frac{188.73 \text{N} \text{s}^{2}}{\text{m}}\\\frac{96.33 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
+
+\begin{equation}F_{3 max} = \left[\begin{matrix}449.91 \text{N}\\- 802.09 \text{N}\\409.4 \text{N}\end{matrix}\right]\end{equation}
+
+\begin{equation}V_{3} = \left[\begin{matrix}57.229 \text{N}\\- 392.69 \text{N}\\409.4 \text{N}\end{matrix}\right]\end{equation}
+
+Maximale Querkraft aus Überlagerung beider EMS mittels SRSS-Regel.
+
+\[
+V_{max} = \sqrt{V_1^2 + V_2^2 + V_3^2}
+\]
+
+\begin{equation}V_{max} = \left[\begin{matrix}1.85 \cdot 10^{4} \text{N}\\1.31 \cdot 10^{4} \text{N}\\7.5 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation}
+
+\hypertarget{biegemomente}{%
+\subsubsection{Biegemomente}\label{biegemomente}}
+
+Die Biegemomente lassen sich abschliessend anhand der Querkräfte
+bestimmen.
+
+\hypertarget{normalkruxe4fte}{%
+\subsubsection{Normalkräfte}\label{normalkruxe4fte}}
+
+Die Normalkräfte resultieren aus den Punktmassen.
+
+\begin{figure}[H]
+
+{\centering \includegraphics{index_files/mediabag/mms_04_files/figure-pdf/fig-schnittgroessen-output-1.pdf}
+
+}
+
+\caption{\label{fig-schnittgroessen}Maximale Schnittgrössen}
+
+\end{figure}
 
 \hypertarget{beispiel-antwortspektrenverfahren-an-einem-rahmen}{%
 \chapter{Beispiel: Antwortspektrenverfahren an einem
@@ -3621,15 +4073,16 @@ Rahmen}\label{beispiel-antwortspektrenverfahren-an-einem-rahmen}}
 \section{Aufgabenstellung}\label{aufgabenstellung-13}}
 
 Dies ist eine Weiterführung des bereits bekannten Rahmentragwerks aus
-\textbf{?@sec-mms\_rahmen}.
+Kapitel~\ref{sec-mms_steif}.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{bilder/mms5.jpg}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_steif_system.pdf}
 
 }
 
-\caption{\label{fig-system}Statisches System des Rahmentragwerks}
+\caption{\label{fig-mms_antwort_system_mms2}Statisches System des
+Rahmentragwerks}
 
 \end{figure}
 
@@ -3666,7 +4119,7 @@ Gegeben:
 \item
   Dehnsteifigkeit aller Stäbe \(E\cdot A = \infty\)
 \item
-  Einzelmassen \(m = 20000 \text{kg}\)
+  Einzelmassen \(M = 20000 \text{kg}\)
 \item
   Baugrundklasse B
 \item
@@ -3675,11 +4128,11 @@ Gegeben:
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-12}{%
-\section{Musterlösung}\label{musterluxf6sung-12}}
+\hypertarget{musterluxf6sung-11}{%
+\section{Musterlösung}\label{musterluxf6sung-11}}
 
-\ul{Bei dieser Musterlösung bin ich nicht ganz sattelfest, müssen wir
-zusammen besprechen Stephan}
+Die Lösung deckt sich mit Kapitel~\ref{sec-mms_steif_ML} bis zu den
+ermittelten Eigenformen.
 
 \hypertarget{tbl-parameter_mms5}{}
 \begin{longtable}[]{@{}
@@ -3704,51 +4157,21 @@ Parameter
 \endlastfoot
 \(E = \frac{30000 \text{N}}{\text{mm}^{2}}\) & \(H = 3.2 \text{m}\) \\
 \(I = 2000000000 \text{mm}^{4}\) &
-\(m_{1} = \frac{40000 \text{N} \text{s}^{2}}{\text{m}}\) \\
-\(m_{2} = \frac{20000 \text{N} \text{s}^{2}}{\text{m}}\) & \\
+\(M_{1} = \frac{40000 \text{N} \text{s}^{2}}{\text{m}}\) \\
+\(M_{2} = \frac{20000 \text{N} \text{s}^{2}}{\text{m}}\) & \\
 \end{longtable}
 
-\hypertarget{steifigkeitsmatrix-mathbfk-2}{%
+\hypertarget{steifigkeitsmatrix-mathbfk-1}{%
 \subsection{\texorpdfstring{Steifigkeitsmatrix
-\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{steifigkeitsmatrix-mathbfk-2}}
-
-Zur Bestimmung der Steifigkeitsmatrix ist das System an jedem
-Freiheitsgrad auszulenken, wie in Abbildung~\ref{fig-steifigkeit}
-dargestellt ist.
-
-\begin{figure}[H]
-
-{\centering \includegraphics{bilder/steifigkeit_mms2.jpg}
-
-}
-
-\caption{\label{fig-steifigkeit}Auslenkung der Freiheitsgrade zur
-Bestimmung der Steifigkeit}
-
-\end{figure}
-
-Wichtig dabei sind die Richtungen der Kräfte. Als Denkstütze gilt
-folgendes: - Der Auslenkung um \(u\) wirkt die Federkraft entgegen,
-welche \(k u\) entspricht. - Zusätzlich wirkt die Trägheitskraft der
-Auslenkung entgegen, welche \(m u''\) entspricht. - Nach der Betrachtung
-des ausgelenkten Punkts, kann mittels \emph{Actio-Reactio}-Prinzip das
-``\emph{Stockwerk}'' ins Gleichgewicht gebracht werden. - Vorzeichen
-sind gegen der Bewegungsrichtig positiv.
+\(\mathbf{K}\)}{Steifigkeitsmatrix \textbackslash mathbf\{K\}}}\label{steifigkeitsmatrix-mathbfk-1}}
 
 \hypertarget{horizontale-steifigkeit-3}{%
 \subsubsection{Horizontale
 Steifigkeit}\label{horizontale-steifigkeit-3}}
 
-Die horizontale Steifigkeit des Systems lässt sich mittels der Formel
-für Rahmen bestimmen.
+\begin{equation}K = \left[\begin{matrix}k_{1} + k_{2} & - k_{2}\\- k_{2} & k_{2}\end{matrix}\right]\end{equation}
 
-\[k_{Stütze} = \frac{12EI_{Stütze}}{H^3}\]
-
-Diese gilt für eine einzelne Stütze.
-
-\begin{equation*}K = \left[\begin{matrix}k_{1} + k_{2} & - k_{2}\\- k_{2} & k_{2}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}K = \left[\begin{matrix}\frac{1.31836 \cdot 10^{8} \text{N}}{\text{m}} & - \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}}\\- \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}} & \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}K = \left[\begin{matrix}\frac{1.31836 \cdot 10^{8} \text{N}}{\text{m}} & - \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}}\\- \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}} & \frac{4.39453 \cdot 10^{7} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenvektoren-4}{%
 \subsection{Eigenvektoren}\label{eigenvektoren-4}}
@@ -3757,101 +4180,73 @@ Diese gilt für eine einzelne Stütze.
 \subsubsection{\texorpdfstring{Massenmatrix
 \(\mathbf{M}\)}{Massenmatrix \textbackslash mathbf\{M\}}}\label{massenmatrix-mathbfm-3}}
 
-Die Massenmatrix folgt dem gleichen Aufbau wie die Steifigkeitsmatrix.
-Es gelten die gleichen Vorzeichenregelungen.
+\begin{equation}M = \left[\begin{matrix}M_{1} & 0\\0 & M_{2}\end{matrix}\right]\end{equation}
 
-\begin{equation*}M = \left[\begin{matrix}m_{1} & 0\\0 & m_{2}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}M = \left[\begin{matrix}\frac{40000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{20000 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}M = \left[\begin{matrix}\frac{40000 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{20000 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenkreisfrequenzen-5}{%
 \subsubsection{Eigenkreisfrequenzen}\label{eigenkreisfrequenzen-5}}
 
-Bei einem Mehrmassenschwinger gibt es entsprechend den Freiheitsgraden
-Eigenkreisfrequenzen \(\omega_n\). Diese lassen sich anhand folgender
-Gleichung bestimmen:
+\begin{equation}\omega_{1} = \frac{33.1}{\text{s}}\end{equation}
 
-\[\det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}\]
-
-\begin{equation*}\omega_{1} = \frac{33.1}{\text{s}}\end{equation*}
-
-\begin{equation*}\omega_{2} = \frac{66.3}{\text{s}}\end{equation*}
+\begin{equation}\omega_{2} = \frac{66.3}{\text{s}}\end{equation}
 
 \hypertarget{eigenvektoren-phi-3}{%
 \subsubsection{\texorpdfstring{Eigenvektoren
 \(\phi\)}{Eigenvektoren \textbackslash phi}}\label{eigenvektoren-phi-3}}
 
-\begin{equation*}\left[\begin{matrix}\frac{- k_{2} m_{2} \phi_{21} + \frac{\phi_{11} \left(- k_{2} m_{1} + m_{2} \left(k_{1} + k_{2}\right) + \sqrt{k_{1}^{2} m_{2}^{2} - 2 k_{1} k_{2} m_{1} m_{2} + 2 k_{1} k_{2} m_{2}^{2} + k_{2}^{2} m_{1}^{2} + 2 k_{2}^{2} m_{1} m_{2} + k_{2}^{2} m_{2}^{2}}\right)}{2}}{m_{2}}\\\frac{- k_{2} m_{1} \phi_{11} + \frac{\phi_{21} \left(k_{2} m_{1} - m_{2} \left(k_{1} + k_{2}\right) + \sqrt{k_{1}^{2} m_{2}^{2} - 2 k_{1} k_{2} m_{1} m_{2} + 2 k_{1} k_{2} m_{2}^{2} + k_{2}^{2} m_{1}^{2} + 2 k_{2}^{2} m_{1} m_{2} + k_{2}^{2} m_{2}^{2}}\right)}{2}}{m_{1}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}\frac{- M_{2} k_{2} \phi_{21} + \frac{\phi_{11} \left(- M_{1} k_{2} + M_{2} \left(k_{1} + k_{2}\right) + \sqrt{M_{1}^{2} k_{2}^{2} - 2 M_{1} M_{2} k_{1} k_{2} + 2 M_{1} M_{2} k_{2}^{2} + M_{2}^{2} k_{1}^{2} + 2 M_{2}^{2} k_{1} k_{2} + M_{2}^{2} k_{2}^{2}}\right)}{2}}{M_{2}}\\\frac{- M_{1} k_{2} \phi_{11} - \frac{\phi_{21} \left(- M_{1} k_{2} + M_{2} \left(k_{1} + k_{2}\right) - \sqrt{M_{1}^{2} k_{2}^{2} - 2 M_{1} M_{2} k_{1} k_{2} + 2 M_{1} M_{2} k_{2}^{2} + M_{2}^{2} k_{1}^{2} + 2 M_{2}^{2} k_{1} k_{2} + M_{2}^{2} k_{2}^{2}}\right)}{2}}{M_{1}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{1} = \left[\begin{matrix}0.5\\1.0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1} = \left[\begin{matrix}0.5\\1.0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\left[\begin{matrix}\frac{- k_{2} m_{2} \phi_{22} + \frac{\phi_{12} \left(- k_{2} m_{1} + m_{2} \left(k_{1} + k_{2}\right) - \sqrt{k_{1}^{2} m_{2}^{2} - 2 k_{1} k_{2} m_{1} m_{2} + 2 k_{1} k_{2} m_{2}^{2} + k_{2}^{2} m_{1}^{2} + 2 k_{2}^{2} m_{1} m_{2} + k_{2}^{2} m_{2}^{2}}\right)}{2}}{m_{2}}\\\frac{- k_{2} m_{1} \phi_{12} + \frac{\phi_{22} \left(k_{2} m_{1} - m_{2} \left(k_{1} + k_{2}\right) - \sqrt{k_{1}^{2} m_{2}^{2} - 2 k_{1} k_{2} m_{1} m_{2} + 2 k_{1} k_{2} m_{2}^{2} + k_{2}^{2} m_{1}^{2} + 2 k_{2}^{2} m_{1} m_{2} + k_{2}^{2} m_{2}^{2}}\right)}{2}}{m_{1}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation*}
+\begin{equation}\left[\begin{matrix}\frac{- M_{2} k_{2} \phi_{22} + \frac{\phi_{12} \left(- M_{1} k_{2} + M_{2} \left(k_{1} + k_{2}\right) - \sqrt{M_{1}^{2} k_{2}^{2} - 2 M_{1} M_{2} k_{1} k_{2} + 2 M_{1} M_{2} k_{2}^{2} + M_{2}^{2} k_{1}^{2} + 2 M_{2}^{2} k_{1} k_{2} + M_{2}^{2} k_{2}^{2}}\right)}{2}}{M_{2}}\\\frac{- M_{1} k_{2} \phi_{12} - \frac{\phi_{22} \left(- M_{1} k_{2} + M_{2} \left(k_{1} + k_{2}\right) + \sqrt{M_{1}^{2} k_{2}^{2} - 2 M_{1} M_{2} k_{1} k_{2} + 2 M_{1} M_{2} k_{2}^{2} + M_{2}^{2} k_{1}^{2} + 2 M_{2}^{2} k_{1} k_{2} + M_{2}^{2} k_{2}^{2}}\right)}{2}}{M_{1}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{2} = \left[\begin{matrix}-1.0\\1.0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{2} = \left[\begin{matrix}-1.0\\1.0\end{matrix}\right]\end{equation}
 
-\hypertarget{orthogonalituxe4tsbedingung-2}{%
-\subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-2}}
+\hypertarget{orthogonalituxe4tsbedingung-3}{%
+\subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-3}}
 
-Zur effektiven Entkoppelung der Gleichungen muss die
-Orthogonalitätsbedingung eingehalten sein. Dies gilt es für die
-Massenmatrix zu kontrollieren:
+\begin{equation}\phi_{1}^{T} M \phi_{1} = \left[\begin{matrix}\frac{3.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-Dies gilt es für die Massenmatrix zu kontrollieren:
+\begin{equation}\phi_{2}^{T} M \phi_{2} = \left[\begin{matrix}\frac{6.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\[\phi_1^T \mathbf{ M } \phi_1 \neq 0\]
+\begin{equation}\phi_{2}^{T} M \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
-\[\phi_2^T \mathbf{ M } \phi_2 \neq 0\]
-
-\[\phi_2^T \mathbf{ M } \phi_1 = 0\]
-
-Sowohl auch für die Steifigkeitsmatrix:
-
-\[\phi_1^T \mathbf{ K } \phi_1 \neq 0\]
-
-\[\phi_2^T \mathbf{ K } \phi_2 \neq 0\]
-
-\[\phi_2^T \mathbf{ K } \phi_1 = 0\]
-
-Angewendet auf die Aufgabe:
-
-\begin{equation*}\phi_{1}^{T} M \phi_{1} = \left[\begin{matrix}\frac{3.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} M \phi_{2} = \left[\begin{matrix}\frac{6.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{2}^{T} M \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
-
-\begin{equation*}\phi_{1}^{T} M \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1}^{T} M \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
 Für die Steifigkeitsmatrix:
 
-\begin{equation*}\phi_{1}^{T} K \phi_{1} = \left[\begin{matrix}\frac{3.3 \cdot 10^{7} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1}^{T} K \phi_{1} = \left[\begin{matrix}\frac{3.3 \cdot 10^{7} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{2}^{T} K \phi_{2} = \left[\begin{matrix}\frac{2.64 \cdot 10^{8} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{2}^{T} K \phi_{2} = \left[\begin{matrix}\frac{2.64 \cdot 10^{8} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{2}^{T} K \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{2}^{T} K \phi_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
-\begin{equation*}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation*}
+\begin{equation}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}
 
 \hypertarget{eigenformen-2}{%
 \subsubsection{Eigenformen}\label{eigenformen-2}}
 
 \begin{figure}[H]
 
-{\centering \includegraphics{bilder/eigenformen_mms2.jpg}
+{\centering \includegraphics{index_files/mediabag/bilder/aufgabe_mms_steif_eigenvektoren.pdf}
 
 }
 
-\caption{\label{fig-eigenformen}Die beiden Eigenformen skizziert}
+\caption{\label{fig-mms_antwort_eigenformen}Die beiden Eigenformen
+skizziert}
 
 \end{figure}
 
-\hypertarget{modale-analyse-1}{%
-\subsection{Modale Analyse}\label{modale-analyse-1}}
+\hypertarget{modale-analyse-2}{%
+\subsection{Modale Analyse}\label{modale-analyse-2}}
 
 Die Bewegungsgleichung für einen ungedämpften, frei schwingenden
 Mehrmassenschwinger lässt sich folgend beschreiben:
 
-\[\mathbf{M u''(t) + K u = 0}\]
+\begin{equation}\protect\hypertarget{eq-mms_antwort_bewegungsgleichung}{}{
+\mathbf{M u''(t) + K u = 0}
+}\label{eq-mms_antwort_bewegungsgleichung}\end{equation}
 
 Die Matrix-Gleichung beschreibt ein System aus Differentialgleichungen.
 Die Modale Analyse zielt darauf ab, diese zu entkoppeln. Bezogen auf den
@@ -3859,72 +4254,95 @@ Mehrmassenschwinger heisst eine Entkoppelung, dass diese in
 Einmassenschwinger aufgeteilt werden. Dies wird nun schrittweise
 durchgeführt.
 
-\hypertarget{modal--und-spektralmatrix-1}{%
+\hypertarget{modal--und-spektralmatrix-2}{%
 \subsubsection{Modal- und
-Spektralmatrix}\label{modal--und-spektralmatrix-1}}
+Spektralmatrix}\label{modal--und-spektralmatrix-2}}
 
 Mittels der Modal- und Spektralmatrix können die generalisierten Grössen
 ermittelt werden. Diese sind die eigenschaften der einzelnen
 Einmassenschwinger. Die generalisierten Werte besitzen keine
-physikalischen Werte, sie sind abhängig von der Wahl der Eigenvektoren,
-welche bekanntlich von der Normierung abhängen.
+physikalische Bedeutung, sie sind abhängig von der Wahl der
+Eigenvektoren, welche bekanntlich von der Normierung abhängen.
 
-Aufgrund der Bewegungsgleichung können die generalisierten Grössen
+Anhand der Bewegungsgleichung können die generalisierten Grössen
 bestimmt werden, es gilt:
 
-\[\mathbf{\Phi^T M \Phi u''(t) + \Phi^T K \Phi u(t) = 0}\]
+\begin{equation}\protect\hypertarget{eq-mms_ant_beweg_generalisiert}{}{
+\Phi^T\mathbf{ M} \Phi \mathbf{u''(t)} + \Phi^T \mathbf{K} \Phi \mathbf{u(t)} = 0
+}\label{eq-mms_ant_beweg_generalisiert}\end{equation}
 
-\[\mathbf{M^*u''(t) + K^* u(t) = 0}\]
+\begin{equation}\protect\hypertarget{eq-mms_ant_beweg_generalisiert_subs}{}{
+\mathbf{M^*u''(t) + K^* u(t) = 0}
+}\label{eq-mms_ant_beweg_generalisiert_subs}\end{equation}
 
 Alle \(N\)-Eigenwerte und alle \(N\)-Eigenvektoren können kompakt mit
 Matrizen ausgedrückt werden:
 
-\begin{equation*}Modalmatrix = \Phi\end{equation*}
+\begin{equation}Modalmatrix = \Phi\end{equation}
 
-\begin{equation*}\Phi = \left[\begin{matrix}0.5 & -1.0\\1.0 & 1.0\end{matrix}\right]\end{equation*}
+\begin{equation}\Phi = \left[\begin{matrix}0.5 & -1.0\\1.0 & 1.0\end{matrix}\right]\end{equation}
 
-\begin{equation*}Spektralmatrix = \Omega^{2}\end{equation*}
+\begin{equation}Spektralmatrix = \Omega^{2}\end{equation}
 
-\begin{equation*}\Omega^{2} = \left[\begin{matrix}\frac{1099.0}{\text{s}^{2}} & 0\\0 & \frac{4395.0}{\text{s}^{2}}\end{matrix}\right]\end{equation*}
+\begin{equation}\Omega^{2} = \left[\begin{matrix}\frac{1099.0}{\text{s}^{2}} & 0\\0 & \frac{4395.0}{\text{s}^{2}}\end{matrix}\right]\end{equation}
 
-\hypertarget{generalisierte-gruxf6ssen-1}{%
+\hypertarget{generalisierte-gruxf6ssen-2}{%
 \subsubsection{Generalisierte
-Grössen}\label{generalisierte-gruxf6ssen-1}}
+Grössen}\label{generalisierte-gruxf6ssen-2}}
 
-\begin{equation*}M^{\star} = \left[\begin{matrix}\frac{30000.0 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{60000.0 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}M^{\star} = \left[\begin{matrix}\frac{30000.0 \text{N} \text{s}^{2}}{\text{m}} & 0\\0 & \frac{60000.0 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}K^{\star} = \left[\begin{matrix}\frac{3.2959 \cdot 10^{7} \text{N}}{\text{m}} & 0\\0 & \frac{2.6367 \cdot 10^{8} \text{N}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}K^{\star} = \left[\begin{matrix}\frac{3.2959 \cdot 10^{7} \text{N}}{\text{m}} & 0\\0 & \frac{2.6367 \cdot 10^{8} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\hypertarget{kontrolle-der-modalen-transformation-1}{%
+\hypertarget{kontrolle-der-modalen-transformation-2}{%
 \subsubsection{Kontrolle der modalen
-Transformation}\label{kontrolle-der-modalen-transformation-1}}
+Transformation}\label{kontrolle-der-modalen-transformation-2}}
 
-\begin{equation*}\omega_{1} = \frac{33.1}{\text{s}}\end{equation*}
+Durch die Transformation in generalisierte Grössen dürfen sich die
+Eigenkreisfrequenzen nicht ändern, da die entkoppelten EMS jeweils eine
+dieser beschreibt.
 
-\begin{equation*}\omega_{1 modal} = \frac{33.1}{\text{s}}\end{equation*}
+Durch Einsetzen der modalen Grössen in
+Gleichung~\ref{eq-mms_antwort_eigenkreisfrequenz} kann mit den
+ermittelten Kreisfrequenzen kontrolliert werden.
 
-\begin{equation*}\omega_{2} = \frac{66.29}{\text{s}}\end{equation*}
+\begin{equation}\protect\hypertarget{eq-mms_antwort_eigenkreisfrequenz}{}{
+\omega_n = \sqrt{\frac{k}{m}}
+}\label{eq-mms_antwort_eigenkreisfrequenz}\end{equation}
 
-\begin{equation*}\omega_{2 modal} = \frac{66.29}{\text{s}}\end{equation*}
+\begin{equation}\omega_{1} = \frac{33.1}{\text{s}}\end{equation}
 
-\hypertarget{partizipationsfaktor-gamma}{%
+\begin{equation}\omega_{1 modal} = \frac{33.1}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{2} = \frac{66.29}{\text{s}}\end{equation}
+
+\begin{equation}\omega_{2 modal} = \frac{66.29}{\text{s}}\end{equation}
+
+\hypertarget{partizipationsfaktor-gamma-1}{%
 \subsubsection{\texorpdfstring{Partizipationsfaktor
-\(\Gamma\)}{Partizipationsfaktor \textbackslash Gamma}}\label{partizipationsfaktor-gamma}}
+\(\Gamma\)}{Partizipationsfaktor \textbackslash Gamma}}\label{partizipationsfaktor-gamma-1}}
 
-Die Verteilung des Partizipationsfaktor gibt einen direkten Hinweis,
-welcher Eigenmode an der Gesamtanwort den grössten Einfluss (beteiligt
-bzw. partizipiert) hat.
+Durch die modalen Grössen wissen wir wie die entkoppelten
+Einmassenschwinger definiert sind, bzw. welche Eigenschaften diese
+besitzen. Die Verteilung des Partizipationsfaktor gibt einen direkten
+Hinweis, welcher Eigenmode an der Gesamtanwort den grössten Einfluss
+(beteiligt bzw. partizipiert) hat.
 
-\[\Gamma_n = \frac{\Phi_n^T \mathbf{M 1}}{\Phi_n^T \mathbf{M}\Phi_n}\]
+\begin{equation}\protect\hypertarget{eq-mms_antwort_Gamma_n}{}{
+\Gamma_n = \frac{\Phi_n^T \mathbf{M 1}}{\Phi_n^T \mathbf{M}\Phi_n}
+}\label{eq-mms_antwort_Gamma_n}\end{equation}
 
 In allgemeiner Form lautet der Partizipationsfaktor:
 
-\[\Gamma_n = \frac{\Phi_n^T \mathbf{M r^\star}}{\Phi_n^T \mathbf{M}\Phi_n}\]
+\begin{equation}\protect\hypertarget{eq-mms_antwort_split_part}{}{
+\Gamma_n = \frac{\Phi_n^T \mathbf{M r^\star}}{\Phi_n^T \mathbf{M}\Phi_n}
+}\label{eq-mms_antwort_split_part}\end{equation}
 
 \(\mathbf{r^\star}\) beschreibt die Starrkörperverschiebung infolge der
-Erdbebenanregung \(u_g\) am Fusspunktb des Gesamtsystems.
+Erdbebenanregung \(u_g\) am Fusspunkt des Gesamtsystems.
 
-\[\mathbf{r^\star} = \begin{bmatrix}
+\begin{equation}\protect\hypertarget{eq-mms_antwort_rstar}{}{
+\mathbf{r^\star} = \begin{bmatrix}
 FHG_1 \\
 FHG_2 
 \end{bmatrix}=
@@ -3935,17 +4353,31 @@ FHG_2
 \begin{bmatrix}
 1 \\
 1 
-\end{bmatrix}= \mathbf{1}\]
+\end{bmatrix}= \mathbf{1}
+}\label{eq-mms_antwort_rstar}\end{equation}
 
-\begin{equation*}\Gamma_{1} = \frac{m_{1} \phi_{11} + m_{2} \phi_{21}}{m_{1} \phi_{11}^{2} + m_{2} \phi_{21}^{2}}\end{equation*}
+Die Partizipationsmatrix lässt sich direkt durch folgende Gleichung
+ermitteln:
 
-\begin{equation*}\Gamma_{1} = 1.33\end{equation*}
+\begin{equation}\protect\hypertarget{eq-mms_antwort_matrix_part}{}{
+\Gamma = M^{\star-1} \cdot \Phi^T \cdot M \cdot 1
+}\label{eq-mms_antwort_matrix_part}\end{equation}
 
-\begin{equation*}\Gamma_{2} = \frac{m_{1} \phi_{12} + m_{2} \phi_{22}}{m_{1} \phi_{12}^{2} + m_{2} \phi_{22}^{2}}\end{equation*}
+Gelöst mit Gleichung~\ref{eq-mms_antwort_matrix_part}:
 
-\begin{equation*}\Gamma_{2} = -0.333\end{equation*}
+\begin{equation}\Gamma = \left[\begin{matrix}1.33\\-0.333\end{matrix}\right]\end{equation}
 
-\begin{equation*}\Gamma^{2}_{n} = \left[\begin{matrix}1.78\\0.111\end{matrix}\right]\end{equation*}
+Gelöst mit Gleichung~\ref{eq-mms_antwort_split_part}:
+
+\begin{equation}\Gamma_{1} = \frac{M_{1} \phi_{11} + M_{2} \phi_{21}}{M_{1} \phi_{11}^{2} + M_{2} \phi_{21}^{2}}\end{equation}
+
+\begin{equation}\Gamma_{1} = 1.33\end{equation}
+
+\begin{equation}\Gamma_{2} = \frac{M_{1} \phi_{12} + M_{2} \phi_{22}}{M_{1} \phi_{12}^{2} + M_{2} \phi_{22}^{2}}\end{equation}
+
+\begin{equation}\Gamma_{2} = -0.333\end{equation}
+
+\begin{equation}\Gamma^{2}_{n} = \left[\begin{matrix}1.78\\0.111\end{matrix}\right]\end{equation}
 
 \hypertarget{effektive-modale-massen}{%
 \subsubsection{Effektive Modale Massen}\label{effektive-modale-massen}}
@@ -3953,26 +4385,24 @@ FHG_2
 Durch Multiplikation der Modalen Massen mit dem Partizipationsfaktor
 resultieren die effektiven Modalen Massen.
 
-\begin{equation*}m_{1eff} = \frac{5.33 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{equation*}
+\begin{equation}m_{1eff} = \frac{5.33 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{equation}
 
-\begin{equation*}m_{2eff} = \frac{6.67 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{equation*}
+\begin{equation}m_{2eff} = \frac{6.67 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{equation}
 
-\begin{equation*}m_{tot} = \frac{6.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{equation*}
+\begin{equation}m_{tot} = \frac{6.0 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{equation}
 
-\hypertarget{modale-huxf6hen}{%
-\subsubsection{Modale Höhen}\label{modale-huxf6hen}}
+\hypertarget{modale-huxf6hen-1}{%
+\subsubsection{Modale Höhen}\label{modale-huxf6hen-1}}
 
-\begin{equation*}h_{1} = \frac{H m_{1} \phi_{11} + H m_{2} \phi_{12}}{m_{1} \phi_{11} + m_{2} \phi_{12}}\end{equation*}
+\begin{equation}H = \left[\begin{matrix}H\\H\end{matrix}\right]\end{equation}
 
-\begin{equation*}\text{False}\end{equation*}
+\begin{equation}H = \left[\begin{matrix}\frac{H M_{1} \phi_{11} + H M_{2} \phi_{21}}{M_{1} \phi_{11} + M_{2} \phi_{21}}\\\frac{H M_{1} \phi_{12} + H M_{2} \phi_{22}}{M_{1} \phi_{12} + M_{2} \phi_{22}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}h_{2} = \frac{H m_{1} \phi_{21} + H m_{2} \phi_{22}}{m_{1} \phi_{21} + m_{2} \phi_{22}}\end{equation*}
+\begin{equation}H = \left[\begin{matrix}3.2 \text{m}\\3.2 \text{m}\end{matrix}\right]\end{equation}
 
-\begin{equation*}h_{2} = 3.2 \text{m}\end{equation*}
-
-\hypertarget{elastisches-antwortspektrum}{%
+\hypertarget{elastisches-antwortspektrum-2}{%
 \subsection{Elastisches
-Antwortspektrum}\label{elastisches-antwortspektrum}}
+Antwortspektrum}\label{elastisches-antwortspektrum-2}}
 
 Dem Vorgehen nach (\protect\hyperlink{ref-SIA261_2020}{Schweizerischer
 Ingenieur- und Architektenverein (SIA), 2020}) Abs. 16.2.3.1
@@ -3985,61 +4415,90 @@ entsprechend, werden folgende Parameter definiert:
 \item
   Erdbebenzone Z2
 \item
-  \(a_{gd} = 1.0 \text{ m}/\text{s}^2\)
+  \(a_{gd} = 1.0 \text{ M}/\text{s}^2\)
 \end{itemize}
 
-\hypertarget{grundschwingzeit}{%
-\subsubsection{Grundschwingzeit}\label{grundschwingzeit}}
+\hypertarget{grundschwingzeit-1}{%
+\subsubsection{Grundschwingzeit}\label{grundschwingzeit-1}}
 
 Die Grundschwingzeit kann anhand der bereits ermittelten
 Eigenkreisfrequenzen ermittelt werden.
 
-\begin{equation*}T_{1} = 0.19 \text{s}\end{equation*}
+\begin{equation}T_{1} = 0.19 \text{s}\end{equation}
 
-\begin{equation*}T_{2} = 0.0948 \text{s}\end{equation*}
+\begin{equation}T_{2} = 0.0948 \text{s}\end{equation}
 
-\hypertarget{elastisches-antwortspektrum-1}{%
+\hypertarget{elastisches-antwortspektrum-3}{%
 \subsubsection{Elastisches
-Antwortspektrum}\label{elastisches-antwortspektrum-1}}
+Antwortspektrum}\label{elastisches-antwortspektrum-3}}
 
-\begin{equation*}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation*}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S = 1.2\) & \(T_{B} = 0.08 \text{s}\) \\
+\(T_{C} = 0.35 \text{s}\) & \(T_{D} = 2.0 \text{s}\) \\
+\(\eta = 1\) & \\
+\end{longtable}
 
-\begin{equation*}S_{e 1} = \frac{3.0 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{equation}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation}
 
-\begin{equation*}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation*}
+\begin{equation}S_{e 1} = \frac{3.0 \text{m}}{\text{s}^{2}}\end{equation}
 
-\begin{equation*}S_{e 2} = \frac{3.0 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S = 1.2\) & \(T_{B} = 0.08 \text{s}\) \\
+\(T_{C} = 0.35 \text{s}\) & \(T_{D} = 2.0 \text{s}\) \\
+\(\eta = 1\) & \\
+\end{longtable}
 
-\hypertarget{bemessungsspektrum}{%
-\subsubsection{Bemessungsspektrum}\label{bemessungsspektrum}}
+\begin{equation}S_{e} = 2.5 S_{} a_{gd} \eta\end{equation}
 
-Es wird lediglich auf charakteristischem Niveau die Kräfte bestimmt
+\begin{equation}S_{e 2} = \frac{3.0 \text{m}}{\text{s}^{2}}\end{equation}
 
 \hypertarget{einwirkungen}{%
 \subsubsection{Einwirkungen}\label{einwirkungen}}
 
-\begin{equation*}f_{11} = S_{e 1} \gamma_{1} m_{1 eff} \phi_{11}\end{equation*}
+\begin{equation}f_{11} = S_{e 1} \gamma_{1} m_{1 eff} \phi_{11}\end{equation}
 
-\begin{equation*}f_{21} = S_{e 1} \gamma_{1} m_{2 eff} \phi_{21}\end{equation*}
+\begin{equation}f_{21} = S_{e 1} \gamma_{1} m_{2 eff} \phi_{21}\end{equation}
 
-\begin{equation*}f_{12} = S_{e 2} \gamma_{2} m_{1 eff} \phi_{12}\end{equation*}
+\begin{equation}f_{12} = S_{e 2} \gamma_{2} m_{1 eff} \phi_{12}\end{equation}
 
-\begin{equation*}f_{22} = S_{e 2} \gamma_{2} m_{2 eff} \phi_{22}\end{equation*}
+\begin{equation}f_{22} = S_{e 2} \gamma_{2} m_{2 eff} \phi_{22}\end{equation}
 
-\begin{equation*}f_{jn} = \left[\begin{matrix}1.07 \cdot 10^{5} \text{N} & 5.33 \cdot 10^{4} \text{N}\\5.33 \cdot 10^{4} \text{N} & - 6.67 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}f_{jn} = \left[\begin{matrix}1.07 \cdot 10^{5} \text{N} & 5.33 \cdot 10^{4} \text{N}\\5.33 \cdot 10^{4} \text{N} & - 6.67 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation}
 
 \hypertarget{deformation}{%
 \subsubsection{Deformation}\label{deformation}}
 
-\begin{equation*}u_{11} = \frac{S_{e 1} \gamma_{1} \phi_{11}}{\omega_{1}^{2}}\end{equation*}
+\begin{equation}u_{11} = \frac{S_{e 1} \gamma_{1} \phi_{11}}{\omega_{1}^{2}}\end{equation}
 
-\begin{equation*}u_{21} = \frac{S_{e 1} \gamma_{1} \phi_{21}}{\omega_{1}^{2}}\end{equation*}
+\begin{equation}u_{21} = \frac{S_{e 1} \gamma_{1} \phi_{21}}{\omega_{1}^{2}}\end{equation}
 
-\begin{equation*}u_{12} = \frac{S_{e 2} \gamma_{2} \phi_{12}}{\omega_{2}^{2}}\end{equation*}
+\begin{equation}u_{12} = \frac{S_{e 2} \gamma_{2} \phi_{12}}{\omega_{2}^{2}}\end{equation}
 
-\begin{equation*}u_{22} = \frac{S_{e 2} \gamma_{2} \phi_{22}}{\omega_{2}^{2}}\end{equation*}
+\begin{equation}u_{22} = \frac{S_{e 2} \gamma_{2} \phi_{22}}{\omega_{2}^{2}}\end{equation}
 
-\begin{equation*}u_{jn} = \left[\begin{matrix}1.82 \text{mm} & 0.228 \text{mm}\\0.228 \text{mm} & - 0.228 \text{mm}\end{matrix}\right]\end{equation*}
+\begin{equation}u_{jn} = \left[\begin{matrix}1.82 \text{mm} & 0.228 \text{mm}\\0.228 \text{mm} & - 0.228 \text{mm}\end{matrix}\right]\end{equation}
 
 \hypertarget{uxfcberlagerung-der-ems}{%
 \subsection{Überlagerung der EMS}\label{uxfcberlagerung-der-ems}}
@@ -4048,27 +4507,31 @@ Um die Entkoppelung rückzuführen gilt es die erhaltenen Resultate zu
 überlagern. Dabei gibt es unterschiedliche Ansätze. Bei weit auseinander
 liegenden Eigenfrequenzen kann die SRSS-Überlagerung verwendet werden.
 
-\[V_{b2max} = \sqrt{\sum_{n=1}^2 f_{j,n}^2}\]
+\begin{equation}\protect\hypertarget{eq-mms_antwort_v_max}{}{
+V_{b2max} = \sqrt{\sum_{n=1}^2 f_{j,n}^2}
+}\label{eq-mms_antwort_v_max}\end{equation}
 
-\begin{equation*}V_{b1 max} = \sqrt{f_{11}^{2} + f_{12}^{2}}\end{equation*}
+\begin{equation}V_{b1 max} = \sqrt{f_{11}^{2} + f_{12}^{2}}\end{equation}
 
-\begin{equation*}V_{b1max} = 1.19 \cdot 10^{5} \text{N}\end{equation*}
+\begin{equation}V_{b1max} = 1.19 \cdot 10^{5} \text{N}\end{equation}
 
-\begin{equation*}V_{b2 max} = \sqrt{f_{21}^{2} + f_{22}^{2}}\end{equation*}
+\begin{equation}V_{b2 max} = \sqrt{f_{21}^{2} + f_{22}^{2}}\end{equation}
 
-\begin{equation*}V_{b2max} = 2.75 \cdot 10^{4} \text{N}\end{equation*}
+\begin{equation}V_{b2max} = 2.75 \cdot 10^{4} \text{N}\end{equation}
 
 Deformationen:
 
-\[u_{bn} = \sqrt{\sum_{n=1}^2 u_{j,n}^2}\]
+\begin{equation}\protect\hypertarget{eq-mms_antwort_u_max}{}{
+u_{bn} = \sqrt{\sum_{n=1}^2 u_{j,n}^2}
+}\label{eq-mms_antwort_u_max}\end{equation}
 
-\begin{equation*}u_{b1} = \sqrt{u_{11}^{2} + u_{12}^{2}}\end{equation*}
+\begin{equation}u_{b1} = \sqrt{u_{11}^{2} + u_{12}^{2}}\end{equation}
 
-\begin{equation*}u_{b1} = 1.83 \text{mm}\end{equation*}
+\begin{equation}u_{b1} = 1.83 \text{mm}\end{equation}
 
-\begin{equation*}u_{b2} = \sqrt{u_{21}^{2} + u_{22}^{2}}\end{equation*}
+\begin{equation}u_{b2} = \sqrt{u_{21}^{2} + u_{22}^{2}}\end{equation}
 
-\begin{equation*}u_{b2} = 3.65 \text{mm}\end{equation*}
+\begin{equation}u_{b2} = 3.65 \text{mm}\end{equation}
 
 \ul{Skizze mit Schnittgrössen ergänzen}
 
@@ -4136,8 +4599,8 @@ Korrekte Angaben zur Ermittlung des Antwortspektrums
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-13}{%
-\section{Musterlösung}\label{musterluxf6sung-13}}
+\hypertarget{musterluxf6sung-12}{%
+\section{Musterlösung}\label{musterluxf6sung-12}}
 
 \hypertarget{tbl-parameter_mms6}{}
 \begin{longtable}[]{@{}
@@ -4292,16 +4755,16 @@ anhand der Eigenvektoren}
 
 \end{figure}
 
-\hypertarget{modale-analyse-2}{%
-\subsection{Modale Analyse}\label{modale-analyse-2}}
+\hypertarget{modale-analyse-3}{%
+\subsection{Modale Analyse}\label{modale-analyse-3}}
 
 Die Modale Analyse zielt darauf ab, den Zweimassenschwinger zu
 entkoppeln. Dazu wird in einem ersten Schritt die
 Orthogonalitätsbedingung kontrolliert. Diese muss erfüllt sein um eine
 Entkoppelung durchzuführen.
 
-\hypertarget{orthogonalituxe4tsbedingung-3}{%
-\subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-3}}
+\hypertarget{orthogonalituxe4tsbedingung-4}{%
+\subsubsection{Orthogonalitätsbedingung}\label{orthogonalituxe4tsbedingung-4}}
 
 Angewendet auf die Massenmatrix: Es zeigen sich kleine numerische
 Unreinheiten, welche vernachlässigt werden können.
@@ -4324,9 +4787,9 @@ Für die Steifigkeitsmatrix:
 
 \begin{equation}\phi_{1}^{T} K \phi_{2} = \left[\begin{matrix}\frac{9.459 \cdot 10^{-11} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\hypertarget{modal--und-spektralmatrix-2}{%
+\hypertarget{modal--und-spektralmatrix-3}{%
 \subsubsection{Modal- und
-Spektralmatrix}\label{modal--und-spektralmatrix-2}}
+Spektralmatrix}\label{modal--und-spektralmatrix-3}}
 
 Mittels der Modal- und Spektralmatrix lassen sich die generalisierten
 Grössen effizient ermitteln.
@@ -4339,17 +4802,17 @@ Grössen effizient ermitteln.
 
 \begin{equation}\Omega^{2} = \left[\begin{matrix}\frac{25.38}{\text{s}^{2}} & 0\\0 & \frac{331.7}{\text{s}^{2}}\end{matrix}\right]\end{equation}
 
-\hypertarget{generalisierte-gruxf6ssen-2}{%
+\hypertarget{generalisierte-gruxf6ssen-3}{%
 \subsubsection{Generalisierte
-Grössen}\label{generalisierte-gruxf6ssen-2}}
+Grössen}\label{generalisierte-gruxf6ssen-3}}
 
 \begin{equation}M^{\star} = \left[\begin{matrix}\frac{5707.3 \text{N} \text{s}^{2}}{\text{m}} & \frac{1.5916 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\\\frac{1.5916 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}} & \frac{2497.0 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
 \begin{equation}K^{\star} = \left[\begin{matrix}\frac{1.4487 \cdot 10^{5} \text{N}}{\text{m}} & \frac{9.4587 \cdot 10^{-11} \text{N}}{\text{m}}\\\frac{9.4587 \cdot 10^{-11} \text{N}}{\text{m}} & \frac{8.2813 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\hypertarget{kontrolle-der-modalen-transformation-2}{%
+\hypertarget{kontrolle-der-modalen-transformation-3}{%
 \subsubsection{Kontrolle der modalen
-Transformation}\label{kontrolle-der-modalen-transformation-2}}
+Transformation}\label{kontrolle-der-modalen-transformation-3}}
 
 Die Eigenkreisfrequenzen ändern sich durch die Transformation nicht.
 
@@ -4361,9 +4824,9 @@ Die Eigenkreisfrequenzen ändern sich durch die Transformation nicht.
 
 \begin{equation}\omega_{2 modal} = \frac{18.21}{\text{s}}\end{equation}
 
-\hypertarget{partizipationsfaktor-gamma-1}{%
+\hypertarget{partizipationsfaktor-gamma-2}{%
 \subsubsection{\texorpdfstring{Partizipationsfaktor
-\(\Gamma\)}{Partizipationsfaktor \textbackslash Gamma}}\label{partizipationsfaktor-gamma-1}}
+\(\Gamma\)}{Partizipationsfaktor \textbackslash Gamma}}\label{partizipationsfaktor-gamma-2}}
 
 Die Verteilung des Partizipationsfaktor gibt einen direkten Hinweis,
 welcher Eigenmode an der Gesamtanwort den grössten Einfluss (beteiligt
@@ -4402,55 +4865,53 @@ ermitteln:
 
 Gelöst mit Gleichung~\ref{eq-matrix_part}:
 
-\begin{verbatim}
-NameError: name 'one_vec' is not defined
-\end{verbatim}
+\begin{equation}\Gamma = \left[\begin{matrix}1.08\\0.288\end{matrix}\right]\end{equation}
 
 Gelöst mit Gleichung~\ref{eq-split_part}:
 
-\begin{equation*}\Gamma_{1} = \frac{m_{1} \phi_{11} + m_{2} \phi_{21}}{m_{1} \phi_{11}^{2} + m_{2} \phi_{21}^{2}}\end{equation*}
+\begin{equation}\Gamma_{1} = \frac{m_{1} \phi_{11} + m_{2} \phi_{21}}{m_{1} \phi_{11}^{2} + m_{2} \phi_{21}^{2}}\end{equation}
 
-\begin{equation*}\Gamma_{1} = 1.08\end{equation*}
+\begin{equation}\Gamma_{1} = 1.08\end{equation}
 
-\begin{equation*}\Gamma_{2} = \frac{m_{1} \phi_{12} + m_{2} \phi_{22}}{m_{1} \phi_{12}^{2} + m_{2} \phi_{22}^{2}}\end{equation*}
+\begin{equation}\Gamma_{2} = \frac{m_{1} \phi_{12} + m_{2} \phi_{22}}{m_{1} \phi_{12}^{2} + m_{2} \phi_{22}^{2}}\end{equation}
 
-\begin{equation*}\Gamma_{2} = 0.288\end{equation*}
+\begin{equation}\Gamma_{2} = 0.288\end{equation}
 
-\begin{equation*}\Gamma^{2}_{n} = \left[\begin{matrix}1.17\\0.0831\end{matrix}\right]\end{equation*}
+\begin{equation}\Gamma^{2}_{n} = \left[\begin{matrix}1.17\\0.0831\end{matrix}\right]\end{equation}
 
-\hypertarget{elastisches-antwortspektrum-2}{%
+\hypertarget{elastisches-antwortspektrum-4}{%
 \subsection{Elastisches
-Antwortspektrum}\label{elastisches-antwortspektrum-2}}
+Antwortspektrum}\label{elastisches-antwortspektrum-4}}
 
 Aus der Aufgabenstellung darf nach
 (\protect\hyperlink{ref-SIA261_2020}{Schweizerischer Ingenieur- und
 Architektenverein (SIA), 2020}) Abs. 16.2.3.1 Kurve \(E\) gewählt
 werden.
 
-\hypertarget{grundschwingzeit-1}{%
-\subsubsection{Grundschwingzeit}\label{grundschwingzeit-1}}
+\hypertarget{grundschwingzeit-2}{%
+\subsubsection{Grundschwingzeit}\label{grundschwingzeit-2}}
 
 Die Grundschwingzeit kann anhand der bereits ermittelten
 Eigenkreisfrequenzen ermittelt werden.
 
-\begin{equation*}T_{1} = 1.25 \text{s}\end{equation*}
+\begin{equation}T_{1} = 1.25 \text{s}\end{equation}
 
-\begin{equation*}T_{2} = 0.345 \text{s}\end{equation*}
+\begin{equation}T_{2} = 0.345 \text{s}\end{equation}
 
-\hypertarget{elastisches-antwortspektrum-3}{%
+\hypertarget{elastisches-antwortspektrum-5}{%
 \subsubsection{Elastisches
-Antwortspektrum}\label{elastisches-antwortspektrum-3}}
+Antwortspektrum}\label{elastisches-antwortspektrum-5}}
 
-\begin{equation*}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation*}
+\begin{equation}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation}
 
-\begin{equation*}S_{e 1} = \frac{0.852 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{equation}S_{e 1} = \frac{0.852 \text{m}}{\text{s}^{2}}\end{equation}
 
-\begin{equation*}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation*}
+\begin{equation}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation}
 
-\begin{equation*}S_{e 2} = \frac{3.08 \text{m}}{\text{s}^{2}}\end{equation*}
+\begin{equation}S_{e 2} = \frac{3.08 \text{m}}{\text{s}^{2}}\end{equation}
 
-\hypertarget{maximale-deformation}{%
-\subsection{Maximale Deformation}\label{maximale-deformation}}
+\hypertarget{maximale-deformation-1}{%
+\subsection{Maximale Deformation}\label{maximale-deformation-1}}
 
 Die maximale Deformation resultiert aus der Beschleunigung \(S_e\) und
 der Eigenkreisfrequenz \(\omega_n^2\). Für die Modalen EMS gilt es diese
@@ -4458,13 +4919,13 @@ anhand der Partizipationsfaktoren zu gewichten. Zur effektiven
 Bestimmung der Auslenkung sind die Resultate der EMS mittels SRSS-Regel
 zu überlagern.
 
-\begin{equation*}q_{1 max} = \frac{\Gamma_{1} S_{e 1}}{\omega_{1}^{2}}\end{equation*}
+\begin{equation}q_{1 max} = \frac{\Gamma_{1} S_{e 1}}{\omega_{1}^{2}}\end{equation}
 
-\begin{equation*}q_{1 max} = 0.0364 \text{m}\end{equation*}
+\begin{equation}q_{1 max} = 0.0364 \text{m}\end{equation}
 
-\begin{equation*}q_{2 max} = \frac{\Gamma_{2} S_{e 2}}{\omega_{2}^{2}}\end{equation*}
+\begin{equation}q_{2 max} = \frac{\Gamma_{2} S_{e 2}}{\omega_{2}^{2}}\end{equation}
 
-\begin{equation*}q_{2 max} = 0.00268 \text{m}\end{equation*}
+\begin{equation}q_{2 max} = 0.00268 \text{m}\end{equation}
 
 Um die Entkoppelung rückzuführen gilt es die erhaltenen Resultate zu
 überlagern. Dabei gibt es unterschiedliche Ansätze. Bei weit auseinander
@@ -4472,7 +4933,7 @@ liegenden Eigenfrequenzen kann die SRSS-Überlagerung verwendet werden.
 
 \[u_{max} = \sqrt{\sum_{n=1}^2 (q_{n} \cdot \phi_n)^2}\]
 
-\begin{equation*}u_{max} = \left[\begin{matrix}0.024 \text{m}\\0.0364 \text{m}\end{matrix}\right]\end{equation*}
+\begin{equation}u_{max} = \left[\begin{matrix}0.024 \text{m}\\0.0364 \text{m}\end{matrix}\right]\end{equation}
 
 \begin{figure}[H]
 
@@ -4485,11 +4946,11 @@ Mehrmassenschwingers}
 
 \end{figure}
 
-\hypertarget{maximale-schnittkruxe4fte}{%
-\subsection{Maximale Schnittkräfte}\label{maximale-schnittkruxe4fte}}
+\hypertarget{maximale-schnittkruxe4fte-1}{%
+\subsection{Maximale Schnittkräfte}\label{maximale-schnittkruxe4fte-1}}
 
-\hypertarget{querkruxe4fte}{%
-\subsubsection{Querkräfte}\label{querkruxe4fte}}
+\hypertarget{querkruxe4fte-1}{%
+\subsubsection{Querkräfte}\label{querkruxe4fte-1}}
 
 Die Einwirkungen resultieren aus der Masse multipliziert mit der
 Beschleunigung aus dem Antwortspektrum. Dazu sind in einem ersten
@@ -4506,19 +4967,19 @@ F_{1max} = M_1 \cdot S_{e1}
 
 Aus dem ersten EMS folgt:
 
-\begin{equation*}\text{False}\end{equation*}
+\begin{equation}\text{False}\end{equation}
 
-\begin{equation*}F_{1 max} = \left[\begin{matrix}1273.7 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}F_{1 max} = \left[\begin{matrix}1273.7 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation}
 
-\begin{equation*}V_{1} = \left[\begin{matrix}5702.9 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}V_{1} = \left[\begin{matrix}5702.9 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation}
 
 Aus dem zweiten EMS folglich:
 
-\begin{equation*}M_{2} = \left[\begin{matrix}\frac{605.23 \text{N} \text{s}^{2}}{\text{m}}\\- \frac{397.83 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation*}
+\begin{equation}M_{2} = \left[\begin{matrix}\frac{605.23 \text{N} \text{s}^{2}}{\text{m}}\\- \frac{397.83 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}
 
-\begin{equation*}F_{2 max} = \left[\begin{matrix}1864.2 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}F_{2 max} = \left[\begin{matrix}1864.2 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation}
 
-\begin{equation*}V_{2} = \left[\begin{matrix}638.82 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}V_{2} = \left[\begin{matrix}638.82 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation}
 
 Maximale Querkraft aus Überlagerung beider EMS mittels SRSS-Regel.
 
@@ -4526,16 +4987,16 @@ Maximale Querkraft aus Überlagerung beider EMS mittels SRSS-Regel.
 V_{max} = \sqrt{V_1^2 + V_2^2}
 \]
 
-\begin{equation*}V_{max} = \left[\begin{matrix}5.74 \cdot 10^{3} \text{N}\\4.6 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation*}
+\begin{equation}V_{max} = \left[\begin{matrix}5.74 \cdot 10^{3} \text{N}\\4.6 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation}
 
-\hypertarget{biegemomente}{%
-\subsubsection{Biegemomente}\label{biegemomente}}
+\hypertarget{biegemomente-1}{%
+\subsubsection{Biegemomente}\label{biegemomente-1}}
 
 Die Biegemomente lassen sich abschliessend anhand der Querkräfte
 bestimmen.
 
-\hypertarget{normalkruxe4fte}{%
-\subsubsection{Normalkräfte}\label{normalkruxe4fte}}
+\hypertarget{normalkruxe4fte-1}{%
+\subsubsection{Normalkräfte}\label{normalkruxe4fte-1}}
 
 Die Normalkräfte resultieren aus den Punktmassen.
 
@@ -4581,18 +5042,26 @@ dem entsprechenden statischen System}
 
 \newpage{}
 
-\hypertarget{musterluxf6sung-14}{%
-\section{Musterlösung}\label{musterluxf6sung-14}}
+\hypertarget{musterluxf6sung-13}{%
+\section{Musterlösung}\label{musterluxf6sung-13}}
 
 \hypertarget{tbl-parameter_ekv1}{}
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \caption{\label{tbl-parameter_ekv1}Verwendete Parameter}\tabularnewline
 \toprule\noalign{}
-Parameter & \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Parameter & \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
