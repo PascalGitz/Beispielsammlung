@@ -1,0 +1,64 @@
+22.08.2023 14:20:20: Engine started
+22.08.2023 14:20:20: >STSTask: STS.INP
+22.08.2023 14:20:20: <STSTask: code=0
+22.08.2023 14:20:20: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   
+22.08.2023 14:20:20: <STBTask: code=0
+22.08.2023 14:20:20: >STLTask: 
+22.08.2023 14:20:20: <STLTask: code=0
+22.08.2023 14:20:20: >STLTask: STL_EW1.inp
+22.08.2023 14:20:20: <STLTask: code=0
+22.08.2023 14:20:20: >STRTask: STR.INP,
+22.08.2023 14:20:20: <STRTask: code=0
+22.08.2023 14:22:57: Engine started
+22.08.2023 14:22:57: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   
+22.08.2023 14:22:57: <STBTask: code=0
+22.08.2023 14:22:57: >STLTask: 
+22.08.2023 14:22:57: <STLTask: code=0
+22.08.2023 14:22:57: >STLTask: STL_EK1.inp
+22.08.2023 14:22:57: <STLTask: code=0
+22.08.2023 14:22:57: >STRTask: STR.INP,
+22.08.2023 14:22:57: <STRTask: code=0
+22.08.2023 14:23:00: Engine started
+22.08.2023 14:23:00: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 14:23:00: <STBTask: code=0
+22.08.2023 14:23:00: >STLTask: 
+22.08.2023 14:23:00: <STLTask: code=0
+22.08.2023 14:23:00: >STLTask: STL_EK1.inp
+22.08.2023 14:23:00: <STLTask: code=0
+22.08.2023 14:23:00: >STRTask: STR.INP,
+22.08.2023 14:23:00: <STRTask: code=0
+22.08.2023 14:26:24: Engine started
+22.08.2023 14:26:24: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 14:26:24: <STBTask: code=0
+22.08.2023 14:26:24: >STLTask: 
+22.08.2023 14:26:24: <STLTask: code=0
+22.08.2023 14:26:24: >STLTask: STL_AS1.inp
+22.08.2023 14:26:24: <STLTask: code=0
+22.08.2023 14:26:24: >STRTask: STR.INP,
+22.08.2023 14:26:24: <STRTask: code=0
+22.08.2023 14:26:36: Engine started
+22.08.2023 14:26:36: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 14:26:37: <STBTask: code=0
+22.08.2023 14:26:37: >STLTask: 
+22.08.2023 14:26:37: <STLTask: code=0
+22.08.2023 14:26:37: >STLTask: STL_AS1.inp
+22.08.2023 14:26:37: <STLTask: code=0
+22.08.2023 14:26:37: >STRTask: STR.INP,
+22.08.2023 14:26:37: <STRTask: code=0
+22.08.2023 14:27:02: Engine started
+22.08.2023 14:27:02: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 14:27:02: <STBTask: code=0
+22.08.2023 14:27:02: >STLTask: 
+22.08.2023 14:27:02: <STLTask: code=0
+22.08.2023 14:27:02: >STLTask: STL_AS1.inp
+22.08.2023 14:27:02: <STLTask: code=0
+22.08.2023 14:27:02: >STRTask: STR.INP,
+22.08.2023 14:27:02: <STRTask: code=0

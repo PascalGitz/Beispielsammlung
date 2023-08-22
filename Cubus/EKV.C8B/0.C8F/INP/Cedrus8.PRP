@@ -1,0 +1,21 @@
+PRGRID=Cedrus-8 - Version 1.00
+BSTDLG_COLUMNVISIBILITYMASK=XXXX-XXX
+BSTKLASSENDLG_COLUMNVISIBILITYMASK=XXXXXXX--
+TDLGBERECHNUNGSSET_MODE=CDR
+FESTATE=40
+SOLSTATE=0
+GVARS=336#300#672#20.0#15.0#1.0#1.0#0.0#0.0#000000000000E+0
+FAKNETZTOLERANZ=00000000E+0
+AUTOKORRONCHECK=0
+CHECKONDEMAND=0
+AUSGABESELECTOR=1#1#1#1#1#1
+UMRISSVORHANDEN=T
+OBJECT=EKV
+POSITION=L0: Fundation
+USERID=Hochschule Technik+Architektur Luzern
+INITIALS=Pascal Gitz
+PAGENR=1
+TJ_LAYOUT=A4
+AUSGABE=!Standard#4,
+TDLGMATERIALBOX=Material.MaterialTyp=1;Material.dOberkante1=0.0;Material.dTot1=0.299999999999999989;Material.BasisBstf.BstfSelIdx=0;Material.BewehrungBstf.BstfSelIdx=0;Material.OrthoD11=0.00010000000000000001;Material.OrthoD12=0.0;Material.OrthoD22=0.00010000000000000001;Material.OrthoD33=0.00010000000000000001;Material.OrthoD11s=0.00010000000000000001;Material.OrthoD12s=0.0;Material.OrthoD22s=0.00010000000000000001;Material.OrthoD33s=0.00010000000000000001;Material.FactorStiffIsoDrill=1.0;Material.EbeneVerzerrungen=0;AusgabeRichtung=0.0;Material.AusgabeAktiv=1;Material.UeberdeckungOX=0.0299999999999999954;Material.UeberdeckungUX=0.0299999999999999954;Material.UeberdeckungOY=0.0299999999999999954;Material.UeberdeckungUY=0.0299999999999999954;Material.GrundbewehrungAktiv=0;Material.GrundbewehrungOX=0.0;Material.GrundbewehrungOY=0.0;Material.GrundbewehrungUX=0.0;Material.GrundbewehrungUY=0.0;Material.pSchiefBewRichtungX=0.0;Material.pSchiefBewRatioO=1.0;Material.pComputeReinfSkew=0;Material.pUseReinfSkewRatioO=0;Material.pSchiefBewRichtungY=1.57079632700000005;Material.pSchiefBewRatioU=1.0;Material.pUseReinfSkewRatioU=0;Material.pSchiefBewUeberdeckXO=0.0299999999999999954;Material.pSchiefBewUeberdeckXU=0.0299999999999999954;Material.pSchiefBewUeberdeckYO=0.0299999999999999954;Material.pSchiefBewUeberdeckYU=0.0299999999999999954;Material.pBemDefTyp=3;Material.pDiamObenX=0.0;Material.pDiamObenY=0.0;Material.pDiamUntenX=0.0;Material.pDiamUntenY=0.0;Material.pASObenX=0.0;Material.pAsObenY=0.0;Material.pASUntenX=0.0;Material.pAsUntenY=0.0;Material.pStababstObenX=0.149999999999999994;Material.pStababstObenY=0.149999999999999994;Material.pStababstUntenX=0.149999999999999994;Material.pStababstUntenY=0.149999999999999994;BeschriftungIdentS=1;BeschriftungDickeS=1;BeschriftungARichtS=0;BeschriftungRAbstS=0;BeschriftungBstfS=0;BeschriftungMaterialS=0;BeschriftungInaktivS=0;BeschriftungGBewS=0;BeschriftungIdentR=1;BeschriftungDickeR=0;BeschriftungARichtR=1;BeschriftungRAbstR=0;BeschriftungBstfR=0;BeschriftungMaterialR=0;BeschriftungInaktivR=0;BeschriftungGBewR=0;
+RESETNEEDEDDOMUS=F

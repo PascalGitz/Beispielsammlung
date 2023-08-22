@@ -1,0 +1,37 @@
+Program STATIK-8  22.08.2023 13:43:46
+
+*****************************
+*     Structural data       *
+*****************************
+
+Plane frame analysis
+Project:  Grundzustand
+Base stage
+
+
+NODAL DATA :   (4 Nodes)
+Node                                            Support cond.  NonLineariries  Misc. 
+no.         X            Y            Z         V-XYZ  R-XYZ    V-XYZ  R-XYZ
+-----------------------------------------------------------------------------------
+    1  000000E+0    000000E+0    000000E+0       BBB    BBB                
+    2  244921E-21   000000E+0    400000E-5                                 
+    3  489843E-21   000000E+0    800000E-5                                 
+    4  734764E-21   000000E+0    120000E-4                                 
+
+
+
+ELEMENT DATA :  (3 elements)
+Elem.    Nodes     Cross Section      Hinges         Misc.             Length     y-local
+no.   Start   End                     Start  End
+-----------------------------------------------------------------------------------------------------
+    1     2     3  P-S:1                                         C1    4,0000    0.000  1.000  0.000 
+    2     3     4  P-S:1                                         C1    4,0000    0.000  1.000  0.000 
+    3     1     2  P-S:1                                         C1    4,0000    0.000  1.000  0.000 
+Cn = active for creeping since stage n
+
+
+Cross Section Properties
+Cross Section                EAx       GAy       GAz       GIx       EIy       EIz       rho       ey        ez        phi
+--------------------------------------------------------------------------------------------------------------------
+P-S:1                   23625E+2  67847E+1  18949E+1  68,7918   68790E+3  13251E+0  90019E-6         0         0         0  
+

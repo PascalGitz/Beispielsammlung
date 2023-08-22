@@ -1,0 +1,19 @@
+<!--cubus.txt.1.0,domus_v=1000-->
+MsStory<105>
++-Plate<45>
+| | Name<37>=S
+| | Thickness<152>=0.3
+| | MassFactor<309>=1.
+| | HoriLoadOrigin<231>=10./7.5
+| | BstfID<200>=C
+| | CdZonePolyCoord<310>=0./0.3,0./0.,20./0.,20./15.,0./15.
+| | CdZonePolyStart<311>=0
+| | CdZonePolyAttrib<312>=C
+| \-Zone<157>
+|     CoordD3Arr<148>=0./0./0.,20./0./0.,20./15./0.,0./15./0.
+\-SoilLevel<51>[0]
+  | Name<37>=F1
+  | SpringForStress<220>=1E100
+  \-Zone<157>
+      CoordD3Arr<148>=0./0./0.,20./0./0.,20./15./0.,0./15./0.
+

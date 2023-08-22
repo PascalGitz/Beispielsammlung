@@ -1,0 +1,117 @@
+F 'M SZ=6.83/10.48' B 'Grundzustand' E 'VER=6,KAT=%¦bel¦benutzerdefiniert,SUB=M,GRP=,TYP=0,USR=1,ANZ=4,GS1=1.0,GS2=1.0,GS3=1.0,GS4=1.0,GI1=1.0,GI2=1.0,GI3=1.0,GI4=1.0,PS0=1.0,PS1=1.0,PS2=1.0,PS3=0.0,MSK=3,EID=1,UFR' A A L 0 0000000000E+0 S 
+
+    Punktlast /
+    6000000000E-9 1485000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -5550000000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    1450000000E-8 1500000000E-10 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -4162500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    4000000000E-9 7500000000E-9 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -6937500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    1985000000E-8 1350000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -4162500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    6000000000E-9 1485000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -5550000000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    1450000000E-8 1500000000E-10 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -4162500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    4000000000E-9 7500000000E-9 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -6937500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Punktlast /
+    1985000000E-8 1350000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Value -4162500000E-8 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Flaechenlast /
+    P 1 0000000000E+0 0000000000E+0 8000000000E-9 /
+    P 2 2000000000E-8 0000000000E+0 8000000000E-9 /
+    P 3 2000000000E-8 1500000000E-8 8000000000E-9 /
+    P 0 0000000000E+0 1500000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Uniform 1 /
+    Values -1000000000E-9 -1000000000E-9 0000000000E+0 0000000000E+0 /
+    Anchor 1 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Flaechenlast /
+    P 1 0000000000E+0 0000000000E+0 8000000000E-9 /
+    P 2 2000000000E-8 0000000000E+0 8000000000E-9 /
+    P 3 2000000000E-8 1500000000E-8 8000000000E-9 /
+    P 0 0000000000E+0 1500000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Uniform 1 /
+    Values -7500000000E-9 -7500000000E-9 0000000000E+0 0000000000E+0 /
+    Anchor 1 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+    Flaechenlast /
+    P 1 0000000000E+0 0000000000E+0 8000000000E-9 /
+    P 2 2000000000E-8 0000000000E+0 8000000000E-9 /
+    P 3 2000000000E-8 1500000000E-8 8000000000E-9 /
+    P 0 0000000000E+0 1500000000E-8 8000000000E-9 /
+    Reference 1 /
+    Orient 3 /
+    Uniform 1 /
+    Values -1200000000E-9 -1200000000E-9 0000000000E+0 0000000000E+0 /
+    Anchor 1 /
+    Show 0 /
+    Flaeche 2 /
+    IsInPlane 0
+
+Ende

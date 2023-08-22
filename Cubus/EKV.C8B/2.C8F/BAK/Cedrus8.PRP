@@ -1,0 +1,24 @@
+PRGRID=Cedrus-8 - Version 1.00
+BSTDLG_COLUMNVISIBILITYMASK=XXXX-XXX
+BSTKLASSENDLG_COLUMNVISIBILITYMASK=XXXXXXX--
+TDLGBERECHNUNGSSET_MODE=CDR
+FESTATE=50
+SOLSTATE=0
+GVARS=349#315#722#20.0#15.0#1.11250000000000071#1.12000000000000011#0.0#0.0#000000000000E+0
+FAKNETZTOLERANZ=00000000E+0
+AUTOKORRONCHECK=0
+CHECKONDEMAND=0
+AUSGABESELECTOR=1#1#1#1#1#1
+UMRISSVORHANDEN=T
+OBJECT=EKV
+POSITION=L2: 
+USERID=Hochschule Technik+Architektur Luzern
+INITIALS=Pascal Gitz
+PAGENR=1
+TJ_LAYOUT=A4
+TDLGMATERIALBOX=Material.MaterialTyp=1;Material.dOberkante1=0.0;Material.dTot1=0.299999999999999989;Material.BasisBstf.BstfSelIdx=0;Material.BewehrungBstf.BstfSelIdx=0;Material.OrthoD11=0.00010000000000000001;Material.OrthoD12=0.0;Material.OrthoD22=0.00010000000000000001;Material.OrthoD33=0.00010000000000000001;Material.OrthoD11s=0.00010000000000000001;Material.OrthoD12s=0.0;Material.OrthoD22s=0.00010000000000000001;Material.OrthoD33s=0.00010000000000000001;Material.FactorStiffIsoDrill=1.0;Material.EbeneVerzerrungen=0;AusgabeRichtung=0.0;Material.AusgabeAktiv=1;Material.UeberdeckungOX=0.0299999999999999954;Material.UeberdeckungUX=0.0299999999999999954;Material.UeberdeckungOY=0.0299999999999999954;Material.UeberdeckungUY=0.0299999999999999954;Material.GrundbewehrungAktiv=0;Material.GrundbewehrungOX=0.0;Material.GrundbewehrungOY=0.0;Material.GrundbewehrungUX=0.0;Material.GrundbewehrungUY=0.0;Material.pSchiefBewRichtungX=0.0;Material.pSchiefBewRatioO=1.0;Material.pComputeReinfSkew=0;Material.pUseReinfSkewRatioO=0;Material.pSchiefBewRichtungY=1.57079632700000005;Material.pSchiefBewRatioU=1.0;Material.pUseReinfSkewRatioU=0;Material.pSchiefBewUeberdeckXO=0.0299999999999999954;Material.pSchiefBewUeberdeckXU=0.0299999999999999954;Material.pSchiefBewUeberdeckYO=0.0299999999999999954;Material.pSchiefBewUeberdeckYU=0.0299999999999999954;Material.pBemDefTyp=3;Material.pDiamObenX=0.0;Material.pDiamObenY=0.0;Material.pDiamUntenX=0.0;Material.pDiamUntenY=0.0;Material.pASObenX=0.0;Material.pAsObenY=0.0;Material.pASUntenX=0.0;Material.pAsUntenY=0.0;Material.pStababstObenX=0.149999999999999994;Material.pStababstObenY=0.149999999999999994;Material.pStababstUntenX=0.149999999999999994;Material.pStababstUntenY=0.149999999999999994;BeschriftungIdentS=1;BeschriftungDickeS=1;BeschriftungARichtS=0;BeschriftungRAbstS=0;BeschriftungBstfS=0;BeschriftungMaterialS=0;BeschriftungInaktivS=0;BeschriftungGBewS=0;BeschriftungIdentR=1;BeschriftungDickeR=0;BeschriftungARichtR=1;BeschriftungRAbstR=0;BeschriftungBstfR=0;BeschriftungMaterialR=0;BeschriftungInaktivR=0;BeschriftungGBewR=0;
+RESETNEEDEDDOMUS=F
+AUSGABE=EG#1L,
+TBELDLG=Typ=1;ID=AL;Beschreibung=Auflast;aktiv=1;AutoExport=1;AutoExportFaktor=1.0;SolveNL=0;InAutoGW=1;exklusiv=0;IdEinwirkung=3;
+TFORMFLAST=WertFlaecheOderSumme=-1.0;LastTyp=1;Richtung=3;WertIstProFlaeche=1;Osize=2;
+TDLGWAND=axe=0;BreiteLinks=0.149999999999999994;BreiteRechts=0.149999999999999994;Breite=0.299999999999999989;PosLagerLinie=2;PosLagerLinieValue=0.0;pHeight=4.0;pGewichtAktiv=1;pZusatzmasse=0.0;FaktorLastAbschnitt=1.0;pDomusHeightFrom=3.0;pDomusHeightTo=3.0;Lagerung.pNoTractionForDZ=0;LinienLagerTyp=2;Lagerung.pSupportModeDZ=3;Lagerung.pFactorDZ=1.0;pComputedStiffnessDZ=2407500.0;Lagerung.pStiffnessGivenDZ=10000000.0;Lagerung.pSupportModeRX=4;Lagerung.pFactorRX=1.0;pComputedStiffnessRX=72224.9999999999854;Lagerung.pStiffnessGivenRX=10000000.0;Lagerung.pSupportModeRY=4;Lagerung.pFactorRY=1.0;Lagerung.pStiffnessGivenRY=10000000.0;LinienLagerTypS=3;Lagerung.pSupportModeDX=4;Lagerung.pStiffnessGivenDX=10000000.0;Lagerung.pFactorDX=1.0;Lagerung.pSupportModeDY=1;Lagerung.pStiffnessGivenDY=10000000.0;Lagerung.pFactorDY=1.0;Lagerung.pSupportModeRZ=1;Lagerung.pStiffnessGivenRZ=10000000.0;Lagerung.pFactorRZ=1.0;BasisBstf.BstfSelIdx=0;BewehrungBstf.BstfSelIdx=0;OeffnungAsText=;Darstellung=1;

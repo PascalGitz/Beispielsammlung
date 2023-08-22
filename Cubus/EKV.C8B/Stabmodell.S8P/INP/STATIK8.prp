@@ -1,0 +1,19 @@
+PRGRID=Statik-8 - Version 1.00
+NORM=SC
+OBJECT=EKV
+POSITION=Stabmodell
+USERID=Hochschule Technik+Architektur Luzern
+INITIALS=Pascal Gitz
+CREATOR=DOMUS
+FORMBERELISTE_COLUMNWIDTH=100#150#100#170
+A_RES_TABSHEETSTATE=V9#P11,0;#111,64;#131,4;#O12,0;#D11,64;#712,0;#311,2;#331,4;
+A_RES_BELTREE=########################Erk######
+TJ_RESULT_VERSION=2
+TOUTPUT_PRINTACTUALSERIES=F
+TOUTPUT_PRINTACTUAL=F
+TDLGKNOTEN=zKoord=12.0;yKoord=14.8499999999999996;Xkoord=6.0;RbDX=0;sdx=0.0;RbDY=0;sdy=0.0;RbDZ=0;sdz=0.0;RbRX=0;srx=0.0;RbRY=0;sry=0.0;RbRZ=0;srz=0.0;LagerKathegorie=0;Doppelknoten=0;ori2x=0.0;ori2y=0.0;ori2z=0.0;OriXYTyp=0;ori1x=0.0;ori1y=0.0;ori1z=0.0;OriXTyp=0;OriMainTyp=0;GebundenTyp=0;BA_DX=;BA_DY=;BA_DZ=;BA_RX=;BA_RY=;BA_RZ=;BDX=0;BDY=0;BDZ=0;BRX=0;BRY=0;BRZ=0;BMasterKn=;Beschriftung.visible=1;KnIdent=L3;KnPrefix=;KnIdentTyp=1;NLDX=0;NLDZ=0;NLRY=0;NLDY=0;NLRX=0;NLRZ=0;Beschriftung.goAbstand=10.0;Beschriftung.goPosition=-0.785398185253143311;
+TDLGPOINTLOAD=pReference=1;pType=0;pRichtung=2;pValue=1.0;pLocalOffset=0.0;ShowID_MitLastwerten=1;ShowID_MitBezeichner=1;pGenGruppenBez=;Beschriftung.Visible=0;Beschriftung.goAbstand=10.0;Beschriftung.goPosition=0.0;
+TDLGSTAB=QSvariabel=0;QSname_A=L3-P3;QSname_E=L3-P3;QSvariant_A=;QSvariant_E=;Aktiv=1;MitSchubVerformung=0;Kriechstab=0;qsDX_A=48149037.0;qfsDX_A=0;qsDY_A=21539569.1999999993;qfsDY_A=0;qsDZ_A=21539569.1999999993;qfsDZ_A=0;qsRX_A=621760.742131317034;qfsRX_A=0;qsRY_A=100306481.370516002;qfsRY_A=0;qsRZ_A=361117.777500000026;qfsRZ_A=0;qffakDX_A=1;qffakDY_A=0;qffakDZ_A=0;qffakRX_A=0;qffakRY_A=1;qffakRZ_A=1;qfakDX_A=100.0;qfakDY_A=1.0;qfakDZ_A=1.0;qfakRX_A=1.0;qfakRY_A=0.5;qfakRZ_A=0.5;qsDX_E=1.0;qfsDX_E=0;qsDY_E=1.0;qfsDY_E=0;qsDZ_E=1.0;qfsDZ_E=0;qsRX_E=1.0;qfsRX_E=0;qsRY_E=1.0;qfsRY_E=0;qsRZ_E=1.0;qfsRZ_E=0;qffakDX_E=1;qffakDY_E=0;qffakDZ_E=0;qffakRX_E=0;qffakRY_E=1;qffakRZ_E=1;qfakDX_E=100.0;qfakDY_E=1.0;qfakDZ_E=1.0;qfakRX_E=1.0;qfakRY_E=0.5;qfakRZ_E=0.5;GelenkTyp0=0;DX_E=0;DY_E=0;DZ_E=0;RZ_E=0;RY_E=0;RX_E=0;fsDX_E=0;sDY_E=0.0;fsDY_E=0;sDX_E=0.0;fsDZ_E=0;sDZ_E=0.0;fsRX_E=0;sRX_E=0.0;fsRY_E=0;sRY_E=0.0;fsRZ_E=0;sRZ_E=0.0;DX_A=0;DY_A=0;DZ_A=0;RZ_A=0;RY_A=0;RX_A=0;fsDX_A=0;sDX_A=0.0;fsDY_A=0;sDY_A=0.0;fsDZ_A=0;sDZ_A=0.0;fsRX_A=0;sRX_A=0.0;fsRY_A=0;sRY_A=0.0;fsRZ_A=0;sRZ_A=0.0;NichtlinearTyp0=1;Plast_GelAktiv_A=1;Plast_GelAktiv_E=1;Plast_GelTyp=0;Plast_AnaparamSetNomGrenzZ=1;Plast_AnaparamSetBruch=1;OriX=5.0;OriY=7.5;OriZ=8.0;Beta=0.0;OriTyp=3;ExzentrTyp=0;ExX_A=0.0;ExY_A=0.0;ExZ_A=0.0;ExX_E=0.0;ExY_E=0.0;ExZ_E=0.0;ExLoxX_A=0.0;ExLoxX_E=0.0;SingleQSInsertPoint=0;QSInsertPoint=0;StabAnZweitKnA=0;StabAnZweitKnE=0;SNI_Unterteilung=5;SNI_Fuellentyp=1;SNI_Abstand=0.0;SNI_EinzelSchnittListe=;SNI_FanStabanfang=0;SNI_VzNachweisAnfang=0;SNI_xVzNachweisAnfang=0.0;SNI_FanStabende=0;SNI_VzNachweisEnde=0;SNI_xVzNachweisEnde=0.0;SNI_Bewehrungsgruppen=;KeineKnAufStab=0;FEunterteilung=0;FEunterteilungMaxSL=1.0;PO_Seismur=0;MehrfachStab=0;UniaxialBending=0;ZusatzParam=;EBon=0;EBDXtyp=0;EBDXaktiv=0;EBDXswert=0.0;EBDYtyp=0;EBDYaktiv=0;EBDYswert=0.0;EBDZtyp=0;EBDZaktiv=0;EBDZswert=0.0;SnLength=4.0;AVENAkipplaengeL=1;AVENAkipplaenge=4.0;AVENAknickLenTypY=0;AVENAknickfakY=1.0;AVENAknickLexplY=5.0;AVENAknickfakZ=1.0;AVENAknickLenTypZ=0;AVENAknickLexplZ=5.0;AVENAlagerGruppe=0;AVENAlagerButton=0;AVEBrand_Aktiv=0;AVEBrand_ID=-1;AVEBrand_Dicke=0.0050000000000000001;AVEBrand_Form=0;AVEBrand_Verkleidung=A1;AVEBrand_KnickenY=1.0;AVEBrand_KnickenZ=1.0;SnIdentTyp=1;SnPrefix=;SnIdent=L3-P3;MitQuerschnitten=0;RenderWithColor=0;BrushColor=255;ShowID_Mode=0;MitQSnamen=0;MitElastBett=0;MitVerkleidung=0;MitProfilname=0;Beschriftung.goRichtung=80;Beschriftung.goAbstand=10.0;Beschriftung.goPosition=0.333333343267440796;
+RECOVER=F
+RECOVERLC=F
+TOUTPUT_LASTACTIVEPATH=\Result\RSA\ModalMasses\Erk

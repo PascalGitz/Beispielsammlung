@@ -1,0 +1,6 @@
+V 5
+L |Eigengewicht| 1 E |VER=6,KAT=%¦bel¦Eigenlast,SUB=,GRP=,TYP=1,USR=0,MSK=7,EID=1,UFR=0;1;2;3| 1 X 1.0 A
+F E B 10.0 G  10.0 7.5 /
+B 10.0 7.5
+
+E

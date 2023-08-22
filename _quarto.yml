@@ -5,7 +5,7 @@ book:
   title: "Beispielsammlung"
   subtitle: "Komplettiert die Vorlesung Baudynamik"
   author: "Dr. Stephan Gollob & Pascal Gitz"
-  date: "2023-08-11"
+  date: "2023-08-18"
   date-format: full
   chapters:
     - index.qmd
@@ -34,7 +34,10 @@ book:
         - mms_06.ipynb
     - part: "Ersatzkraftverfahren"
       chapters:
-        - U4_EKV.ipynb
+        - ekv_01.ipynb
+        - ekv_02.ipynb
+        - ekv_03.ipynb
+
     - references.qmd
 
 bibliography: literatur_Beispielsammlung.bib
@@ -59,3 +62,11 @@ format:
 
     include-in-header:
     - "packages_style.tex"
+    
+  html:
+    fig-format: svg
+    lang: de
+    csl: apa-eu.csl
+    link-citations: True
+    tbl-colwidths: [50,50]
+

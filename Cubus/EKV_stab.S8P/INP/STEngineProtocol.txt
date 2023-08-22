@@ -1,0 +1,376 @@
+18.08.2023 09:11:21: Engine started
+18.08.2023 09:11:21: >STSTask: STS.INP
+18.08.2023 09:11:21: <STSTask: code=0
+18.08.2023 09:11:21: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   
+18.08.2023 09:11:21: <STBTask: code=0
+18.08.2023 09:11:21: >STLTask: 
+18.08.2023 09:11:21: <STLTask: code=0
+18.08.2023 09:11:21: >STRTask: STR.INP,
+18.08.2023 09:11:21: <STRTask: code=0
+18.08.2023 09:14:50: Engine started
+18.08.2023 09:14:50: >STSTask: STS.INP
+18.08.2023 09:14:50: <STSTask: code=0
+18.08.2023 09:14:50: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   
+18.08.2023 09:14:50: <STBTask: code=0
+18.08.2023 09:14:50: >STLTask: 
+18.08.2023 09:14:50: <STLTask: code=0
+18.08.2023 09:14:50: >STRTask: STR.INP,
+18.08.2023 09:14:50: <STRTask: code=0
+18.08.2023 12:53:11: Engine started
+18.08.2023 12:53:11: >STSTask: STS.INP
+18.08.2023 12:53:11: <STSTask: code=0
+18.08.2023 12:53:11: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   
+18.08.2023 12:53:11: <STBTask: code=0
+18.08.2023 12:53:11: >STLTask: 
+18.08.2023 12:53:11: <STLTask: code=0
+18.08.2023 12:53:11: >STRTask: STR.INP,
+18.08.2023 12:53:11: <STRTask: code=0
+22.08.2023 10:46:44: Engine started
+22.08.2023 10:46:44: >STSTask: STS.INP
+22.08.2023 10:46:44: <STSTask: code=0
+22.08.2023 10:46:44: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 10:46:44: <STBTask: code=0
+22.08.2023 10:46:44: >STLTask: 
+22.08.2023 10:46:44: <STLTask: code=0
+22.08.2023 10:46:44: >STLTask: STL_EK1.inp
+22.08.2023 10:46:44: <STLTask: code=0
+22.08.2023 10:46:44: >STRTask: STR.INP,
+22.08.2023 10:46:44: <STRTask: code=0
+22.08.2023 10:47:28: Engine started
+22.08.2023 10:47:28: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 10:47:28: <STBTask: code=0
+22.08.2023 10:47:28: >STLTask: 
+22.08.2023 10:47:28: <STLTask: code=0
+22.08.2023 10:47:28: >STLTask: STL_EK1.inp
+22.08.2023 10:47:28: <STLTask: code=0
+22.08.2023 10:47:28: >STRTask: STR.INP,
+22.08.2023 10:47:28: <STRTask: code=0
+22.08.2023 10:47:33: Engine started
+22.08.2023 10:47:33: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:47:33: <STBTask: code=0
+22.08.2023 10:47:33: >STLTask: 
+22.08.2023 10:47:33: <STLTask: code=0
+22.08.2023 10:47:33: >STLTask: STL_EK1.inp
+22.08.2023 10:47:33: <STLTask: code=0
+22.08.2023 10:47:33: >STRTask: STR.INP,
+22.08.2023 10:47:33: <STRTask: code=0
+22.08.2023 10:47:37: Engine started
+22.08.2023 10:47:37: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:47:37: <STBTask: code=0
+22.08.2023 10:47:37: >STLTask: 
+22.08.2023 10:47:37: <STLTask: code=0
+22.08.2023 10:47:37: >STLTask: STL_EK1.inp
+22.08.2023 10:47:37: <STLTask: code=0
+22.08.2023 10:47:37: >STRTask: STR.INP,
+22.08.2023 10:47:37: <STRTask: code=0
+22.08.2023 10:47:44: Engine started
+22.08.2023 10:47:44: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:47:44: <STBTask: code=0
+22.08.2023 10:47:44: >STLTask: 
+22.08.2023 10:47:44: <STLTask: code=0
+22.08.2023 10:47:44: >STLTask: STL_EW1.inp
+22.08.2023 10:47:44: <STLTask: code=0
+22.08.2023 10:47:44: >STRTask: STR.INP,
+22.08.2023 10:47:44: <STRTask: code=0
+22.08.2023 10:48:25: Engine started
+22.08.2023 10:48:25: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:25: <STBTask: code=0
+22.08.2023 10:48:25: >STLTask: 
+22.08.2023 10:48:25: <STLTask: code=0
+22.08.2023 10:48:25: >STLTask: STL_EW1.inp
+22.08.2023 10:48:25: <STLTask: code=0
+22.08.2023 10:48:25: >STRTask: STR.INP,
+22.08.2023 10:48:25: <STRTask: code=0
+22.08.2023 10:48:29: Engine started
+22.08.2023 10:48:29: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:29: <STBTask: code=0
+22.08.2023 10:48:29: >STLTask: 
+22.08.2023 10:48:29: <STLTask: code=0
+22.08.2023 10:48:29: >STLTask: STL_EW1.inp
+22.08.2023 10:48:29: <STLTask: code=0
+22.08.2023 10:48:29: >STRTask: STR.INP,
+22.08.2023 10:48:29: <STRTask: code=0
+22.08.2023 10:48:33: Engine started
+22.08.2023 10:48:33: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:33: <STBTask: code=0
+22.08.2023 10:48:33: >STLTask: 
+22.08.2023 10:48:33: <STLTask: code=0
+22.08.2023 10:48:33: >STLTask: STL_EW1.inp
+22.08.2023 10:48:33: <STLTask: code=0
+22.08.2023 10:48:33: >STRTask: STR.INP,
+22.08.2023 10:48:33: <STRTask: code=0
+22.08.2023 10:48:37: Engine started
+22.08.2023 10:48:37: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:37: <STBTask: code=0
+22.08.2023 10:48:37: >STLTask: 
+22.08.2023 10:48:37: <STLTask: code=0
+22.08.2023 10:48:37: >STLTask: STL_EW1.inp
+22.08.2023 10:48:37: <STLTask: code=0
+22.08.2023 10:48:37: >STRTask: STR.INP,
+22.08.2023 10:48:37: <STRTask: code=0
+22.08.2023 10:48:40: Engine started
+22.08.2023 10:48:40: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:40: <STBTask: code=0
+22.08.2023 10:48:40: >STLTask: 
+22.08.2023 10:48:40: <STLTask: code=0
+22.08.2023 10:48:40: >STLTask: STL_EW1.inp
+22.08.2023 10:48:40: <STLTask: code=0
+22.08.2023 10:48:40: >STRTask: STR.INP,
+22.08.2023 10:48:40: <STRTask: code=0
+22.08.2023 10:48:43: Engine started
+22.08.2023 10:48:43: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 10:48:43: <STBTask: code=0
+22.08.2023 10:48:43: >STLTask: 
+22.08.2023 10:48:43: <STLTask: code=0
+22.08.2023 10:48:43: >STLTask: STL_EW1.inp
+22.08.2023 10:48:43: <STLTask: code=0
+22.08.2023 10:48:43: >STRTask: STR.INP,
+22.08.2023 10:48:43: <STRTask: code=0
+22.08.2023 10:49:31: Engine started
+22.08.2023 10:49:31: >STSTask: STS.INP
+22.08.2023 10:49:31: <STSTask: code=0
+22.08.2023 10:49:31: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 10:49:31: <STBTask: code=0
+22.08.2023 10:49:31: >STLTask: 
+22.08.2023 10:49:31: <STLTask: code=0
+22.08.2023 10:49:31: >STLTask: STL_EK1.inp
+22.08.2023 10:49:31: <STLTask: code=0
+22.08.2023 10:49:31: >STRTask: STR.INP,
+22.08.2023 10:49:31: <STRTask: code=0
+22.08.2023 10:49:37: Engine started
+22.08.2023 10:49:37: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 10:49:37: <STBTask: code=0
+22.08.2023 10:49:37: >STLTask: 
+22.08.2023 10:49:37: <STLTask: code=0
+22.08.2023 10:49:37: >STLTask: STL_EK1.inp
+22.08.2023 10:49:37: <STLTask: code=0
+22.08.2023 10:49:37: >STRTask: STR.INP,
+22.08.2023 10:49:37: <STRTask: code=0
+22.08.2023 10:53:00: Engine started
+22.08.2023 10:53:00: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   
+22.08.2023 10:53:00: <STBTask: code=0
+22.08.2023 10:53:00: >STLTask: 
+22.08.2023 10:53:00: <STLTask: code=0
+22.08.2023 10:53:00: >STLTask: STL_EK1.inp
+22.08.2023 10:53:00: <STLTask: code=0
+22.08.2023 10:53:00: >STRTask: STR.INP,
+22.08.2023 10:53:00: <STRTask: code=0
+22.08.2023 11:07:25: Engine started
+22.08.2023 11:07:25: >STSTask: STS.INP
+22.08.2023 11:07:25: <STSTask: code=0
+22.08.2023 11:07:25: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 11:07:25: <STBTask: code=0
+22.08.2023 11:07:25: >STLTask: 
+                   Solve_Manager: 
+solution first order standard
+solving
+FactorizeNumeric...
+Solver: Pivot<=0 for dof 6
+
+                   1
+                   
+22.08.2023 11:10:09: Engine started
+22.08.2023 11:10:09: >STSTask: STS.INP
+22.08.2023 11:10:09: <STSTask: code=0
+22.08.2023 11:10:09: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 11:10:09: <STBTask: code=0
+22.08.2023 11:10:09: >STLTask: 
+22.08.2023 11:10:09: <STLTask: code=0
+22.08.2023 11:10:09: >STLTask: STL_EK1.inp
+22.08.2023 11:10:09: <STLTask: code=0
+22.08.2023 11:10:09: >STRTask: STR.INP,
+22.08.2023 11:10:09: <STRTask: code=0
+22.08.2023 11:10:16: Engine started
+22.08.2023 11:10:16: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 11:10:16: <STBTask: code=0
+22.08.2023 11:10:16: >STLTask: 
+22.08.2023 11:10:16: <STLTask: code=0
+22.08.2023 11:10:16: >STLTask: STL_EK1.inp
+22.08.2023 11:10:16: <STLTask: code=0
+22.08.2023 11:10:16: >STRTask: STR.INP,
+22.08.2023 11:10:16: <STRTask: code=0
+22.08.2023 11:15:20: Engine started
+22.08.2023 11:15:20: >STSTask: STS.INP
+22.08.2023 11:15:20: <STSTask: code=0
+22.08.2023 11:15:20: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 11:15:20: <STBTask: code=0
+22.08.2023 11:15:20: >STLTask: 
+22.08.2023 11:15:20: <STLTask: code=0
+22.08.2023 11:15:20: >STLTask: STL_EK1.inp
+22.08.2023 11:15:20: <STLTask: code=0
+22.08.2023 11:15:20: >STRTask: STR.INP,
+22.08.2023 11:15:20: <STRTask: code=0
+22.08.2023 11:15:40: Engine started
+22.08.2023 11:15:40: >STSTask: STS.INP
+22.08.2023 11:15:40: <STSTask: code=0
+22.08.2023 11:15:40: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EG   EK1%X   
+22.08.2023 11:15:40: <STBTask: code=0
+22.08.2023 11:15:40: >STLTask: 
+22.08.2023 11:15:40: <STLTask: code=0
+22.08.2023 11:15:40: >STLTask: STL_EK1.inp
+22.08.2023 11:15:40: <STLTask: code=0
+22.08.2023 11:15:40: >STRTask: STR.INP,
+22.08.2023 11:15:40: <STRTask: code=0
+22.08.2023 11:17:01: Engine started
+22.08.2023 11:17:01: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 11:17:01: <STBTask: code=0
+22.08.2023 11:17:01: >STLTask: 
+22.08.2023 11:17:01: <STLTask: code=0
+22.08.2023 11:17:01: >STRTask: STR.INP,
+22.08.2023 11:17:01: <STRTask: code=0
+22.08.2023 11:26:38: Engine started
+22.08.2023 11:26:38: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   t1   
+22.08.2023 11:26:38: <STBTask: code=0
+22.08.2023 11:26:38: >STLTask: 
+22.08.2023 11:26:38: <STLTask: code=0
+22.08.2023 11:26:38: >STLTask: STL_EK1.inp
+22.08.2023 11:26:38: <STLTask: code=0
+22.08.2023 11:26:38: >STRTask: STR.INP,
+22.08.2023 11:26:38: <STRTask: code=0
+22.08.2023 11:26:52: Engine started
+22.08.2023 11:26:52: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 11:26:52: <STBTask: code=0
+22.08.2023 11:26:52: >STLTask: 
+22.08.2023 11:26:53: <STLTask: code=0
+22.08.2023 11:26:53: >STLTask: STL_EW1.inp
+22.08.2023 11:26:53: <STLTask: code=0
+22.08.2023 11:26:53: >STRTask: STR.INP,
+22.08.2023 11:26:53: <STRTask: code=0
+22.08.2023 12:01:11: Engine started
+22.08.2023 12:01:11: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 12:01:11: <STBTask: code=0
+22.08.2023 12:01:11: >STLTask: 
+22.08.2023 12:01:11: <STLTask: code=0
+22.08.2023 12:01:11: >STLTask: STL_EK1.inp
+22.08.2023 12:01:11: <STLTask: code=0
+22.08.2023 12:01:11: >STRTask: STR.INP,
+22.08.2023 12:01:11: <STRTask: code=0
+22.08.2023 12:04:37: Engine started
+22.08.2023 12:04:37: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   t1   
+22.08.2023 12:04:37: <STBTask: code=0
+22.08.2023 12:04:37: >STLTask: 
+22.08.2023 12:04:37: <STLTask: code=0
+22.08.2023 12:04:37: >STRTask: STR.INP,
+22.08.2023 12:04:37: <STRTask: code=0
+22.08.2023 12:09:04: Engine started
+22.08.2023 12:09:04: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 12:09:04: <STBTask: code=0
+22.08.2023 12:09:04: >STLTask: 
+22.08.2023 12:09:04: <STLTask: code=0
+22.08.2023 12:09:04: >STRTask: STR.INP,
+22.08.2023 12:09:04: <STRTask: code=0
+22.08.2023 12:12:18: Engine started
+22.08.2023 12:12:18: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 12:12:18: <STBTask: code=0
+22.08.2023 12:12:18: >STLTask: 
+22.08.2023 12:12:18: <STLTask: code=0
+22.08.2023 12:12:18: >STLTask: STL_EK1.inp
+22.08.2023 12:12:18: <STLTask: code=0
+22.08.2023 12:12:18: >STRTask: STR.INP,
+22.08.2023 12:12:18: <STRTask: code=0
+22.08.2023 12:28:04: Engine started
+22.08.2023 12:28:04: >STBTask: 
+                   Verarbeitete Lastfälle: 
+22.08.2023 12:28:04: <STBTask: code=0
+22.08.2023 12:28:04: >STLTask: 
+22.08.2023 12:28:04: <STLTask: code=0
+22.08.2023 12:28:04: >STLTask: STL_EW1.inp
+22.08.2023 12:28:04: <STLTask: code=0
+22.08.2023 12:28:04: >STRTask: STR.INP,
+22.08.2023 12:28:04: <STRTask: code=0
+22.08.2023 12:30:57: Engine started
+22.08.2023 12:30:57: >STSTask: STS.INP
+22.08.2023 12:30:57: <STSTask: code=0
+22.08.2023 12:30:57: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 12:30:57: <STBTask: code=0
+22.08.2023 12:30:57: >STLTask: 
+22.08.2023 12:30:57: <STLTask: code=0
+22.08.2023 12:30:57: >STLTask: STL_EW1.inp
+22.08.2023 12:30:57: <STLTask: code=0
+22.08.2023 12:30:57: >STRTask: STR.INP,
+22.08.2023 12:30:57: <STRTask: code=0
+22.08.2023 13:39:54: Engine started
+22.08.2023 13:39:54: >STSTask: STS.INP
+22.08.2023 13:39:54: <STSTask: code=0
+22.08.2023 13:39:54: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 13:39:54: <STBTask: code=0
+22.08.2023 13:39:54: >STLTask: 
+22.08.2023 13:39:54: <STLTask: code=0
+22.08.2023 13:39:54: >STLTask: STL_EW1.inp
+22.08.2023 13:39:54: <STLTask: code=0
+22.08.2023 13:39:54: >STRTask: STR.INP,
+22.08.2023 13:39:54: <STRTask: code=0
+22.08.2023 13:43:46: Engine started
+22.08.2023 13:43:46: >STSTask: STS.INP
+22.08.2023 13:43:46: <STSTask: code=0
+22.08.2023 13:43:46: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 13:43:46: <STBTask: code=0
+22.08.2023 13:43:46: >STLTask: 
+22.08.2023 13:43:46: <STLTask: code=0
+22.08.2023 13:43:46: >STLTask: STL_EW1.inp
+22.08.2023 13:43:46: <STLTask: code=0
+22.08.2023 13:43:46: >STRTask: STR.INP,
+22.08.2023 13:43:46: <STRTask: code=0
+22.08.2023 13:44:14: Engine started
+22.08.2023 13:44:14: >STBTask: 
+                   Verarbeitete Lastfälle: 
+                   EK1%X   t1   
+22.08.2023 13:44:14: <STBTask: code=0
+22.08.2023 13:44:14: >STLTask: 
+22.08.2023 13:44:14: <STLTask: code=0
+22.08.2023 13:44:14: >STLTask: STL_EK1.inp
+22.08.2023 13:44:14: <STLTask: code=0
+22.08.2023 13:44:14: >STRTask: STR.INP,
+22.08.2023 13:44:14: <STRTask: code=0

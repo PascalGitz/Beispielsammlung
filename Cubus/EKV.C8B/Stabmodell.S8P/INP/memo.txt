@@ -1,0 +1,22 @@
+>  Optionen des Stabmodells:
+>  Einspanngeschosse = L0
+>  Export Schnittkräfte statt vertikale Lasten = T
+>  Spektrum Name = Spec
+>  inkl. Träger = F
+>  inkl. nur vertikal tragende Elemente = T
+>  EI-Faktor Pfeiler = 0.5
+>  EI-Faktor Stützen = 0.5
+>  EI-Faktor Träger = 0.5
+>  E-Faktor Platte = 0.5
+>  Geschosse mit Plattensteifigkeit = 
+>  GA-Faktor Mauerwerk = 0.5
+>  EI-Faktor Mauerwerk = 0.5
+>  EKV: Massenreduktionsfaktor 0.85 = F
+>  Verformungskontrolle = SIA D 0257
+>  Aktiv = F
+>  EA Faktor Stützen/Pfeiler  = 1.
+>  EA Faktor Stützen/Pfeiler automatisch = T
+>  Einbindegeschosse = 
+>  Modelloptimierung für Stützen = T
+>  Stahlbetonanalyse für Wände = F
+>  Verhaltensbeiwert qo = 1.15
