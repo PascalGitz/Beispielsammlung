@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Beispielsammlung - 16&nbsp; Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ekv_01.html" rel="next">
+<link href="./mms_05.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mms_02.html">Mehrmassenschwinger</a></li><li class="breadcrumb-item"><a href="./mms_06.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Beispielsammlung</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Rayleigh-Quotient</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 2 Punktmassen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 1 Punktmasse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Beispiel: Einfacher Balken mit konstanter Masse</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Einmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Beispiel: Logarithmisches Dekrement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beispiel: Impulssatz</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Beispiel: Dynamischer Vergrösserungsfaktor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort ohne Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Beispiel: Fourier-Transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beispiel: Balken ohne Tilger{#sec-ems_untilg}</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mehrmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren mit direkt bestimmter Steifigkeitsmatrix{#sec-mms_steif}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren und Nachgiebigkeitsmatrix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem dreistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem Rahmen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_06.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Ersatzkraftverfahren</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient an einem Sechsmassenschwinger beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">16.1</span> Aufgabenstellung</a></li>
+  <li><a href="#musterlösung" id="toc-musterlösung" class="nav-link" data-scroll-target="#musterlösung"><span class="header-section-number">16.2</span> Musterlösung</a>
+  <ul class="collapse">
+  <li><a href="#massenmatrix-m" id="toc-massenmatrix-m" class="nav-link" data-scroll-target="#massenmatrix-m"><span class="header-section-number">16.2.1</span> Massenmatrix <span class="math inline">\(M\)</span></a></li>
+  <li><a href="#steifigkeitsmatrix-k" id="toc-steifigkeitsmatrix-k" class="nav-link" data-scroll-target="#steifigkeitsmatrix-k"><span class="header-section-number">16.2.2</span> Steifigkeitsmatrix <span class="math inline">\(K\)</span></a></li>
+  <li><a href="#eigenvektoren" id="toc-eigenvektoren" class="nav-link" data-scroll-target="#eigenvektoren"><span class="header-section-number">16.2.3</span> Eigenvektoren</a></li>
+  <li><a href="#modale-analyse" id="toc-modale-analyse" class="nav-link" data-scroll-target="#modale-analyse"><span class="header-section-number">16.2.4</span> Modale Analyse</a></li>
+  <li><a href="#elastisches-antwortspektrum" id="toc-elastisches-antwortspektrum" class="nav-link" data-scroll-target="#elastisches-antwortspektrum"><span class="header-section-number">16.2.5</span> Elastisches Antwortspektrum</a></li>
+  <li><a href="#maximale-deformation" id="toc-maximale-deformation" class="nav-link" data-scroll-target="#maximale-deformation"><span class="header-section-number">16.2.6</span> Maximale Deformation</a></li>
+  <li><a href="#maximale-schnittkräfte" id="toc-maximale-schnittkräfte" class="nav-link" data-scroll-target="#maximale-schnittkräfte"><span class="header-section-number">16.2.7</span> Maximale Schnittkräfte</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run style_and_packages.ipynb</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>export.pdf_to_svg(<span class="st">'bilder/'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="aufgabenstellung" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">16.1</span> Aufgabenstellung</h2>
+<div id="fig-mms_2er_zweistock" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_mms_2er_system.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.1: Statisches System des zweistöckigen Gebäudes</figcaption>
+</figure>
+</div>
+<p>Gesucht:</p>
+<ul>
+<li>Eigenfrequenzen <span class="math inline">\(\omega_n\)</span></li>
+<li>Darstellung der Eigenformen</li>
+<li>Modal- und Spektralmatrix</li>
+<li>Maximale Gesamtverformung mittels SRSS-Kombinationsregel aus dem Antwortspektrum der Pseudobeschleunigung.</li>
+<li>Resultierende Schnittgrössen</li>
+</ul>
+<p>Gegeben:</p>
+<ul>
+<li>Baugrundklasse <span class="math inline">\(E\)</span></li>
+<li>Erdbebenzone <span class="math inline">\(Z2\)</span></li>
+</ul>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {<span class="st">'EI_ac'</span>: <span class="fl">5.5</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">5</span> <span class="op">*</span>unit.N<span class="op">*</span>unit.m<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="st">'EI_d'</span>: <span class="fl">2.5</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">5</span> <span class="op">*</span>unit.N<span class="op">*</span>unit.m<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">'m_1'</span>:<span class="dv">2100</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">'m_2'</span>:<span class="dv">4800</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">'H_1'</span>:<span class="fl">3.81</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">'H_2'</span>:<span class="dv">3</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(params)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="tbl-parameter_mms6" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabelle&nbsp;16.1: Verwendete Parameter</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(EI_{ac} = 550000.0 \text{m}^{2} \text{N}\)</span></td>
+<td><span class="math inline">\(EI_{d} = 250000.0 \text{m}^{2} \text{N}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H_{1} = 3.81 \text{m}\)</span></td>
+<td><span class="math inline">\(H_{2} = 3 \text{m}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(m_{1} = \frac{2100 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+<td><span class="math inline">\(m_{2} = \frac{4800 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="musterlösung" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="musterlösung"><span class="header-section-number">16.2</span> Musterlösung</h2>
+<section id="massenmatrix-m" class="level3" data-number="16.2.1">
+<h3 data-number="16.2.1" class="anchored" data-anchor-id="massenmatrix-m"><span class="header-section-number">16.2.1</span> Massenmatrix <span class="math inline">\(M\)</span></h3>
+<div id="fig-mms_2er_steifigkeit" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_mms_2er_auslenk.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.2: Auslenkung der Massen zur Ermittlung der Matrizen</figcaption>
+</figure>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>m_1, m_2 <span class="op">=</span> sp.symbols(<span class="st">'m_1, m_2'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> sp.Matrix([[m_1,<span class="dv">0</span>],[<span class="dv">0</span>,m_2]])</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>, <span class="dv">2</span>), M,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>, <span class="dv">2</span>), M.subs(params))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M} = \left[\begin{matrix}m_{1} &amp; 0\\0 &amp; m_{2}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M} = \left[\begin{matrix}\frac{2100 \text{N} \text{s}^{2}}{\text{m}} &amp; 0\\0 &amp; \frac{4800 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="steifigkeitsmatrix-k" class="level3" data-number="16.2.2">
+<h3 data-number="16.2.2" class="anchored" data-anchor-id="steifigkeitsmatrix-k"><span class="header-section-number">16.2.2</span> Steifigkeitsmatrix <span class="math inline">\(K\)</span></h3>
+<section id="steifigkeit-der-stockwerke" class="level4" data-number="16.2.2.1">
+<h4 data-number="16.2.2.1" class="anchored" data-anchor-id="steifigkeit-der-stockwerke"><span class="header-section-number">16.2.2.1</span> Steifigkeit der Stockwerke</h4>
+<p>Die Steifigkeit des Systems in <a href="#fig-mms_2er_zweistock">Abbildung&nbsp;<span>16.1</span></a> entspricht der Geschosssteifigkeit. Dazu sind die Steifigkeiten der Stützen zu addieren.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>EI_ac, EI_d, H_1, H_2 <span class="op">=</span> sp.symbols(<span class="st">"EI_ac, EI_d, H_1, H_2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>k_1 <span class="op">=</span> <span class="dv">12</span> <span class="op">*</span> EI_ac <span class="op">/</span>H_1<span class="op">**</span><span class="dv">3</span> <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>k_2 <span class="op">=</span> <span class="dv">12</span><span class="op">*</span>EI_ac <span class="op">/</span> H_2<span class="op">**</span><span class="dv">3</span> <span class="op">+</span> <span class="dv">12</span><span class="op">*</span>EI_d <span class="op">/</span> H_2<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">"k_1"</span>, k_1,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">'k_1'</span>, k_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">"k_2"</span>, k_2,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">'k_2'</span>, k_2.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{1} = \frac{24 EI_{ac}}{H_{1}^{3}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{1} = \frac{2.39 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{2} = \frac{12 EI_{ac}}{H_{2}^{3}} + \frac{12 EI_{d}}{H_{2}^{3}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{2} = \frac{3.56 \cdot 10^{5} \text{N}}{\text{m}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Abgefüllt in die Steifigkeitsmatrix</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> sp.Matrix([[k_1 <span class="op">+</span> k_2, <span class="op">-</span>k_2],[<span class="op">-</span>k_2, k_2]])</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>, <span class="dv">2</span>), <span class="st">"Matrix([[k_1 + k_2, -k_2],[-k_2, k_2]])"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>, <span class="dv">2</span>), K,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>, <span class="dv">2</span>), K.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K} = \left[\begin{matrix}k_{1} + k_{2} &amp; - k_{2}\\- k_{2} &amp; k_{2}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K} = \left[\begin{matrix}\frac{12 EI_{ac}}{H_{2}^{3}} + \frac{24 EI_{ac}}{H_{1}^{3}} + \frac{12 EI_{d}}{H_{2}^{3}} &amp; - \frac{12 EI_{ac}}{H_{2}^{3}} - \frac{12 EI_{d}}{H_{2}^{3}}\\- \frac{12 EI_{ac}}{H_{2}^{3}} - \frac{12 EI_{d}}{H_{2}^{3}} &amp; \frac{12 EI_{ac}}{H_{2}^{3}} + \frac{12 EI_{d}}{H_{2}^{3}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K} = \left[\begin{matrix}\frac{5.94 \cdot 10^{5} \text{N}}{\text{m}} &amp; - \frac{3.56 \cdot 10^{5} \text{N}}{\text{m}}\\- \frac{3.56 \cdot 10^{5} \text{N}}{\text{m}} &amp; \frac{3.56 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="eigenvektoren" class="level3" data-number="16.2.3">
+<h3 data-number="16.2.3" class="anchored" data-anchor-id="eigenvektoren"><span class="header-section-number">16.2.3</span> Eigenvektoren</h3>
+<section id="eigenkreisfrequenzen" class="level4" data-number="16.2.3.1">
+<h4 data-number="16.2.3.1" class="anchored" data-anchor-id="eigenkreisfrequenzen"><span class="header-section-number">16.2.3.1</span> Eigenkreisfrequenzen</h4>
+<p>Bei einem Mehrmassenschwinger gibt es entsprechend den Freiheitsgraden Eigenkreisfrequenzen <span class="math inline">\(\omega_n\)</span>. Diese lassen sich anhand folgender Gleichung bestimmen:</p>
+<p><span id="eq-mms_2er_eigenkreisfreqs"><span class="math display">\[
+\det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}
+\tag{16.1}\]</span></span></p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>omega_n <span class="op">=</span>sp.symbols(<span class="st">'omega_n'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>eq_omega <span class="op">=</span> sp.det(K<span class="op">-</span>omega_n<span class="op">**</span><span class="dv">2</span><span class="op">*</span>M)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>omega_n_solve <span class="op">=</span> sp.solve(eq_omega, omega_n)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>omega_1 <span class="op">=</span> omega_n_solve[<span class="dv">1</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>omega_2 <span class="op">=</span> omega_n_solve[<span class="dv">3</span>]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2'</span>, omega_2.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{5.04}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2} = \frac{18.2}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenvektoren-phi" class="level4" data-number="16.2.3.2">
+<h4 data-number="16.2.3.2" class="anchored" data-anchor-id="eigenvektoren-phi"><span class="header-section-number">16.2.3.2</span> Eigenvektoren <span class="math inline">\(\phi\)</span></h4>
+<p>Durch das Einsetzen der bestimmten Eigenkreisfrequenzen lassen sich die Eigenvektoren bestimmen. Die Einträge des Eigenvektors sind voneinander abhängig und lassen sich dem Entsprechen beliebig definieren. Grundsätzlich wird der maximale Eigenwert zu <span class="math inline">\(1\)</span> gesetzt.</p>
+<p><span id="eq-mms_2er_mms_3_eigenvek"><span class="math display">\[
+\mathbf{K} - \omega_n^2 \mathbf{M} \phi_n= 0
+\tag{16.2}\]</span></span></p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>phi_11, phi_21 <span class="op">=</span> sp.symbols(<span class="st">'phi_11, phi_21'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_11'</span>] <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>phi_1 <span class="op">=</span> sp.Matrix([[phi_11], [phi_21]])</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>phi_21 <span class="op">=</span> <span class="bu">list</span>(sp.solve((K<span class="op">-</span>omega_1<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_1, phi_21).values())[<span class="dv">0</span>]</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_21'</span>] <span class="op">=</span> phi_21.subs(params).simplify() </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_11'</span>] <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>phi_21.subs(params).simplify() </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_21'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_1'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(phi_1.subs(params)).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1} = \left[\begin{matrix}0.657\\1.0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>phi_12, phi_22 <span class="op">=</span> sp.symbols(<span class="st">'phi_12, phi_22'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_12'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>phi_2 <span class="op">=</span> sp.Matrix([[phi_12], [phi_22]])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>phi_22 <span class="op">=</span> <span class="bu">list</span>(sp.solve((K<span class="op">-</span>omega_2<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_2, phi_22).values())[<span class="dv">0</span>]</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_22'</span>] <span class="op">=</span> phi_22.subs(params).simplify() </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_2'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(phi_2.subs(params)).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2} = \left[\begin{matrix}1.0\\-0.288\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="darstellung-der-eigenvektoren" class="level4" data-number="16.2.3.3">
+<h4 data-number="16.2.3.3" class="anchored" data-anchor-id="darstellung-der-eigenvektoren"><span class="header-section-number">16.2.3.3</span> Darstellung der Eigenvektoren</h4>
+<p>Die Darstellung der Eigenvektoren besteht aus der Biegedeformation mit den Eigenvektoren entsprechenden Kopfauslenkungen. Für den Fall einer beidseitigen Einspannung und einer Verschiebung an den Knoten, entspricht die Deformation der <a href="#eq-mms_2er_deformation_geloest">Gleichung&nbsp;<span>16.3</span></a>.</p>
+<p><span id="eq-mms_2er_deformation_geloest"><span class="math display">\[
+w(x) = \Delta_A + (\Delta_B- \Delta_A)(3\xi^2 - 2 \xi^3)
+\tag{16.3}\]</span></span></p>
+<p>mit <span id="eq-mms_2er_subs"><span class="math display">\[
+\xi = \frac{x}{l}
+\tag{16.4}\]</span></span></p>
+<p>wobei <span class="math inline">\(x\)</span> die Laufvariable ist und <span class="math inline">\(l\)</span> die Stablänge, oder in diesem Fall die Stockwerkshöhe.</p>
+<p>Für den ersten Eigenvektor</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Delta_A, Delta_B, zeta <span class="op">=</span> sp.symbols(<span class="st">'Delta_A, Delta_B, zeta'</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 1 der Funktion</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> x<span class="op">/</span>l</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'w(x)'</span>, w_ansatz)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>w_1_x <span class="op">=</span> w_ansatz.subs(Delta_A, <span class="dv">0</span>).subs(Delta_B, phi_11.subs(params)).subs(l,H_1.subs(params_plot))</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 2 der Funktion</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> (x<span class="op">-</span>H_1.subs(params_plot))<span class="op">/</span>l</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'w(x)'</span>, w_ansatz.evalf(<span class="dv">2</span>))</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>w_2_x <span class="op">=</span> w_ansatz.subs(Delta_A, phi_11.subs(params)).subs(Delta_B, phi_21.subs(params)).subs(l,H_2.subs(params_plot))</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co">#Zusammengestellt</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>w_eigenform_1 <span class="op">=</span> sp.Eq(w,sp.Piecewise((w_1_x, x<span class="op">&lt;=</span>H_1.subs(params_plot)),(w_2_x, x<span class="op">&gt;=</span>H_1.subs(params_plot))))</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>render.eq_display(w_eigenform_1.lhs, w_eigenform_1.rhs.evalf(<span class="dv">2</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w{\left(x \right)} = \Delta_{A} + \left(- \Delta_{A} + \Delta_{B}\right) \left(\frac{3 x^{2}}{l^{2}} - \frac{2 x^{3}}{l^{3}}\right)\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w{\left(x \right)} = \Delta_{A} + \left(- \Delta_{A} + \Delta_{B}\right) \left(\frac{44.0 \left(0.26 x - 1.0\right)^{2}}{l^{2}} - \frac{1.1 \cdot 10^{2} \left(0.26 x - 1.0\right)^{3}}{l^{3}}\right)\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w = \begin{cases} - 0.024 x^{3} + 0.14 x^{2} &amp; \text{for}\: x \leq 3.81 \\- 1.4 \left(0.26 x - 1.0\right)^{3} + 1.7 \left(0.26 x - 1.0\right)^{2} + 0.66 &amp; \text{for}\: x \geq 3.81 \end{cases}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Für den zweiten Eigenvektor. (Es bedingt eine Verschiebung der Laufvariable <span class="math inline">\(x\)</span> um die <span class="math inline">\(H_1\)</span>)</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Delta_A, Delta_B, zeta <span class="op">=</span> sp.symbols(<span class="st">'Delta_A, Delta_B, zeta'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 1 der Funktion</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> x<span class="op">/</span>l</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'w(x)'</span>, w_ansatz)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>w_12_x <span class="op">=</span> w_ansatz.subs(Delta_A, <span class="dv">0</span>).subs(Delta_B, phi_12.subs(params)).subs(l,H_1.subs(params_plot))</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 2 der Funktion</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> (x<span class="op">-</span>H_1.subs(params_plot))<span class="op">/</span>l</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'w(x)'</span>, w_ansatz.evalf(<span class="dv">2</span>))</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>w_22_x <span class="op">=</span> w_ansatz.subs(Delta_A, phi_12.subs(params)).subs(Delta_B, phi_22.subs(params)).subs(l,H_2.subs(params_plot))</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co">#Zusammengestellt</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>w_eigenform_2 <span class="op">=</span> sp.Eq(w,sp.Piecewise((w_12_x, x<span class="op">&lt;=</span>H_1.subs(params_plot)),(w_22_x, x<span class="op">&gt;=</span>H_1.subs(params_plot))))</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>render.eq_display(w_eigenform_2.lhs, w_eigenform_2.rhs.evalf(<span class="dv">2</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w{\left(x \right)} = \Delta_{A} + \left(- \Delta_{A} + \Delta_{B}\right) \left(\frac{3 x^{2}}{l^{2}} - \frac{2 x^{3}}{l^{3}}\right)\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w{\left(x \right)} = \Delta_{A} + \left(- \Delta_{A} + \Delta_{B}\right) \left(\frac{44.0 \left(0.26 x - 1.0\right)^{2}}{l^{2}} - \frac{1.1 \cdot 10^{2} \left(0.26 x - 1.0\right)^{3}}{l^{3}}\right)\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}w = \begin{cases} - 0.036 x^{3} + 0.21 x^{2} &amp; \text{for}\: x \leq 3.81 \\5.3 \left(0.26 x - 1.0\right)^{3} - 6.2 \left(0.26 x - 1.0\right)^{2} + 1.0 &amp; \text{for}\: x \geq 3.81 \end{cases}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Numerische Daten generieren</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>w_eigenform_1_lamb <span class="op">=</span> sp.lambdify(x, w_eigenform_1.rhs)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>w_eigenform_2_lamb <span class="op">=</span> sp.lambdify(x, w_eigenform_2.rhs)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>x_array <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="bu">float</span>((H_1<span class="op">+</span>H_2).subs(params_plot)), <span class="dv">1000</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>w_1_array <span class="op">=</span> w_eigenform_1_lamb(x_array)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>w_2_array <span class="op">=</span> w_eigenform_2_lamb(x_array)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure und Axes erstellen</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>ax1.plot(w_1_array, x_array)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$\phi_1$'</span>)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>ax1.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>ax1.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>ax1.axvline(phi_21.subs(params),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>ax1.axvline(phi_11.subs(params),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweiten Plot erstellen</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>ax2.plot(w_2_array, x_array)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$\phi_2$'</span>)</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>ax2.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>ax2.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>ax2.axvline(phi_22.subs(params),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>ax2.axvline(phi_12.subs(params),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-mms_2er_eigenvektoren" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="mms_06_files/figure-html/fig-mms_2er_eigenvektoren-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.3: Deformation des Mehrmassenschwingers anhand der Eigenvektoren</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="modale-analyse" class="level3" data-number="16.2.4">
+<h3 data-number="16.2.4" class="anchored" data-anchor-id="modale-analyse"><span class="header-section-number">16.2.4</span> Modale Analyse</h3>
+<p>Die Modale Analyse zielt darauf ab, den Mehrmassenschwinger zu entkoppeln. Dazu wird in einem ersten Schritt die Orthogonalitätsbedingung kontrolliert. Diese muss erfüllt sein, um eine Entkoppelung durchzuführen. Siehe <a href="mms_01.html#sec-mms_nach_ortho"><span>Kapitel&nbsp;12.2.2.4</span></a> für eine ausführliche Erklärung.</p>
+<section id="orthogonalitätsbedingung" class="level4" data-number="16.2.4.1">
+<h4 data-number="16.2.4.1" class="anchored" data-anchor-id="orthogonalitätsbedingung"><span class="header-section-number">16.2.4.1</span> Orthogonalitätsbedingung</h4>
+<p>Angewendet auf die Massenmatrix: Es zeigen sich kleine numerische Unreinheiten, welche vernachlässigt werden können.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_1.T<span class="op">*</span>M<span class="op">*</span>phi_1).subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_2.T<span class="op">*</span>M<span class="op">*</span>phi_2).subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_2.T<span class="op">*</span>M<span class="op">*</span>phi_1).subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_1.T<span class="op">*</span>M<span class="op">*</span>phi_2).subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{M} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{5.71 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{M} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{2.5 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{M} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{1.59 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{M} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{1.59 \cdot 10^{-12} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Für die Steifigkeitsmatrix:</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_1.T<span class="op">*</span>K<span class="op">*</span>phi_1).subs(params)).evalf(<span class="dv">3</span>),</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_2.T<span class="op">*</span>K<span class="op">*</span>phi_2).subs(params)).evalf(<span class="dv">3</span>),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_2.T<span class="op">*</span>K<span class="op">*</span>phi_1).subs(params)).evalf(<span class="dv">4</span>),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_1.T<span class="op">*</span>K<span class="op">*</span>phi_2).subs(params)).evalf(<span class="dv">4</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{K} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{1.45 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{K} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{8.28 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{K} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{9.459 \cdot 10^{-11} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{K} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{9.459 \cdot 10^{-11} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="modal--und-spektralmatrix" class="level4" data-number="16.2.4.2">
+<h4 data-number="16.2.4.2" class="anchored" data-anchor-id="modal--und-spektralmatrix"><span class="header-section-number">16.2.4.2</span> Modal- und Spektralmatrix</h4>
+<p>Mittels der Modal- und Spektralmatrix lassen sich die generalisierten Grössen effizient ermitteln.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Phi <span class="op">=</span> sp.Matrix([[phi_1, phi_2]])</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>Omega <span class="op">=</span> sp.Matrix([[omega_1, <span class="dv">0</span>],[<span class="dv">0</span>, omega_2]])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Modalmatrix'</span>, <span class="st">'Phi'</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'Phi'</span>, <span class="dv">2</span>, <span class="dv">2</span>), Phi.subs(params).evalf(<span class="dv">4</span>),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Spektralmatrix'</span>, <span class="st">'Omega^2'</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'Omega^2'</span>, <span class="dv">2</span>, <span class="dv">2</span>), (Omega<span class="op">**</span><span class="dv">2</span>).subs(params).evalf(<span class="dv">4</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Modalmatrix = \Phi\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Phi} = \left[\begin{matrix}0.6573 &amp; 1.0\\1.0 &amp; -0.2876\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Spektralmatrix = \Omega^{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Omega}^{2} = \left[\begin{matrix}\frac{25.38}{\text{s}^{2}} &amp; 0\\0 &amp; \frac{331.7}{\text{s}^{2}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="generalisierte-grössen" class="level4" data-number="16.2.4.3">
+<h4 data-number="16.2.4.3" class="anchored" data-anchor-id="generalisierte-grössen"><span class="header-section-number">16.2.4.3</span> Generalisierte Grössen</h4>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>M_star <span class="op">=</span> Phi.T <span class="op">*</span> M <span class="op">*</span> Phi</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>K_star <span class="op">=</span> Phi.T <span class="op">*</span> K <span class="op">*</span> Phi</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>M_star_clean <span class="op">=</span> set_small_values_to_zero(M_star.subs(params).evalf(<span class="dv">5</span>), <span class="fl">0.1</span><span class="op">*</span>unit.N <span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> unit.m)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>K_star_clean <span class="op">=</span> set_small_values_to_zero(K_star.subs(params).evalf(<span class="dv">5</span>), <span class="fl">0.1</span><span class="op">*</span>unit.N  <span class="op">/</span> unit.m)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M^\star'</span>, <span class="dv">2</span>,<span class="dv">2</span>),sp.simplify(M_star_clean.subs(params)).evalf(<span class="dv">5</span>),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'K^\star'</span>, <span class="dv">2</span>,<span class="dv">2</span>),sp.simplify(K_star_clean.subs(params)).evalf(<span class="dv">5</span>))</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>                 </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M}^{\star} = \left[\begin{matrix}\frac{5707.3 \text{N} \text{s}^{2}}{\text{m}} &amp; 0\\0 &amp; \frac{2497.0 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K}^{\star} = \left[\begin{matrix}\frac{1.4487 \cdot 10^{5} \text{N}}{\text{m}} &amp; 0\\0 &amp; \frac{8.2813 \cdot 10^{5} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="modale-höhen" class="level4" data-number="16.2.4.4">
+<h4 data-number="16.2.4.4" class="anchored" data-anchor-id="modale-höhen"><span class="header-section-number">16.2.4.4</span> Modale Höhen</h4>
+<p>Die modalen Höhen bestimmen sich aus <a href="#eq-mms_2er_modale_hoehe">Gleichung&nbsp;<span>16.5</span></a>:</p>
+<p><span id="eq-mms_2er_modale_hoehe"><span class="math display">\[
+H_n = \frac{L_n^\theta}{L_n}
+\tag{16.5}\]</span></span></p>
+<p><span id="eq-mms_2er_L_n"><span class="math display">\[
+L_n = \phi_n^T \cdot \mathbf{M 1}
+\tag{16.6}\]</span></span></p>
+<p><span id="eq-mms_2er_L_n_theta"><span class="math display">\[
+L_n^\theta = \sum_{j=1}^N H_j \cdot m_j \cdot \phi_{jn}
+\tag{16.7}\]</span></span></p>
+<p>Angewendet auf das Beispiel folgt:</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>one_vec <span class="op">=</span> sp.ones(<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>H_matrix <span class="op">=</span> sp.Matrix([H_1, H_2])</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>H_modal <span class="op">=</span> (H_matrix.T<span class="op">*</span>M<span class="op">*</span>Phi).T.multiply_elementwise((M<span class="op">*</span>Phi.T<span class="op">*</span>one_vec).applyfunc(<span class="kw">lambda</span> x: x<span class="op">**-</span><span class="dv">1</span>))</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'H'</span>, <span class="dv">2</span>,<span class="dv">1</span>), H_matrix,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'H'</span>, <span class="dv">2</span>,<span class="dv">1</span>), H_modal,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'H'</span>, <span class="dv">2</span>,<span class="dv">1</span>), H_modal.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{H} = \left[\begin{matrix}H_{1}\\H_{2}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{H} = \left[\begin{matrix}\frac{H_{1} m_{1} \phi_{11} + H_{2} m_{2} \phi_{21}}{m_{1} \phi_{11} + m_{1} \phi_{21}}\\\frac{H_{1} m_{1} \phi_{12} + H_{2} m_{2} \phi_{22}}{m_{2} \phi_{12} + m_{2} \phi_{22}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{H} = \left[\begin{matrix}5.65 \text{m}\\1.13 \text{m}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="kontrolle-der-modalen-transformation" class="level4" data-number="16.2.4.5">
+<h4 data-number="16.2.4.5" class="anchored" data-anchor-id="kontrolle-der-modalen-transformation"><span class="header-section-number">16.2.4.5</span> Kontrolle der modalen Transformation</h4>
+<p>Die Eigenkreisfrequenzen ändern sich durch die Transformation nicht.</p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>omega_1_kontrolle <span class="op">=</span> sp.sqrt(K_star[<span class="dv">0</span>] <span class="op">/</span> M_star[<span class="dv">0</span>])</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>omega_2_kontrolle <span class="op">=</span> sp.sqrt(K_star[<span class="dv">3</span>] <span class="op">/</span> M_star[<span class="dv">3</span>])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_1_modal'</span>, omega_1_kontrolle.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2'</span>, omega_2.subs(params).simplify().evalf(<span class="dv">4</span>),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2_modal'</span>, omega_2_kontrolle.subs(params).simplify().evalf(<span class="dv">4</span>))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{5.04}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1 modal} = \frac{5.04}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2} = \frac{18.21}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2 modal} = \frac{18.21}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="partizipationsfaktor-gamma" class="level4" data-number="16.2.4.6">
+<h4 data-number="16.2.4.6" class="anchored" data-anchor-id="partizipationsfaktor-gamma"><span class="header-section-number">16.2.4.6</span> Partizipationsfaktor <span class="math inline">\(\Gamma\)</span></h4>
+<p>Die Verteilung des Partizipationsfaktor gibt einen direkten Hinweis, welcher Eigenmode an der Gesamtanwort den grössten Einfluss (beteiligt bzw. partizipiert) hat.</p>
+<p><span id="eq-mms_2er_part"><span class="math display">\[
+\Gamma_n = \frac{\Phi_n^T \mathbf{M 1}}{\Phi_n^T \mathbf{M}\Phi_n}
+\tag{16.8}\]</span></span></p>
+<p>In allgemeiner Form lautet der Partizipationsfaktor:</p>
+<p><span id="eq-mms_2er_split_part"><span class="math display">\[
+\Gamma_n = \frac{\Phi_n^T \mathbf{M r^\star}}{\Phi_n^T \mathbf{M}\Phi_n}
+\tag{16.9}\]</span></span></p>
+<p><span class="math inline">\(\mathbf{r^\star}\)</span> beschreibt die Starrkörperverschiebung infolge der Erdbebenanregung <span class="math inline">\(u_g\)</span> am Fusspunkt des Gesamtsystems.</p>
+<p><span id="eq-mms_2er_starrkoerperverschiebung"><span class="math display">\[
+\mathbf{r^\star} = \begin{bmatrix}
+FHG_1 \\
+FHG_2
+\end{bmatrix}=
+\begin{bmatrix}
+\cos(0) \\
+\cos(0)
+\end{bmatrix}=
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}= \mathbf{1}
+\tag{16.10}\]</span></span></p>
+<p>Die Partizipationsmatrix lässt sich direkt durch folgende Gleichung ermitteln:</p>
+<p><span id="eq-mms_2er_matrix_part"><span class="math display">\[
+\Gamma = M^{\star-1} \cdot \Phi^T \cdot M \cdot 1
+\tag{16.11}\]</span></span></p>
+<p>Gelöst mit <a href="#eq-mms_2er_matrix_part">Gleichung&nbsp;<span>16.11</span></a>:</p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>one_vec <span class="op">=</span> sp.ones(<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>Gamma <span class="op">=</span> M_star<span class="op">**-</span><span class="dv">1</span> <span class="op">*</span> Phi.T <span class="op">*</span> M<span class="op">*</span>one_vec </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'Gamma'</span>,<span class="dv">2</span>,<span class="dv">1</span>), Gamma.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Gamma} = \left[\begin{matrix}1.08\\0.288\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Gelöst mit <a href="#eq-mms_2er_split_part">Gleichung&nbsp;<span>16.9</span></a>:</p>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>gamma_1 <span class="op">=</span> (phi_1.T<span class="op">*</span>M<span class="op">*</span>one_vec)[<span class="dv">0</span>]<span class="op">/</span>(phi_1.T<span class="op">*</span>M<span class="op">*</span>phi_1)[<span class="dv">0</span>]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>gamma_2 <span class="op">=</span> (phi_2.T<span class="op">*</span>M<span class="op">*</span>one_vec)[<span class="dv">0</span>]<span class="op">/</span>(phi_2.T<span class="op">*</span>M<span class="op">*</span>phi_2)[<span class="dv">0</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>gamma_sqr <span class="op">=</span> sp.Matrix([[gamma_1<span class="op">**</span><span class="dv">2</span>],[gamma_2<span class="op">**</span><span class="dv">2</span>]])</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Gamma_1'</span>, gamma_1,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Gamma_1'</span>, gamma_1.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Gamma_2'</span>, gamma_2,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Gamma_2'</span>, gamma_2.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'Gamma^2_n'</span>,<span class="dv">2</span>,<span class="dv">1</span>),gamma_sqr.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Gamma_{1} = \frac{m_{1} \phi_{11} + m_{2} \phi_{21}}{m_{1} \phi_{11}^{2} + m_{2} \phi_{21}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Gamma_{1} = 1.08\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Gamma_{2} = \frac{m_{1} \phi_{12} + m_{2} \phi_{22}}{m_{1} \phi_{12}^{2} + m_{2} \phi_{22}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Gamma_{2} = 0.288\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Gamma}^{2}_{n} = \left[\begin{matrix}1.17\\0.0831\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>hoehe <span class="op">=</span> <span class="bu">list</span>(H_modal.subs(params).evalf(<span class="dv">3</span>)<span class="op">/</span>unit.m)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>hoehe <span class="op">=</span> [np.float64(i).<span class="bu">round</span>(<span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> hoehe]</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>masse <span class="op">=</span> <span class="bu">list</span>(M_star_clean<span class="op">/</span>unit.N<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> unit.m)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>masse <span class="op">=</span> [np.float64(i).<span class="bu">round</span>(<span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> masse <span class="cf">if</span> i <span class="op">!=</span> <span class="dv">0</span>]</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>steifigkeiten <span class="op">=</span> <span class="bu">list</span>(K_star_clean<span class="op">/</span>unit.N <span class="op">*</span> unit.m)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>steifigkeiten <span class="op">=</span> [np.float64(i).<span class="bu">round</span>(<span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> steifigkeiten <span class="cf">if</span> i <span class="op">!=</span> <span class="dv">0</span>]</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>omegas <span class="op">=</span> <span class="bu">list</span>(Omega.subs(params)<span class="op">*</span>unit.second)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>omegas <span class="op">=</span> [np.float64(i).<span class="bu">round</span>(<span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> omegas <span class="cf">if</span> i <span class="op">!=</span> <span class="dv">0</span>]</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>gammas <span class="op">=</span> <span class="bu">list</span>(Gamma.subs(params).evalf(<span class="dv">3</span>))</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>gammas <span class="op">=</span> [np.float64(i).<span class="bu">round</span>(<span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> gammas <span class="cf">if</span> i <span class="op">!=</span> <span class="dv">0</span>]</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>plot_einmassenschwinger(hoehe, masse, steifigkeiten, omegas, gammas)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-mms_2er_modale_ems" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="mms_06_files/figure-html/fig-mms_2er_modale_ems-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.4: Darstellung der entkoppelten Einmassenschwinger</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="elastisches-antwortspektrum" class="level3" data-number="16.2.5">
+<h3 data-number="16.2.5" class="anchored" data-anchor-id="elastisches-antwortspektrum"><span class="header-section-number">16.2.5</span> Elastisches Antwortspektrum</h3>
+<p>Aus der Aufgabenstellung darf nach <span class="citation" data-cites="SIA261_2020">(<a href="references.html#ref-SIA261_2020" role="doc-biblioref">Schweizerischer Ingenieur- und Architektenverein (SIA), 2020</a>)</span> Abs. 16.2.3.1 Kurve <span class="math inline">\(E\)</span> gewählt werden.</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>a_gd <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span>unit.m <span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="grundschwingzeit" class="level4" data-number="16.2.5.1">
+<h4 data-number="16.2.5.1" class="anchored" data-anchor-id="grundschwingzeit"><span class="header-section-number">16.2.5.1</span> Grundschwingzeit</h4>
+<p>Die Grundschwingzeit kann anhand der bereits ermittelten Eigenkreisfrequenzen ermittelt werden.</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> (omega_1 <span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>sp.pi))<span class="op">**-</span><span class="dv">1</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>T_2 <span class="op">=</span> (omega_2 <span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>sp.pi))<span class="op">**-</span><span class="dv">1</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'T_1'</span>, T_1.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'T_2'</span>, T_2.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>                  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1} = 1.25 \text{s}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{2} = 0.345 \text{s}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="elastisches-antwortspektrum-1" class="level4" data-number="16.2.5.2">
+<h4 data-number="16.2.5.2" class="anchored" data-anchor-id="elastisches-antwortspektrum-1"><span class="header-section-number">16.2.5.2</span> Elastisches Antwortspektrum</h4>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>S_e_1 <span class="op">=</span> antwortspektrum(a_gd, T_1.subs(params).evalf(<span class="dv">3</span>), Baugrundklasse<span class="op">=</span><span class="st">'E'</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'S_e_1'</span>, S_e_1.evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S = 1.7\)</span></td>
+<td><span class="math inline">\(T_{B} = 0.09 \text{s}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{C} = 0.25 \text{s}\)</span></td>
+<td><span class="math inline">\(T_{D} = 2.0 \text{s}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\eta = 1\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{e 1} = \frac{0.852 \text{m}}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>S_e_2 <span class="op">=</span> antwortspektrum(a_gd, T_2.subs(params).evalf(<span class="dv">3</span>), Baugrundklasse <span class="op">=</span> <span class="st">'E'</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'S_e_2'</span>, S_e_2.evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S = 1.7\)</span></td>
+<td><span class="math inline">\(T_{B} = 0.09 \text{s}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{C} = 0.25 \text{s}\)</span></td>
+<td><span class="math inline">\(T_{D} = 2.0 \text{s}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\eta = 1\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{e} = \frac{2.5 S_{} T_{C} a_{gd} \eta}{T}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{e 2} = \frac{3.08 \text{m}}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="maximale-deformation" class="level3" data-number="16.2.6">
+<h3 data-number="16.2.6" class="anchored" data-anchor-id="maximale-deformation"><span class="header-section-number">16.2.6</span> Maximale Deformation</h3>
+<p>Die maximale Deformation resultiert aus der Beschleunigung <span class="math inline">\(S_e\)</span> und der Eigenkreisfrequenz <span class="math inline">\(\omega_n^2\)</span>. Für die Modalen EMS gilt es diese anhand der Partizipationsfaktoren zu gewichten. Zur effektiven Bestimmung der Auslenkung sind die Resultate der EMS mittels SRSS-Regel zu überlagern.</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>q_1_max <span class="op">=</span> Gamma[<span class="dv">0</span>] <span class="op">*</span> S_e_1 <span class="op">/</span> omega_1<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>q_2_max <span class="op">=</span> Gamma[<span class="dv">1</span>] <span class="op">*</span> S_e_2 <span class="op">/</span> omega_2<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'q_1_max'</span>,<span class="st">"Gamma_1 * S_e_1 / omega_1**2"</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="st">'q_1_max'</span>, q_1_max.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="st">'q_2_max'</span>,<span class="st">"Gamma_2 * S_e_2 / omega_2**2"</span>,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="st">'q_2_max'</span>, q_2_max.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{1 max} = \frac{\Gamma_{1} S_{e 1}}{\omega_{1}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{1 max} = 0.0364 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{2 max} = \frac{\Gamma_{2} S_{e 2}}{\omega_{2}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{2 max} = 0.00268 \text{m}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Um die Entkoppelung rückzuführen, gilt es die erhaltenen Resultate zu überlagern. Dabei gibt es unterschiedliche Ansätze. Bei weit auseinander liegenden Eigenfrequenzen kann die SRSS-Überlagerung verwendet werden.</p>
+<p><span id="eq-mms_2er_srss"><span class="math display">\[
+u_{max} = \sqrt{\sum_{n=1}^2 (q_{n} \cdot \phi_n)^2}
+\tag{16.12}\]</span></span></p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>u_max <span class="op">=</span> ((phi_1<span class="op">*</span>q_1_max).applyfunc(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)<span class="op">+</span>(phi_2<span class="op">*</span>q_2_max).applyfunc(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)).applyfunc(sp.sqrt)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'u_max'</span>, <span class="dv">2</span>,<span class="dv">1</span>), u_max.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{u}_{max} = \left[\begin{matrix}0.024 \text{m}\\0.0364 \text{m}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Delta_A, Delta_B, zeta <span class="op">=</span> sp.symbols(<span class="st">'Delta_A, Delta_B, zeta'</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 1 der Funktion</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> x<span class="op">/</span>l</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>w_1_x <span class="op">=</span> w_ansatz.subs(Delta_A, <span class="dv">0</span>).subs(Delta_B, u_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.m).subs(l,H_1.subs(params_plot))</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Ansatzfunktion für Teil 2 der Funktion</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> (x<span class="op">-</span>H_1.subs(params_plot))<span class="op">/</span>l</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>w_ansatz <span class="op">=</span> Delta_A <span class="op">+</span> (Delta_B<span class="op">-</span>Delta_A)<span class="op">*</span>(<span class="dv">3</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>zeta<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>w_2_x <span class="op">=</span> w_ansatz.subs(Delta_A, u_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.m).subs(Delta_B, u_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.m).subs(l,H_2.subs(params_plot))</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Zusammengestellt</span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>w_eigenform_1 <span class="op">=</span> sp.Eq(w,sp.Piecewise((w_1_x, x<span class="op">&lt;=</span>H_1.subs(params_plot)),(w_2_x, x<span class="op">&gt;=</span>H_1.subs(params_plot))))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Numerische Daten generieren</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>w_eigenform_1_lamb <span class="op">=</span> sp.lambdify(x, w_eigenform_1.rhs)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>x_array <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="bu">float</span>((H_1<span class="op">+</span>H_2).subs(params_plot)), <span class="dv">1000</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>w_1_array <span class="op">=</span> w_eigenform_1_lamb(x_array)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>plt.plot(w_1_array, x_array)</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>plt.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>plt.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>plt.axvline(u_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.m,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>plt.axvline(u_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.m,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'$u$ [m]'</span>)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'$H$ [m]'</span>)</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-mms_2er_deformation" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="mms_06_files/figure-html/fig-mms_2er_deformation-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.5: Maximale Deformation des Mehrmassenschwingers</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="maximale-schnittkräfte" class="level3" data-number="16.2.7">
+<h3 data-number="16.2.7" class="anchored" data-anchor-id="maximale-schnittkräfte"><span class="header-section-number">16.2.7</span> Maximale Schnittkräfte</h3>
+<section id="querkräfte" class="level4" data-number="16.2.7.1">
+<h4 data-number="16.2.7.1" class="anchored" data-anchor-id="querkräfte"><span class="header-section-number">16.2.7.1</span> Querkräfte</h4>
+<p>Die Einwirkungen resultieren aus der Masse multipliziert mit der Beschleunigung aus dem Antwortspektrum. Dazu sind in einem ersten Schritt die beiden entkoppelten EMS voneinander getrennt zu betrachten. Die Überlagerung erfolgt erst bei den ermittelten Querkräften.</p>
+<p><span id="eq-mms_2er_masse"><span class="math display">\[
+m_1 = \Gamma \cdot M \cdot \phi_1
+\tag{16.13}\]</span></span></p>
+<p><span id="eq-mms_2er_kraft_aus_masse"><span class="math display">\[
+F_{1max} = m_1 \cdot S_{e1}
+\tag{16.14}\]</span></span></p>
+<p>Aus dem ersten EMS folgt:</p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>M_1 <span class="op">=</span> Gamma[<span class="dv">0</span>] <span class="op">*</span> M <span class="op">*</span> phi_1</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>F_1_max <span class="op">=</span> M_1<span class="op">*</span> S_e_1</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>V_1 <span class="op">=</span> sp.Matrix([[F_1_max[<span class="dv">0</span>]<span class="op">+</span>F_1_max[<span class="dv">1</span>]],[F_1_max[<span class="dv">1</span>]]])</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M_1'</span>, <span class="dv">2</span>,<span class="dv">1</span>), M_1.subs(params).evalf(<span class="dv">5</span>),</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'F_1_max'</span>, <span class="dv">2</span>,<span class="dv">1</span>), F_1_max.subs(params).evalf(<span class="dv">5</span>),</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'V_1'</span>, <span class="dv">2</span>,<span class="dv">1</span>), V_1.subs(params).evalf(<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M}_{1} = \left[\begin{matrix}\frac{1494.8 \text{N} \text{s}^{2}}{\text{m}}\\\frac{5197.8 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{F}_{1 max} = \left[\begin{matrix}1273.7 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{V}_{1} = \left[\begin{matrix}5702.9 \text{N}\\4429.2 \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Aus dem zweiten EMS folglich:</p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>M_2 <span class="op">=</span> Gamma[<span class="dv">1</span>] <span class="op">*</span> M <span class="op">*</span> phi_2</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>F_2_max <span class="op">=</span> M_2<span class="op">*</span> S_e_2</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>V_2 <span class="op">=</span> sp.Matrix([[F_2_max[<span class="dv">0</span>]<span class="op">+</span>F_2_max[<span class="dv">1</span>]],[F_2_max[<span class="dv">1</span>]]])</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M_2'</span>, <span class="dv">2</span>,<span class="dv">1</span>), M_2.subs(params).evalf(<span class="dv">5</span>),</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'F_2_max'</span>, <span class="dv">2</span>,<span class="dv">1</span>), F_2_max.subs(params).evalf(<span class="dv">5</span>),</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'V_2'</span>, <span class="dv">2</span>,<span class="dv">1</span>), V_2.subs(params).evalf(<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M}_{2} = \left[\begin{matrix}\frac{605.23 \text{N} \text{s}^{2}}{\text{m}}\\- \frac{397.83 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{F}_{2 max} = \left[\begin{matrix}1864.2 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{V}_{2} = \left[\begin{matrix}638.82 \text{N}\\- 1225.4 \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Maximale Querkraft aus Überlagerung beider EMS mittels SRSS-Regel.</p>
+<p><span id="eq-mms_2er_max_querkraft"><span class="math display">\[
+V_{max} = \sqrt{V_1^2 + V_2^2 }
+\tag{16.15}\]</span></span></p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>V_max <span class="op">=</span> (V_1.applyfunc(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)<span class="op">+</span>V_2.applyfunc(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)).applyfunc(sp.sqrt)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'V_max'</span>, <span class="dv">2</span>,<span class="dv">1</span>), V_max.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{V}_{max} = \left[\begin{matrix}5.74 \cdot 10^{3} \text{N}\\4.6 \cdot 10^{3} \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="biegemomente" class="level4" data-number="16.2.7.2">
+<h4 data-number="16.2.7.2" class="anchored" data-anchor-id="biegemomente"><span class="header-section-number">16.2.7.2</span> Biegemomente</h4>
+<p>Die Biegemomente lassen sich abschliessend anhand der Querkräfte bestimmen.</p>
+</section>
+<section id="normalkräfte" class="level4" data-number="16.2.7.3">
+<h4 data-number="16.2.7.3" class="anchored" data-anchor-id="normalkräfte"><span class="header-section-number">16.2.7.3</span> Normalkräfte</h4>
+<p>Die Normalkräfte resultieren aus den Punktmassen.</p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Querkraft</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>V_x <span class="op">=</span> sp.Piecewise((V_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))), (V_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Biegemoment</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>C_1 <span class="op">=</span> sp.symbols(<span class="st">'C_1'</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> sp.integrate(<span class="op">-</span>V_x, x) <span class="op">+</span> C_1</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>C_1_solve <span class="op">=</span> sp.solve(M_x.subs(x, (H_1<span class="op">+</span>H_2).subs(params_plot)), C_1)[<span class="dv">0</span>]</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> M_x.subs(C_1, C_1_solve)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalkraft</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>unit.m<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>N_x <span class="op">=</span> sp.Piecewise(((m_1<span class="op">+</span>m_2).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))),(m_1.subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Numerische Daten generieren</span></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>V_x_lamb <span class="op">=</span> sp.lambdify(x, V_x)</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>V_x_array <span class="op">=</span> V_x_lamb(x_array)</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>M_x_lamb <span class="op">=</span> sp.lambdify(x,M_x)</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>M_x_array <span class="op">=</span> M_x_lamb(x_array)</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>N_x_lamb <span class="op">=</span> sp.lambdify(x,N_x)</span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>N_x_array <span class="op">=</span> N_x_lamb(x_array)</span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure und Axes erstellen</span></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>ax1.plot(V_x_array<span class="op">/</span><span class="dv">1000</span>, x_array)</span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$V(x)$'</span>)</span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a>ax1.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a>ax1.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'$[m]$'</span>)</span>
+<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweiten Plot erstellen</span></span>
+<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a>ax2.plot(M_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$M(x)$'</span>)</span>
+<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a>ax2.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a>ax2.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'$[kNm]$'</span>)</span>
+<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Dritten Plot erstellen</span></span>
+<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-60"><a href="#cb35-60" aria-hidden="true" tabindex="-1"></a>ax3.plot(N_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb35-61"><a href="#cb35-61" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'$N(x)$'</span>)</span>
+<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a>ax3.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a>ax3.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-68"><a href="#cb35-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-69"><a href="#cb35-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a>ax3.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb35-75"><a href="#cb35-75" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-76"><a href="#cb35-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-77"><a href="#cb35-77" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-mms_2er_schnittgroessen" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="mms_06_files/figure-html/fig-mms_2er_schnittgroessen-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;16.6: Maximale Schnittgrössen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-SIA261_2020" class="csl-entry" role="listitem">
+Schweizerischer Ingenieur- und Architektenverein (SIA). (2020). <em><span>Norm SIA 261:2020 Einwirkungen auf Tragwerke </span></em> (136. S.).
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./mms_05.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem Rahmen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ekv_01.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

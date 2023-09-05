@@ -5,11 +5,11 @@ book:
   title: "Beispielsammlung"
   subtitle: "Komplettiert die Vorlesung Baudynamik"
   author: "Dr. Stephan Gollob & Pascal Gitz"
-  date: "2023-08-18"
+  date: "2023-09-05"
   date-format: full
   chapters:
     - index.qmd
-    - part: "Rayleigh - Quotient"
+    - part: "Rayleigh-Quotient"
       chapters:
         - rayleigh_01.ipynb
         - rayleigh_02.ipynb
@@ -55,11 +55,6 @@ format:
     csl: apa-eu.csl
     link-citations: True
     tbl-colwidths: [50,50]
-    latex:
-      preamble: |
-        \usepackage{palatino}
-
-
     include-in-header:
     - "packages_style.tex"
     
@@ -69,4 +64,15 @@ format:
     csl: apa-eu.csl
     link-citations: True
     tbl-colwidths: [50,50]
+
+  docx:
+    lang: de
+    reference-doc: 'custom-reference.docx'
+
+    execute:
+      echo: false
+      warning: false
+    link-citations: True
+    toc-depth: 2
+
 

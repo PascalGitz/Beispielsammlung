@@ -3,5 +3,7 @@ Loadcase t1:  test
 
 Load type                  Val A      B/Dist     from       to       / Element list
 ------------------------------------------------------------------------------------------------------------------------
-Global Force  X concentr.  100000E-5  400000E-5       2 
+Global Force  X concentr.  155200E-2  000000E+0       1 
+Global Force  X concentr.  310500E-2  400000E-5       1 
+Global Force  X concentr.  465700E-2  400000E-5       2 
 

@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Beispielsammlung - 18&nbsp; Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ekv_03.html" rel="next">
+<link href="./ekv_01.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ekv_01.html">Ersatzkraftverfahren</a></li><li class="breadcrumb-item"><a href="./ekv_02.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Beispielsammlung</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Rayleigh-Quotient</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 2 Punktmassen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 1 Punktmasse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Beispiel: Einfacher Balken mit konstanter Masse</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Einmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Beispiel: Logarithmisches Dekrement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beispiel: Impulssatz</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Beispiel: Dynamischer Vergrösserungsfaktor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort ohne Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Beispiel: Fourier-Transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beispiel: Balken ohne Tilger{#sec-ems_untilg}</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mehrmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren mit direkt bestimmter Steifigkeitsmatrix{#sec-mms_steif}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren und Nachgiebigkeitsmatrix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem dreistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem Rahmen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Ersatzkraftverfahren</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_02.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient an einem Sechsmassenschwinger beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">18.1</span> Aufgabenstellung</a></li>
+  <li><a href="#musterlösung" id="toc-musterlösung" class="nav-link" data-scroll-target="#musterlösung"><span class="header-section-number">18.2</span> Musterlösung</a>
+  <ul class="collapse">
+  <li><a href="#lastermittlung" id="toc-lastermittlung" class="nav-link" data-scroll-target="#lastermittlung"><span class="header-section-number">18.2.1</span> Lastermittlung</a></li>
+  <li><a href="#biegesteifigkeit" id="toc-biegesteifigkeit" class="nav-link" data-scroll-target="#biegesteifigkeit"><span class="header-section-number">18.2.2</span> Biegesteifigkeit</a></li>
+  <li><a href="#formfunktion-aus-der-biegelinie" id="toc-formfunktion-aus-der-biegelinie" class="nav-link" data-scroll-target="#formfunktion-aus-der-biegelinie"><span class="header-section-number">18.2.3</span> Formfunktion aus der Biegelinie</a></li>
+  <li><a href="#formfunktion-analytisch" id="toc-formfunktion-analytisch" class="nav-link" data-scroll-target="#formfunktion-analytisch"><span class="header-section-number">18.2.4</span> Formfunktion analytisch</a></li>
+  <li><a href="#erweiterung-des-rayleigh-quotienten" id="toc-erweiterung-des-rayleigh-quotienten" class="nav-link" data-scroll-target="#erweiterung-des-rayleigh-quotienten"><span class="header-section-number">18.2.5</span> Erweiterung des Rayleigh-Quotienten</a></li>
+  <li><a href="#reduktion-der-wandlänge" id="toc-reduktion-der-wandlänge" class="nav-link" data-scroll-target="#reduktion-der-wandlänge"><span class="header-section-number">18.2.6</span> Reduktion der Wandlänge</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run style_and_packages.ipynb</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="aufgabenstellung" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">18.1</span> Aufgabenstellung</h2>
+<p>In <a href="#fig-ekv_rayleigh_system">Abbildung&nbsp;<span>18.1</span></a> ist ein Gebäudegrundriss dargestellt. Dieser wird durch drei Stahlbeton-Wandscheiben ausgesteift. Die Anordnung ist symmetrisch, das Steifigkeitszentrum stimmt mit dem Massenzentrum der Decke überein.</p>
+<div id="fig-ekv_rayleigh_system" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_rayleigh_GR.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.1: Grundriss des Gebäudes</figcaption>
+</figure>
+</div>
+<p>Das Untergeschoss gilt als <em>steifer Kasten</em>, folglich ist der Einspannungshorizont der Wandscheiben Oberkante UG. Es findet eine gewisse Einspannung der Wandscheiben in die Bodenplatte statt, je nach Ausbildung der Fundation. Diese kann man z.B. mit einer elastischen Einspannung (Drehfeder) modellieren. Die elastische Einspannung liegt im Bereich von 20% einer Volleinspannung. Im Beispiel wird diese als gelenkige Lagerung angenommen.</p>
+<div id="fig-ekv_rayleigh_systemansicht" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_gebaude_ansicht.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.2: Ansicht der Wand 3 des Gebäudes</figcaption>
+</figure>
+</div>
+<p>Die Modellierung in <a href="#fig-ekv_rayleigh_systemmodell">Abbildung&nbsp;<span>18.3</span></a> trifft folgende Annahmen:</p>
+<ul>
+<li>Die Decken sind gelenkig an die Tragwände angeschlossen</li>
+<li>Die Deckenscheiben wirken in ihrer Ebene als starre Scheiben</li>
+<li>Die Wandscheiben bzw. Tragwände sind in den Kellerkasten eingespannt, so dass die Modellierung als Kragarm gerechtfertigt ist</li>
+<li>Die Massen der Decken werden im Aufriss als Punktmassen am Kragarm abgebildet (Dabei werden die Massen der Wände pro Geschoss je zur Hälfte der Geschossmassen zugeordnet)</li>
+<li>Die Stützen tragen lediglich zum vertikalen Lastabtrag bei. Deren Steifigkeit kann vernachlässigt werden</li>
+</ul>
+<div id="fig-ekv_rayleigh_systemmodell" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_3ms.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.3: Modellierung als Mehrmassenschwinger</figcaption>
+</figure>
+</div>
+<p>Gesucht:</p>
+<ul>
+<li>Erste Eigenperiode in globaler Y-Richtung</li>
+<li>Ersatzkräfte durch das Ersatzkraftverfahren</li>
+</ul>
+<p>Gegeben:</p>
+<ul>
+<li>Baugrundklasse <span class="math inline">\(B\)</span></li>
+<li>Erdbebenzone <span class="math inline">\(Z2\)</span></li>
+<li>Decken und Wände sind alle <span class="math inline">\(d\)</span> stark</li>
+<li>Sämtliche Decken gelten als Wohnflächen (Lastermittlung - vereinfacht auch die Dachfläche)</li>
+<li>Reduktion der Biegesteifigkeit <span class="math inline">\(\gamma_{EI}\)</span> zur Berücksichtigung der Rissbildung</li>
+</ul>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rho_c, gamma_f, q,q_auflast_k, q_nutzlast_k <span class="op">=</span> sp.symbols(<span class="st">'rho_c, gamma_f, q, q_auflast_k, q_nutzlast_k'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>H_1, H_2, H_3 <span class="op">=</span> sp.symbols(<span class="st">"H_1, H_2, H_3"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>m_1, m_2, m_3 <span class="op">=</span> sp.symbols(<span class="st">'m_1, m_2, m_3'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>gamma_EI <span class="op">=</span> sp.symbols(<span class="st">'gamma_EI'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>F_1, F_2, F_3 <span class="op">=</span> sp.symbols(<span class="st">'F_1, F_2, F_3'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>E, d, L_y, L_x, L_w1, L_w2, L_w3 <span class="op">=</span> sp.symbols(<span class="st">'E, d, L_y, L_x, L_w1, L_w2, L_w3'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>C_1 <span class="op">=</span> sp.symbols(<span class="st">'C_1'</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> sp.symbols(<span class="st">'H'</span>, positive<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>u_0 <span class="op">=</span> sp.symbols(<span class="st">'u_0'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>G_c, nu_c <span class="op">=</span> sp.symbols(<span class="st">'G_c, nu_c'</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>G_eff_sand, nu_sand <span class="op">=</span> sp.symbols(<span class="st">'G_eff_sand nu_sand'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E'</span>:<span class="dv">30000</span> <span class="op">*</span>unit.N<span class="op">/</span>unit.mm<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'d'</span>:<span class="fl">0.3</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L_y'</span>:<span class="dv">5</span><span class="op">*</span>unit.m, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L_x'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L_w1'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L_w2'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L_w3'</span>:<span class="dv">5</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'q'</span>: <span class="fl">2.0</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gamma_f'</span>: <span class="fl">1.0</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'q_nutzlast_k'</span>: <span class="dv">3</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span><span class="op">*</span>unit.N<span class="op">/</span>unit.m<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'q_auflast_k'</span>: <span class="dv">1</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span><span class="op">*</span>unit.N<span class="op">/</span>unit.m<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H_1'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H_2'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H_3'</span>:<span class="dv">4</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'rho_c'</span>:<span class="dv">25000</span><span class="op">*</span>unit.N <span class="op">/</span> unit.m<span class="op">**</span><span class="dv">3</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="dv">10</span> <span class="op">*</span>unit.m<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gamma_EI'</span>:<span class="fl">0.50</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'G_eff_sand'</span>:<span class="dv">120</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">*</span>unit.N<span class="op">/</span>unit.m<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'nu_sand'</span>:<span class="fl">0.3</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(params)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="tbl-parameter_ekv1" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabelle&nbsp;18.1: Verwendete Parameter der Aufgabe</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(E = \frac{30000 \text{N}}{\text{mm}^{2}}\)</span></td>
+<td><span class="math inline">\(G_{eff sand} = \frac{120000000 \text{N}}{\text{m}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H_{1} = 4 \text{m}\)</span></td>
+<td><span class="math inline">\(H_{2} = 4 \text{m}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(H_{3} = 4 \text{m}\)</span></td>
+<td><span class="math inline">\(L_{w1} = 4 \text{m}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L_{w2} = 4 \text{m}\)</span></td>
+<td><span class="math inline">\(L_{w3} = 5 \text{m}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(L_{x} = 4 \text{m}\)</span></td>
+<td><span class="math inline">\(L_{y} = 5 \text{m}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(d = 0.3 \text{m}\)</span></td>
+<td><span class="math inline">\(g = \frac{10 \text{m}}{\text{s}^{2}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\gamma_{EI} = 0.5\)</span></td>
+<td><span class="math inline">\(\gamma_{f} = 1.0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\nu_{sand} = 0.3\)</span></td>
+<td><span class="math inline">\(q = 2.0\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(q_{auflast k} = \frac{1000 \text{N}}{\text{m}^{2}}\)</span></td>
+<td><span class="math inline">\(q_{nutzlast k} = \frac{3000 \text{N}}{\text{m}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rho_{c} = \frac{25000 \text{N}}{\text{m}^{3}}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="musterlösung" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="musterlösung"><span class="header-section-number">18.2</span> Musterlösung</h2>
+<section id="lastermittlung" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="lastermittlung"><span class="header-section-number">18.2.1</span> Lastermittlung</h3>
+<p>Gemäss <span class="citation" data-cites="SIA261_2020">Schweizerischer Ingenieur- und Architektenverein (SIA) (<a href="references.html#ref-SIA261_2020" role="doc-biblioref">2020</a>)</span> Ziff. 16.5.2.3 sind ständige und quasiständige Lasten anzusetzen. Bei der Lastermittlung werden die Gewichtskräfte aus Eigenmassen und Auflasten ermittelt. Dazu werden pro Stockwerk die Gewichtskräfte der Wände definiert. Eine Punktmasse erhält jeweils die Hälfte der darunter- und darüber liegenden Wände. Für die Decke über 2.OG bleibt folglich nur eine Hälfte der Wände.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>A_decke <span class="op">=</span> <span class="dv">5</span><span class="op">*</span>L_x<span class="op">*</span> <span class="dv">3</span> <span class="op">*</span> L_y</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>G_decke <span class="op">=</span> A_decke <span class="op">*</span> rho_c<span class="op">*</span> d</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>G_waende_stock <span class="op">=</span> (L_w1 <span class="op">+</span>L_w2<span class="op">+</span>L_w3)<span class="op">*</span>H_1 <span class="op">*</span> rho_c <span class="op">*</span> d</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Q_auflast_k <span class="op">=</span> q_auflast_k <span class="op">*</span> A_decke</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>Q_nutzlast_k <span class="op">=</span> q_nutzlast_k <span class="op">*</span> A_decke</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>psi_2 <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'m_3'</span>] <span class="op">=</span> ((G_decke <span class="op">+</span> Q_auflast_k<span class="op">+</span> G_waende_stock<span class="op">/</span><span class="dv">2</span><span class="op">+</span>psi_2 <span class="op">*</span> Q_nutzlast_k)<span class="op">/</span>g).subs(params)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'m_2'</span>] <span class="op">=</span> ((G_decke <span class="op">+</span> Q_auflast_k<span class="op">+</span> G_waende_stock<span class="op">+</span>psi_2 <span class="op">*</span> Q_nutzlast_k)<span class="op">/</span>g).subs(params)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'m_1'</span>] <span class="op">=</span> ((G_decke <span class="op">+</span> Q_auflast_k<span class="op">+</span> G_waende_stock<span class="op">+</span>psi_2 <span class="op">*</span> Q_nutzlast_k)<span class="op">/</span>g).subs(params)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'A_Decke'</span>, A_decke.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'G_Decke_k'</span>, G_decke.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'G_Waende_k'</span>, G_waende_stock.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Q_auflast_k'</span>, Q_auflast_k.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Q_nutzlast_k'</span>, Q_nutzlast_k.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'psi_2'</span>, psi_2,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}A_{Decke} = 300.0 \text{m}^{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{Decke k} = 2.25 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{Waende k} = 3.9 \cdot 10^{5} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Q_{auflast k} = 3.0 \cdot 10^{5} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Q_{nutzlast k} = 9.0 \cdot 10^{5} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\psi_{2} = 0.3\end{equation}\]</span></p>
+</div>
+</div>
+<p>Daraus lassen sich die Punktmassen bestimmen:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'m_1'</span>, <span class="st">"(G_decke + Q_auflast_k+ G_Waende_k+psi_2 * Q_nutzlast_k)/g"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'m_1'</span>, m_1.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'m_2'</span>, <span class="st">"(G_decke + Q_auflast_k+ G_Waende_k+psi_2 * Q_nutzlast_k)/g"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'m_2'</span>, m_2.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'m_3'</span>, <span class="st">"(G_decke + Q_auflast_k+ G_Waende_k/2+psi_2 * Q_nutzlast_k)/g"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'m_3'</span>, m_3.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{1} = \frac{G_{Waende k} + G_{decke} + Q_{auflast k} + Q_{nutzlast k} \psi_{2}}{g}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{1} = \frac{3.21 \cdot 10^{5} \text{N} \text{s}^{2}}{\text{m}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{2} = \frac{G_{Waende k} + G_{decke} + Q_{auflast k} + Q_{nutzlast k} \psi_{2}}{g}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{2} = \frac{3.21 \cdot 10^{5} \text{N} \text{s}^{2}}{\text{m}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{3} = \frac{\frac{G_{Waende k}}{2} + G_{decke} + Q_{auflast k} + Q_{nutzlast k} \psi_{2}}{g}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{3} = \frac{3.02 \cdot 10^{5} \text{N} \text{s}^{2}}{\text{m}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="biegesteifigkeit" class="level3" data-number="18.2.2">
+<h3 data-number="18.2.2" class="anchored" data-anchor-id="biegesteifigkeit"><span class="header-section-number">18.2.2</span> Biegesteifigkeit</h3>
+<p>Die Biegesteifigkeit wird in Y-Richtung bestimmt. Es wird lediglich Wand 3 berücksichtigt. Die Reduktion zur Berücksichtigung der Rissbildung ist ebenfalls miteinbezogen.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>I_y <span class="op">=</span> L_w3 <span class="op">**</span> <span class="dv">3</span> <span class="op">*</span> d <span class="op">/</span> <span class="dv">12</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>EI_y_ersatz <span class="op">=</span> I_y <span class="op">*</span> E <span class="op">*</span> gamma_EI</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I_y'</span> , <span class="st">'L_w3 ** 3 * d / 12'</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I_y'</span> , I_y.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'EI_y_ersatz'</span>, I_y <span class="op">*</span> E <span class="op">*</span> gamma_EI,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'EI_y_ersatz'</span>, EI_y_ersatz.subs(params).evalf(<span class="dv">3</span>).simplify())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}I_{y} = \frac{L_{w3}^{3} d}{12}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}I_{y} = 3.13 \text{m}^{4}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}EI_{y ersatz} = \frac{E L_{w3}^{3} d \gamma_{EI}}{12}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}EI_{y ersatz} = 4.69 \cdot 10^{10} \text{m}^{2} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="formfunktion-aus-der-biegelinie" class="level3" data-number="18.2.3">
+<h3 data-number="18.2.3" class="anchored" data-anchor-id="formfunktion-aus-der-biegelinie"><span class="header-section-number">18.2.3</span> Formfunktion aus der Biegelinie</h3>
+<p>Als geeignete statische Belastung für die Abbildung der Eigenform eignet sich eine lineare dreiecksförmige Verteilung von Einzellasten. Diese bewirken am Stab eine Verschiebung <span class="math inline">\(u_i\)</span> auf Höhe der Geschossdecken.</p>
+<section id="rayleigh-quotient" class="level4" data-number="18.2.3.1">
+<h4 data-number="18.2.3.1" class="anchored" data-anchor-id="rayleigh-quotient"><span class="header-section-number">18.2.3.1</span> Rayleigh-Quotient</h4>
+<p>Gemäss dem Arbeitssatz gilt: Die von den äusseren Kräften <span class="math inline">\(F_i\)</span> auf ihren Verschiebungswegen <span class="math inline">\(u_i\)</span> geleistete Arbeit entspricht der inneren Arbeit, welche von den Schnittgrössen auf den Dehnungen im Querschnitt geleistet wird.</p>
+<p><span id="eq-ekv_rayleigh_arbeit"><span class="math display">\[
+W_a = W_i
+\tag{18.1}\]</span></span></p>
+<p>Dies führt zur <a href="#eq-ekv_rayleigh_rayleigh">Gleichung&nbsp;<span>18.2</span></a>:</p>
+<p><span id="eq-ekv_rayleigh_rayleigh"><span class="math display">\[
+\frac{1}{2} \sum_{i=1}^n F_i\cdot u_i=\int_0^L \frac{1}{2} EI \cdot u''(x)^2 \cdot d_x
+\tag{18.2}\]</span></span></p>
+<p>Unter Berücksichtigung, dass die Stäbe als masselos zu betrachten sind (da die Massen der Wände zu den Punktmassen dazugezählt sind), lässt sich die Eigenkreisfrequenz gemäss <a href="#eq-ekv_rayleigh_eigenkreis">Gleichung&nbsp;<span>18.3</span></a> beschreiben.</p>
+<p><span id="eq-ekv_rayleigh_eigenkreis"><span class="math display">\[
+\omega_1^2 = \frac{\frac{1}{2}\sum_{i=1}^n F_i \cdot u_i}{\frac{1}{2}\sum_{i=1}^n m_i \cdot u_i^2} = \frac{\text{max. potentielle Energie}}{\text{max. kinetische Energie}}
+\tag{18.3}\]</span></span></p>
+<p>Zur Ermittlung der Biegelinie, bzw. der Verformungen <span class="math inline">\(u_i\)</span> wird das gleiche Vorgehen wie bei der Ermittlung der Nachgiebigkeitsmatrix angewendet.</p>
+<div id="fig-ekv_rayleigh_biegelinie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_rayleigh_biege.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.4: System mit Einwirkungen zur Bestimmung der Formfunktion anhand der Biegelinie</figcaption>
+</figure>
+</div>
+<p>Daraus lassen sich die Kräftezustände beschreiben:</p>
+<div id="fig-ekv_rayleigh_realfikt" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_rayleigh_biege_schnittgroessen.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.5: Schnittgrössen im realen und fiktiven Kräftezustand</figcaption>
+</figure>
+</div>
+<p>Durch die Anwendung der Arbeitsgleichung lassen sich die jeweiligen Deformationen bestimmen. Die Indizes <span class="math inline">\(ij\)</span> in <span class="math inline">\(\delta_{ij}\)</span> bedeuten <span class="math inline">\(i\)</span> Position der realen Einwirkung und <span class="math inline">\(j\)</span> Position der fiktiven Einwirkung. Dies resultiert zur Nachgiebigkeitsmatrix. Invertiert folgt daraus die Steifigkeitsmatrix. Mit den Einwirkungen multipliziert folgt die Deformation an jedem Punkt.</p>
+<p>Zur Bestimmung der Nachgiebigkeitsmatrix werden die Kräfte <span class="math inline">\(F_i = 1\)</span> gesetzt. Durch Multiplikation mit dem effektiven Kraftvektor resultieren die entsprechenden Verformungen.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>F_1_n, F_2_n, F_3_n <span class="op">=</span> <span class="dv">1</span> ,<span class="dv">1</span> ,<span class="dv">1</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> delta_ij(M, m_l, m_r, L):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (sp.Rational(<span class="dv">1</span>,<span class="dv">6</span>) <span class="op">/</span> EI_y_ersatz) <span class="op">*</span> M<span class="op">*</span>(m_l<span class="op">+</span><span class="dv">2</span><span class="op">*</span>m_r)<span class="op">*</span>L</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>delta_11 <span class="op">=</span> delta_ij(F_1_n <span class="op">*</span> H_1, <span class="dv">0</span>, H_1, H_1)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>delta_22 <span class="op">=</span> delta_ij(F_2_n <span class="op">*</span> (H_1<span class="op">+</span>H_2), <span class="dv">0</span>, (H_1<span class="op">+</span>H_2), (H_1<span class="op">+</span>H_2))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>delta_33 <span class="op">=</span> delta_ij(F_3_n <span class="op">*</span> (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3), <span class="dv">0</span>, (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3), (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>delta_12 <span class="op">=</span> delta_ij(F_1_n<span class="op">*</span>H_1, H_1, H_1<span class="op">+</span>H_2, H_1)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>delta_21 <span class="op">=</span> delta_12</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>delta_13 <span class="op">=</span> delta_ij(F_1_n<span class="op">*</span>H_1,H_1<span class="op">+</span>H_2, H_1<span class="op">+</span>H_2<span class="op">+</span>H_3, H_1)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>delta_31 <span class="op">=</span> delta_13</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>delta_23 <span class="op">=</span> delta_ij(F_2_n<span class="op">*</span>(H_1<span class="op">+</span>H_2), H_3, H_1<span class="op">+</span>H_2<span class="op">+</span>H_3, H_1 <span class="op">+</span> H_2)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>delta_32 <span class="op">=</span> delta_23</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'delta_11'</span>, delta_11,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_12'</span>, delta_12,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_13'</span>, delta_13,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_21'</span>, delta_21,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_22'</span>, delta_22,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_23'</span>, delta_23,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_31'</span>, delta_31,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_32'</span>, delta_32,</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>               <span class="st">'delta_33'</span>, delta_33,</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{11} = \frac{4 H_{1}^{3}}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{12} = \frac{2 H_{1}^{2} \cdot \left(3 H_{1} + 2 H_{2}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{13} = \frac{2 H_{1}^{2} \cdot \left(3 H_{1} + 3 H_{2} + 2 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{21} = \frac{2 H_{1}^{2} \cdot \left(3 H_{1} + 2 H_{2}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{22} = \frac{2 \left(H_{1} + H_{2}\right)^{2} \cdot \left(2 H_{1} + 2 H_{2}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{23} = \frac{2 \left(H_{1} + H_{2}\right)^{2} \cdot \left(2 H_{1} + 2 H_{2} + 3 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{31} = \frac{2 H_{1}^{2} \cdot \left(3 H_{1} + 3 H_{2} + 2 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{32} = \frac{2 \left(H_{1} + H_{2}\right)^{2} \cdot \left(2 H_{1} + 2 H_{2} + 3 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\delta_{33} = \frac{2 \left(H_{1} + H_{2} + H_{3}\right)^{2} \cdot \left(2 H_{1} + 2 H_{2} + 2 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Eingesetzt in die Nachgiebigkeitsmatrix und mit dem Kraftvektor multipliziert:</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'F_1'</span>] <span class="op">=</span> <span class="dv">1000</span><span class="op">*</span>unit.N</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'F_2'</span>] <span class="op">=</span> <span class="dv">2000</span><span class="op">*</span>unit.N</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'F_3'</span>] <span class="op">=</span> <span class="dv">3000</span><span class="op">*</span>unit.N</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>D_matrix <span class="op">=</span> sp.Matrix([[delta_11, delta_12, delta_13],[delta_21, delta_22, delta_23],[delta_31, delta_32, delta_33]])</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>F_vektor <span class="op">=</span> sp.Matrix([[F_1],[F_2],[F_3]])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>u_vektor <span class="op">=</span> D_matrix <span class="op">*</span> F_vektor</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'D'</span>, <span class="dv">3</span>,<span class="dv">3</span>), </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>sp.simplify(D_matrix),</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'D'</span>, <span class="dv">3</span>,<span class="dv">3</span>), </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>unit.convert_to(sp.simplify(D_matrix.subs(params)).evalf(<span class="dv">3</span>), unit.mm),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'F'</span>, <span class="dv">3</span>,<span class="dv">1</span>), F_vektor.subs(params),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>, <span class="st">'D * F'</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'u'</span>, <span class="dv">3</span>,<span class="dv">1</span>), unit.convert_to(sp.simplify(u_vektor.subs(params)).evalf(<span class="dv">3</span>), unit.mm))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{D} = \left[\begin{matrix}\frac{4 H_{1}^{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{H_{1}^{2} \cdot \left(6 H_{1} + 4 H_{2}\right)}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{H_{1}^{2} \cdot \left(6 H_{1} + 6 H_{2} + 4 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\\\frac{H_{1}^{2} \cdot \left(6 H_{1} + 4 H_{2}\right)}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{4 \left(H_{1} + H_{2}\right)^{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{\left(H_{1} + H_{2}\right)^{2} \cdot \left(4 H_{1} + 4 H_{2} + 6 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}}\\\frac{H_{1}^{2} \cdot \left(6 H_{1} + 6 H_{2} + 4 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{\left(H_{1} + H_{2}\right)^{2} \cdot \left(4 H_{1} + 4 H_{2} + 6 H_{3}\right)}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{4 \left(H_{1} + H_{2} + H_{3}\right)^{3}}{E L_{w3}^{3} d \gamma_{EI}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{D} = \left[\begin{matrix}\frac{4.55 \cdot 10^{-7} \text{mm}}{\text{N}} &amp; \frac{1.14 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{1.82 \cdot 10^{-6} \text{mm}}{\text{N}}\\\frac{1.14 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{3.64 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{6.37 \cdot 10^{-6} \text{mm}}{\text{N}}\\\frac{1.82 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{6.37 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{1.23 \cdot 10^{-5} \text{mm}}{\text{N}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{F} = \left[\begin{matrix}1000 \text{N}\\2000 \text{N}\\3000 \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u = D F\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{u} = \left[\begin{matrix}0.00819 \text{mm}\\0.0275 \text{mm}\\0.0514 \text{mm}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<section id="alternative" class="level5" data-number="18.2.3.1.1">
+<h5 data-number="18.2.3.1.1" class="anchored" data-anchor-id="alternative"><span class="header-section-number">18.2.3.1.1</span> Alternative</h5>
+<p>Alternativ kann die Nachgiebigkeitsmatrix mit dem folgenden Bildungsgesetz ermitteln. Dies gilt <strong>nur</strong> bei gleichen Stockwerkshöhen!</p>
+<p><span id="eq-ekv_rayleigh_bildungsgesetz"><span class="math display">\[
+D_{ij} = \frac{H^3}{6EI}\cdot [j^2 \cdot(3\cdot i - j)]
+\tag{18.4}\]</span></span></p>
+<p>vereinfacht: <span id="eq-ekv_rayleigh_bildungsgesetz_subs"><span class="math display">\[
+D_{ij} = v\cdot \Delta
+\tag{18.5}\]</span></span></p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>D_bildung <span class="op">=</span> sp.Matrix([[<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">8</span>],[<span class="dv">5</span>,<span class="dv">16</span>,<span class="dv">28</span>],[<span class="dv">8</span>,<span class="dv">28</span>,<span class="dv">54</span>]])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>v_term <span class="op">=</span> H_1<span class="op">*</span>H_2<span class="op">*</span>H_3 <span class="op">/</span> (<span class="dv">6</span> <span class="op">*</span> EI_y_ersatz)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'v'</span>, <span class="st">'H_1*H_2*H_3 / (6 * EI_y_ersatz)'</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'Delta'</span>,<span class="dv">3</span>,<span class="dv">3</span>), D_bildung,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'D'</span>, <span class="dv">3</span>,<span class="dv">3</span>), D_bildung<span class="op">*</span>v_term,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    sp.MatrixSymbol(<span class="st">'D'</span>, <span class="dv">3</span>,<span class="dv">3</span>),unit.convert_to(sp.simplify((D_bildung<span class="op">*</span>v_term).subs(params).evalf(<span class="dv">3</span>)),unit.mm),</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}v = \frac{H_{1} H_{2} H_{3}}{6 EI_{y ersatz}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Delta} = \left[\begin{matrix}2 &amp; 5 &amp; 8\\5 &amp; 16 &amp; 28\\8 &amp; 28 &amp; 54\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{D} = \left[\begin{matrix}\frac{4 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{10 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{16 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}}\\\frac{10 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{32 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{56 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}}\\\frac{16 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{56 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}} &amp; \frac{108 H_{1} H_{2} H_{3}}{E L_{w3}^{3} d \gamma_{EI}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{D} = \left[\begin{matrix}\frac{4.55 \cdot 10^{-7} \text{mm}}{\text{N}} &amp; \frac{1.14 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{1.82 \cdot 10^{-6} \text{mm}}{\text{N}}\\\frac{1.14 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{3.64 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{6.37 \cdot 10^{-6} \text{mm}}{\text{N}}\\\frac{1.82 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{6.37 \cdot 10^{-6} \text{mm}}{\text{N}} &amp; \frac{1.23 \cdot 10^{-5} \text{mm}}{\text{N}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Die durch das Bildungsgesetz ermittelte Nachgiebigkeitsmatrix entspricht, der mittels der Arbeitsgleichung ermittelten.</p>
+</section>
+</section>
+<section id="eigenkreisfrequenz" class="level4" data-number="18.2.3.2">
+<h4 data-number="18.2.3.2" class="anchored" data-anchor-id="eigenkreisfrequenz"><span class="header-section-number">18.2.3.2</span> Eigenkreisfrequenz</h4>
+<p>Diese kann nach <a href="#eq-ekv_rayleigh_eigenkreis">Gleichung&nbsp;<span>18.3</span></a> ermittelt werden.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>E_pot <span class="op">=</span> <span class="bu">sum</span>(u_vektor.multiply_elementwise(F_vektor))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>M_vektor <span class="op">=</span> sp.Matrix([[m_1],[m_2],[m_3]])</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>E_kin <span class="op">=</span> <span class="bu">sum</span>(u_vektor.multiply_elementwise(u_vektor).multiply_elementwise(M_vektor))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E_pot'</span>, E_pot.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E_kin'</span>, E_kin.subs(params).simplify().evalf(<span class="dv">3</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}E_{pot} = 0.218 \text{m} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}E_{kin} = 0.00106 \text{m} \text{N} \text{s}^{2}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>omega_1 <span class="op">=</span> sp.sqrt(E_pot <span class="op">/</span> E_kin)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>f_1 <span class="op">=</span> omega_1 <span class="op">/</span> <span class="dv">2</span> <span class="op">/</span> sp.pi</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> f_1</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'f_1'</span>, f_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T_1'</span>, T_1.subs(params).simplify().evalf(<span class="dv">3</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{14.3}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f_{1} = \frac{2.28}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1} = 0.439 \text{s}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="bemessungsspektrum" class="level4" data-number="18.2.3.3">
+<h4 data-number="18.2.3.3" class="anchored" data-anchor-id="bemessungsspektrum"><span class="header-section-number">18.2.3.3</span> Bemessungsspektrum</h4>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a_gd <span class="op">=</span> <span class="fl">1.0</span><span class="op">*</span>unit.m <span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>S_d_y <span class="op">=</span> bemessungsspektrum(a_gd, T_1.subs(params).simplify().evalf(<span class="dv">3</span>), params[<span class="st">'q'</span>], params[<span class="st">'gamma_f'</span>], Baugrundklasse<span class="op">=</span><span class="st">'B'</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'S_d_y'</span>, S_d_y.evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S = 1.2\)</span></td>
+<td><span class="math inline">\(T_{B} = 0.08 \text{s}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{C} = 0.35 \text{s}\)</span></td>
+<td><span class="math inline">\(T_{D} = 2.0 \text{s}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a_{gd} = \frac{1.0 \text{m}}{\text{s}^{2}}\)</span></td>
+<td><span class="math inline">\(g = \frac{10.0 \text{m}}{\text{s}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\gamma_{f} = 1.0\)</span></td>
+<td><span class="math inline">\(q = 2.0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{d} = \frac{2.5 S_{} T_{C} a_{gd} \gamma_{f}}{T g q}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{d y} = 0.12\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="gesamt-ersatzkraft" class="level4" data-number="18.2.3.4">
+<h4 data-number="18.2.3.4" class="anchored" data-anchor-id="gesamt-ersatzkraft"><span class="header-section-number">18.2.3.4</span> Gesamt-Ersatzkraft</h4>
+<p>Die Stockwerksquerkraft resultiert nach Norm aus <a href="#eq-ekv_rayleigh_v_stock">Gleichung&nbsp;<span>18.6</span></a>.</p>
+<p><span id="eq-ekv_rayleigh_v_stock"><span class="math display">\[
+F_d = S_d \cdot \sum_{j=1} (G_k + \psi_2 \cdot Q_k)_j
+\tag{18.6}\]</span></span></p>
+<p>Aufgeteilt auf die Geschosse wird diese nach <a href="#eq-ekv_rayleigh_aufteilung">Gleichung&nbsp;<span>18.7</span></a>.</p>
+<p><span id="eq-ekv_rayleigh_aufteilung"><span class="math display">\[
+F_{d,i} = \frac{z_i \sum_{i=1} (G_k + \psi_2 \cdot Q_k)_i}{\sum_{j=1} z_j\cdot(G_k + \psi_2 \cdot Q_k)_j} \cdot F_d
+\tag{18.7}\]</span></span></p>
+<p>Der Term der <a href="#eq-ekv_rayleigh_term_massen">Gleichung&nbsp;<span>18.8</span></a> entspricht den Punktmassen.</p>
+<p><span id="eq-ekv_rayleigh_term_massen"><span class="math display">\[
+G_k + \psi_2 \cdot Q_k
+\tag{18.8}\]</span></span></p>
+<p>Die Ersatzkraft greift am Massenschwerpunkt der Decke an.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>F_d_y <span class="op">=</span> np.<span class="bu">sum</span>(np.array([m_1, m_2, m_3])<span class="op">*</span>g<span class="op">*</span>S_d_y)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'F_d_y'</span>, F_d_y.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}F_{d y} = 1.13 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>H_masse_i <span class="op">=</span> np.array([(H_1) <span class="op">*</span> m_1,(H_1<span class="op">+</span>H_2) <span class="op">*</span> m_2,(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3) <span class="op">*</span> m_3])</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>F_y_i <span class="op">=</span> H_masse_i <span class="op">/</span> np.<span class="bu">sum</span>(H_masse_i) <span class="op">*</span> F_d_y</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>F_y_i_dict <span class="op">=</span> {<span class="ss">f'F_y</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>: F_y_i[i].subs(params).evalf(<span class="dv">3</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(F_y_i))}</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(F_y_i_dict)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(F_{y1} = 1.94 \cdot 10^{5} \text{N}\)</span></td>
+<td><span class="math inline">\(F_{y2} = 3.88 \cdot 10^{5} \text{N}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F_{y3} = 5.47 \cdot 10^{5} \text{N}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="schnittgrössen" class="level4" data-number="18.2.3.5">
+<h4 data-number="18.2.3.5" class="anchored" data-anchor-id="schnittgrössen"><span class="header-section-number">18.2.3.5</span> Schnittgrössen</h4>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Querkraft</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>F_y_i <span class="op">=</span> <span class="bu">list</span>(F_y_i_dict.values())[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>V_max <span class="op">=</span> [F_y_i[<span class="dv">0</span>], F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>],F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>]<span class="op">+</span>F_y_i[<span class="dv">2</span>]][::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>V_x <span class="op">=</span> sp.Piecewise((V_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))), (V_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))), (V_max[<span class="dv">2</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Biegemoment</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> sp.integrate(<span class="op">-</span>V_x, x) <span class="op">+</span> C_1</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>C_1_solve <span class="op">=</span> sp.solve(M_x.subs(x, (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)), C_1)[<span class="dv">0</span>]</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> M_x.subs(C_1, C_1_solve)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalkraft</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>unit.m<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>N_x <span class="op">=</span> sp.Piecewise(((m_1<span class="op">+</span>m_2<span class="op">+</span>m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))),((m_3<span class="op">+</span>m_2).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))),((m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Numerische Daten generieren</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>x_array <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">0.01</span>, <span class="bu">float</span>((H_1<span class="op">+</span>H_2<span class="op">+</span>H_3<span class="op">+</span><span class="fl">.01</span>).subs(params_plot)), <span class="dv">1000</span>)</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>V_x_lamb <span class="op">=</span> sp.lambdify(x, V_x)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>V_x_array <span class="op">=</span> V_x_lamb(x_array)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>M_x_lamb <span class="op">=</span> sp.lambdify(x,M_x)</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>M_x_array <span class="op">=</span> M_x_lamb(x_array)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>N_x_lamb <span class="op">=</span> sp.lambdify(x,N_x)</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>N_x_array <span class="op">=</span> N_x_lamb(x_array)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure und Axes erstellen</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>ax1.plot(V_x_array<span class="op">/</span><span class="dv">1000</span>, x_array)</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$V(x)$'</span>)</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>ax1.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>ax1.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'$[m]$'</span>)</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweiten Plot erstellen</span></span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>ax2.plot(M_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$M(x)$'</span>)</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>ax2.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>ax2.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'$[kNm]$'</span>)</span>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Dritten Plot erstellen</span></span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>ax3.plot(N_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'$N(x)$'</span>)</span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>ax3.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>ax3.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a>ax3.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-ekv_rayleigh_schnittgroessen" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ekv_02_files/figure-html/fig-ekv_rayleigh_schnittgroessen-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.6: Maximale Schnittgrössen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Unter der Annahme das der Einspanngrad der Tragwand in die <em>biegeweiche</em> Bodenplatte zu vernachlässigen ist, kann das Biegemoment am Kragarm in ein Kräftepaar mit der Stockwerkshöhe im UG von 4m aufgelöst werden. Entsprechend dem System in <a href="#fig-ekv_rayleigh_systemansicht">Abbildung&nbsp;<span>18.2</span></a>. Somit ergeben sich nachfolgend dargestellten Schnittkräfte. Elastische Einspanngrade in die Bodenplatte können in Abhängigkeit der Steifigkeit der Fundation berücksichtigt werden. Zu beachten sind die hohen Querkräfte der Tragwand im UG. Da infolge Querkraft ein sprödes Versagen erfolgt, ist bei der Querkraft-Bemessung besonders Beachtung zu schenken.</p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Querkraft</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>F_y_i <span class="op">=</span> <span class="bu">list</span>(F_y_i_dict.values())[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>V_max <span class="op">=</span> [F_y_i[<span class="dv">0</span>], F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>],F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>]<span class="op">+</span>F_y_i[<span class="dv">2</span>]][::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>V_x <span class="op">=</span> sp.Piecewise((<span class="op">-</span>np.<span class="bu">sum</span>(V_max).subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&gt;=-</span>H_1.subs(params_plot)))),(V_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))), (V_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))), (V_max[<span class="dv">2</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Biegemoment</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> sp.integrate(<span class="op">-</span>V_x, x) <span class="op">+</span> C_1</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>C_1_solve <span class="op">=</span> sp.solve(M_x.subs(x, (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)), C_1)[<span class="dv">0</span>]</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> M_x.subs(C_1, C_1_solve)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalkraft</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>unit.m<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>N_x <span class="op">=</span> sp.Piecewise(((m_1<span class="op">+</span>m_2<span class="op">+</span>m_3<span class="op">*</span><span class="dv">2</span>).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&gt;=-</span>H_1.subs(params_plot)))),((m_1<span class="op">+</span>m_2<span class="op">+</span>m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))),((m_3<span class="op">+</span>m_2).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))),((m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Numerische Daten generieren</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>x_array <span class="op">=</span> np.linspace(<span class="bu">float</span>((<span class="op">-</span>H_1<span class="op">-</span><span class="fl">.01</span>).subs(params_plot)), <span class="bu">float</span>((H_1<span class="op">+</span>H_2<span class="op">+</span>H_3<span class="op">+</span><span class="fl">.01</span>).subs(params_plot)), <span class="dv">1000</span>)</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>V_x_lamb <span class="op">=</span> sp.lambdify(x, V_x)</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>V_x_array <span class="op">=</span> V_x_lamb(x_array)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>M_x_lamb <span class="op">=</span> sp.lambdify(x,M_x)</span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>M_x_array <span class="op">=</span> M_x_lamb(x_array)</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>N_x_lamb <span class="op">=</span> sp.lambdify(x,N_x)</span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>N_x_array <span class="op">=</span> N_x_lamb(x_array)</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure und Axes erstellen</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>ax1.plot(V_x_array<span class="op">/</span><span class="dv">1000</span>, x_array)</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$V(x)$'</span>)</span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>ax1.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>ax1.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'$[m]$'</span>)</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweiten Plot erstellen</span></span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a>ax2.plot(M_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$M(x)$'</span>)</span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a>ax2.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a>ax2.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'$[kNm]$'</span>)</span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Dritten Plot erstellen</span></span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a>ax3.plot(N_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'$N(x)$'</span>)</span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a>ax3.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a>ax3.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a>ax3.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-ekv_rayleigh_schnittgroessen_ug" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ekv_02_files/figure-html/fig-ekv_rayleigh_schnittgroessen_ug-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.7: Maximale Schnittgrössen erweitert in das UG</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In einem weiteren Schritt sind die Auflagerkräfte in der Decke über UG und in der Bodenplatte mit einem geeigneten Fachwerkmodell in die Aussenwände (ebene Scheibe) abzuleiten. Des Weiteren ist auf die lokale Lasteinleitung der Auflagerkräfte in die Decken bzw. Bodenplatte zu achten bzw. rechnerisch nachzuweisen.</p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>R_A <span class="op">=</span> <span class="op">-</span>V_x.subs(x,<span class="op">-</span><span class="dv">3</span>)<span class="op">*</span>unit.N</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>R_B <span class="op">=</span> (V_x.subs(x,<span class="op">-</span><span class="dv">3</span>) <span class="op">-</span> V_x.subs(x,<span class="dv">1</span>)) <span class="op">*</span> unit.N</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'R_A'</span>, R_A,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'R_B'</span>, R_B)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}R_{A} = 2.61 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}R_{B} = - 3.74 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="formfunktion-analytisch" class="level3" data-number="18.2.4">
+<h3 data-number="18.2.4" class="anchored" data-anchor-id="formfunktion-analytisch"><span class="header-section-number">18.2.4</span> Formfunktion analytisch</h3>
+<p>Als Formfunktion wählen wir die bekannte normierte analytische Funktion für den Kragstab, welche die kinematischen Randbedingungen erfüllt.</p>
+<section id="rayleigh-quotient-1" class="level4" data-number="18.2.4.1">
+<h4 data-number="18.2.4.1" class="anchored" data-anchor-id="rayleigh-quotient-1"><span class="header-section-number">18.2.4.1</span> Rayleigh-Quotient</h4>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>params[H] <span class="op">=</span> (H_1 <span class="op">+</span> H_2 <span class="op">+</span> H_3).subs(params)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Psi_x <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> sp.cos(sp.pi <span class="op">*</span> x <span class="op">/</span> ( <span class="dv">2</span><span class="op">*</span>H))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'H'</span>, H.subs(params),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Psi(x)'</span>, Psi_x)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}H = 12 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi{\left(x \right)} = 1 - \cos{\left(\frac{\pi x}{2 H} \right)}\end{equation}\]</span></p>
+</div>
+</div>
+<p><span id="eq-ekv_rayleigh_balken_energie"><span class="math display">\[
+E_{pot,max} = E_{kin,max}
+\tag{18.9}\]</span></span></p>
+<p><span id="eq-ekv_rayleigh_balken_quotient"><span class="math display">\[
+\omega_1^2 = \frac{\int_0^L EI[u''(x)]^2 dx}{\int_0^L m_{const.}[u(x)]^2 dx}
+\tag{18.10}\]</span></span></p>
+<p>Dies lässt sich mit entsprechender Formfunktion schreiben:</p>
+<p><span id="eq-ekv_rayleigh_balken_quotient_subs"><span class="math display">\[
+\omega_1^2 = \frac{\int_0^L EI[\Psi''(x)]^2 dx}{\int_0^L m_{const.}[\Psi(x)]^2 dx}
+\tag{18.11}\]</span></span></p>
+<p>Durch die Ermittlung der zweiten Ableitung der Formfunktion:</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>Psi_x_diff_1 <span class="op">=</span> sp.diff(Psi_x, x)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>Psi_x_diff_2 <span class="op">=</span> sp.diff(Psi_x, x,x)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Psi(x)'</span>, Psi_x,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Derivative(Psi(x),x)'</span>, Psi_x_diff_1,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Derivative(Psi(x),x,x)'</span>, Psi_x_diff_2,)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi{\left(x \right)} = 1 - \cos{\left(\frac{\pi x}{2 H} \right)}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\frac{d}{d x} \Psi{\left(x \right)} = \frac{\pi \sin{\left(\frac{\pi x}{2 H} \right)}}{2 H}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\frac{d^{2}}{d x^{2}} \Psi{\left(x \right)} = \frac{\pi^{2} \cos{\left(\frac{\pi x}{2 H} \right)}}{4 H^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Die Funktionswerte der Punktmassen:</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>Psi_x1 <span class="op">=</span> Psi_x.subs(x, sp.Rational(<span class="dv">1</span>,<span class="dv">3</span>)<span class="op">*</span>H)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>Psi_x2 <span class="op">=</span> Psi_x.subs(x, sp.Rational(<span class="dv">2</span>,<span class="dv">3</span>)<span class="op">*</span>H)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>Psi_x3 <span class="op">=</span> Psi_x.subs(x, sp.Rational(<span class="dv">3</span>,<span class="dv">3</span>)<span class="op">*</span>H)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Psi_x1(1/3*H)'</span>, Psi_x1.evalf(<span class="dv">3</span>),</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Psi_x2(2/3*H)'</span>, Psi_x2,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Psi_x3(H)'</span>, Psi_x3</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>                 )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi_{x1}{\left(\frac{H}{3} \right)} = 0.134\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi_{x2}{\left(\frac{2 H}{3} \right)} = \frac{1}{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi_{x3}{\left(H \right)} = 1\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenkreisfrequenz-1" class="level4" data-number="18.2.4.2">
+<h4 data-number="18.2.4.2" class="anchored" data-anchor-id="eigenkreisfrequenz-1"><span class="header-section-number">18.2.4.2</span> Eigenkreisfrequenz</h4>
+<p><a href="#eq-ekv_rayleigh_balken_quotient_subs">Gleichung&nbsp;<span>18.11</span></a> umgeformt und substituiert:</p>
+<p><span id="eq-ekv_rayleigh_2pm_grundfreq"><span class="math display">\[
+\omega_1 = \sqrt{\frac{k^\star}{m^\star}}
+\tag{18.12}\]</span></span></p>
+<p>Masse:</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>m_star <span class="op">=</span> m_1<span class="op">*</span>Psi_x1<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> m_2 <span class="op">*</span>Psi_x2<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> m_3 <span class="op">*</span> Psi_x3<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>m_star</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.Symbol(<span class="st">'m^\star'</span>), <span class="st">"m_1*Psi_x1**2 + m_2 *Psi_x2**2 + m_3 * Psi_x2**2"</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>                  sp.Symbol(<span class="st">'m^\star'</span>), m_star,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>                  sp.Symbol(<span class="st">'m^\star'</span>), m_star.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                 )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m^{\star} = \Psi_{x1}^{2} m_{1} + \Psi_{x2}^{2} m_{2} + \Psi_{x2}^{2} m_{3}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m^{\star} = m_{1} \left(1 - \frac{\sqrt{3}}{2}\right)^{2} + \frac{m_{2}}{4} + m_{3}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m^{\star} = \frac{3.88 \cdot 10^{5} \text{N} \text{s}^{2}}{\text{m}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Steifigkeit:</p>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>k_star <span class="op">=</span> EI_y_ersatz<span class="op">*</span>sp.integrate(Psi_x_diff_2<span class="op">**</span><span class="dv">2</span>, (x, <span class="dv">0</span>, H))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.Symbol(<span class="st">'k^\star'</span>), <span class="st">"EI_y_ersatz*Integral(Derivative(Psi(x),x,x)**2, (x, 0, L))"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>                  sp.Symbol(<span class="st">'k^\star'</span>), k_star,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>                  sp.Symbol(<span class="st">'k^\star'</span>), k_star.subs(params).evalf(<span class="dv">3</span>).simplify(),</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>                 )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k^{\star} = EI_{y ersatz} \int\limits_{0}^{L} \left(\frac{d^{2}}{d x^{2}} \Psi{\left(x \right)}\right)^{2}\, dx\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k^{\star} = \frac{\pi^{4} E L_{w3}^{3} d \gamma_{EI}}{384 H^{3}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k^{\star} = \frac{8.25 \cdot 10^{7} \text{N}}{\text{m}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Eigenkreisfrequenz:</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>omega_1 <span class="op">=</span> sp.sqrt(k_star <span class="op">/</span>m_star)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{14.6}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Eigenfrequenz und Eigenperiode:</p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>f_1 <span class="op">=</span> omega_1 <span class="op">/</span> <span class="dv">2</span> <span class="op">/</span> sp.pi</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> f_1</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'f_1'</span>, f_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'T_1'</span>, T_1.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f_{1} = \frac{2.32}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1} = 0.43 \text{s}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="erweiterung-des-rayleigh-quotienten" class="level3" data-number="18.2.5">
+<h3 data-number="18.2.5" class="anchored" data-anchor-id="erweiterung-des-rayleigh-quotienten"><span class="header-section-number">18.2.5</span> Erweiterung des Rayleigh-Quotienten</h3>
+<p>Eine Erweiterung des Rayleigh-Quotienten besteht in der näherungsweisen Berücksichtigung von Schubverformungen und Fundamentverdrehungen. Beide führen zu einem weicheren System. Bei langen Stahlbetonwänden und Mauerwerkswänden sind die Schubverformungen zu berücksichtigen. Bei weichem Baugrund folglich die Fundamentverdrehungen.</p>
+<p>Die <a href="#fig-ekv_rayleigh_feder">Abbildung&nbsp;<span>18.8</span></a> zeigt ein idealisiertes Kragsystem für einen Mehrmassenschwinger in ausgelenkter Lage. Es gilt die Annahme für kleine Winkel <span class="math inline">\(\tan(\phi) = \phi\)</span>.</p>
+<div id="fig-ekv_rayleigh_feder" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ekv_rayleigh_biege_feder.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.8: Mehrmassenschwinger erweitert mit einer Fundamentverdrehung und Schubsteifigkeit</figcaption>
+</figure>
+</div>
+<p>Die Eigenform wird mit einer linearen Formfunktion <span class="math inline">\(\Psi(x)\)</span> angenähert.</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Psi_x <span class="op">=</span> (u_0 <span class="op">/</span> H <span class="op">*</span> x)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>Psi_x_diff_2 <span class="op">=</span> sp.Derivative(Psi_x, x,x).doit()</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Psi(x)'</span>, Psi_x,</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Derivative(Psi(x),x,x)'</span>, Psi_x_diff_2,</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Psi(0)'</span>, Psi_x.subs(x,<span class="dv">0</span>),</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Psi(H)'</span>, Psi_x.subs(x,H))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi{\left(x \right)} = \frac{u_{0} x}{H}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\frac{d^{2}}{d x^{2}} \Psi{\left(x \right)} = 0\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi{\left(0 \right)} = 0\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\Psi{\left(H \right)} = u_{0}\end{equation}\]</span></p>
+</div>
+</div>
+<section id="rayleigh-quotient-2" class="level4" data-number="18.2.5.1">
+<h4 data-number="18.2.5.1" class="anchored" data-anchor-id="rayleigh-quotient-2"><span class="header-section-number">18.2.5.1</span> Rayleigh-Quotient</h4>
+<p>Der Rayleigh-Quotient lässt sich in Analogie des Vorgehens in <a href="#eq-ekv_rayleigh_arbeit">Gleichung&nbsp;<span>18.1</span></a> folgendermassen beschreiben:</p>
+<p><span id="eq-ekv_rayleigh_eigenkreisfreq_drehfeder"><span class="math display">\[
+\omega_1^2 = \frac{F\cdot u_0}{\sum_{i=1}^n m_i [\Psi_i(x)]^2}
+\tag{18.13}\]</span></span></p>
+<p>Die Verformung <span class="math inline">\(u_0\)</span> setzt aus einer Reihenschaltung von Federn zusammen und bezeichnet die Nachgiebigkeit. Diese Nachgiebigkeiten setzen sich aus der Beige- und Schubverformung des Stabes und der Fundamntdrehung infolge dem Einspannmoment <span class="math inline">\(M = 1 \cdot H\)</span> zusammen.</p>
+<p><span id="eq-ekv_rayleigh_u0"><span class="math display">\[
+u_0 = \frac{H^3}{3 \cdot EI} + \frac{H}{G\cdot A_s} + \frac{H^2}{k_\phi}
+\tag{18.14}\]</span></span></p>
+<section id="schubverformung" class="level5" data-number="18.2.5.1.1">
+<h5 data-number="18.2.5.1.1" class="anchored" data-anchor-id="schubverformung"><span class="header-section-number">18.2.5.1.1</span> Schubverformung</h5>
+<p>Die <a href="#eq-ekv_rayleigh_u0">Gleichung&nbsp;<span>18.14</span></a> wird folgend hergeleitet:</p>
+<p><span id="eq-ekv_rayleigh_schubwinkel"><span class="math display">\[
+\gamma = \frac{\tau}{G} = \frac{\frac{V}{A_s}}{G} =  \frac{u_G}{H}
+\tag{18.15}\]</span></span></p>
+<p><span class="math inline">\(\gamma = \text{Schubwinkel}\)</span> Der Schubwinkel ist bei der Schubspannung <em>gleichbedeutend</em> wie die Dehnung <span class="math inline">\(\varepsilon\)</span> bei der Normalspannung.</p>
+<p><span class="math inline">\(\tau = \frac{V}{A_s}\)</span> Die Schubspannung definiert sich aus der Querkraft über die Querschnittsfläche. Als Annahme gilt eine konstante Schubspannungsverteilung über die Wandlänge.</p>
+<p><span class="math inline">\(G = \text{Schubmodul}\)</span> Das Schubmodul ist das Elastizitätsmodul bei den Schubspannungen.</p>
+<p><span class="math inline">\(u_G = \text{Anteil an Gesamtverformung}\)</span></p>
+<p>Gleichung <a href="#eq-ekv_rayleigh_schubwinkel">Gleichung&nbsp;<span>18.15</span></a> lässt sich nach <span class="math inline">\(u_G\)</span> umformen für <span class="math inline">\(V = 1\)</span>:</p>
+<p><span id="eq-ekv_rayleigh_u_G"><span class="math display">\[
+u_G = \frac{H}{G\cdot A_s}
+\tag{18.16}\]</span></span></p>
+<p>Zur Beziehung, es lässt sich ein Dreieck aus <span class="math inline">\(u_G\)</span> und <span class="math inline">\(H\)</span> bilden, der Winkel am Fusspunkt entspricht dem Schubwinkel.</p>
+<p><span id="eq-ekv_rayleigh_gamma"><span class="math display">\[
+\gamma = \frac{u_G}{H}
+\tag{18.17}\]</span></span></p>
+</section>
+<section id="fundamentverdrehung" class="level5" data-number="18.2.5.1.2">
+<h5 data-number="18.2.5.1.2" class="anchored" data-anchor-id="fundamentverdrehung"><span class="header-section-number">18.2.5.1.2</span> Fundamentverdrehung</h5>
+<p>Infolge elastischer Lagerung resultiert die Fundamentverdrehung:</p>
+<p><span id="eq-ekv_rayleigh_drehfeder"><span class="math display">\[
+k_{\varphi} = \frac{M}{\varphi}
+\tag{18.18}\]</span></span></p>
+<p>Das Biegemoment resultiert aus <span class="math inline">\(F=1\)</span> mit entsprechendem Hebelarm. Die Verdrehung folgt aus der Kopfverschiebung verteilt an die Systemhöhe. Gleiche Winkelbetrachtung wie bei dem Schubwinkel. Mit <span class="math inline">\(M = 1 \cdot H\)</span> und <span class="math inline">\(\varphi = \frac{u_{\varphi}}{H}\)</span></p>
+<p><span id="eq-ekv_rayleigh_anteil_u_phi"><span class="math display">\[
+u_{\varphi} = \frac{H^2}{k_{\varphi}}
+\tag{18.19}\]</span></span></p>
+<p><span class="math inline">\(u_{\varphi} = \text{Anteil an Gesamtverformung}\)</span></p>
+</section>
+<section id="biegeverformung" class="level5" data-number="18.2.5.1.3">
+<h5 data-number="18.2.5.1.3" class="anchored" data-anchor-id="biegeverformung"><span class="header-section-number">18.2.5.1.3</span> Biegeverformung</h5>
+<p>Für die Biegeverformung gilt folgendes: <span id="eq-ekv_rayleigh_u_B"><span class="math display">\[
+u_B = \frac{F}{k}
+\tag{18.20}\]</span></span></p>
+<p>Die Steifigkeit für den eingespannten Kragarm: <span id="eq-ekv_rayleigh_k"><span class="math display">\[
+k = \frac{3 \cdot EI }{H^3}
+\tag{18.21}\]</span></span></p>
+</section>
+</section>
+<section id="nachgiebigkeiten" class="level4" data-number="18.2.5.2">
+<h4 data-number="18.2.5.2" class="anchored" data-anchor-id="nachgiebigkeiten"><span class="header-section-number">18.2.5.2</span> Nachgiebigkeiten</h4>
+<p>Wir wissen nun, welchen Einfluss die Fundamentverdrehung, sowie die Schubverformung auf den Rayleigh-Quotienten hat. Nun gilt es die Federsteifigkeit zu definieren.</p>
+<section id="schubverformung-1" class="level5" data-number="18.2.5.2.1">
+<h5 data-number="18.2.5.2.1" class="anchored" data-anchor-id="schubverformung-1"><span class="header-section-number">18.2.5.2.1</span> Schubverformung</h5>
+<p>Dabei gilt, die Schubsteifigkeit wird um den gleichen Faktor wie die Biegesteifigkeit abgemindert, um das Rissverhalten zu berücksichtigen.</p>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>A_s <span class="op">=</span> (L_w3 <span class="op">*</span> d)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>nu_c <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>G_c <span class="op">=</span> (E <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>nu_c)))</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'A_s'</span>, A_s,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'A_s'</span>, A_s.subs(params),</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'nu_c'</span>, nu_c,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'G_c'</span>, <span class="st">'(E_ / (2*(1-nu_c)))'</span>,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'G_c'</span>, G_c.subs(params))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}A_{s} = L_{w3} d\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}A_{s} = 1.5 \text{m}^{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\nu_{c} = 0.2\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{c} = \frac{E_{}}{2 - 2 \nu_{c}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{c} = \frac{18750.0 \text{N}}{\text{mm}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Schubsteifigkeit der Tragwand:</p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>G_cA_2 <span class="op">=</span> G_c<span class="op">*</span>gamma_EI <span class="op">*</span> A_s</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GA_II'</span>, <span class="st">'G_c*gamma_EI * A_s'</span>,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GA_II'</span>, G_cA_2.subs(params).simplify())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}GA_{II} = A_{s} G_{c} \gamma_{EI}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}GA_{II} = 14062500000.0 \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Verformungsanteil durch die Querkraft:</p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>u_g <span class="op">=</span> H <span class="op">/</span> G_cA_2</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'u_g'</span>, u_g.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{g} = \frac{8.53 \cdot 10^{-10} \text{m}}{\text{N}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="fundamentverdrehung-1" class="level5" data-number="18.2.5.2.2">
+<h5 data-number="18.2.5.2.2" class="anchored" data-anchor-id="fundamentverdrehung-1"><span class="header-section-number">18.2.5.2.2</span> Fundamentverdrehung</h5>
+<p>Sowie wird die Fundamentsteifigkeit nach <span class="citation" data-cites="SIA269/8">Schweizerischer Ingenieur- und Architektenverein (SIA) (<a href="references.html#ref-SIA269/8" role="doc-biblioref">2017</a>)</span> Tabelle 7 ermittelt. Der Baugrund wird als locker gelagerter Sand angenommen. Effektive Werte sind aus geologischen Berichten zu entnehmen. Dabei ist die Baugrundklasse zu berücksichtigen:</p>
+<p>Bodenkennwert nach Tabelle 6:</p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>G_eff <span class="op">=</span> G_eff_sand <span class="op">*</span> <span class="fl">0.935</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'G_eff'</span>,<span class="st">'G_eff_sand * 0.935'</span>,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'G_eff'</span>, G_eff.subs(params))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{eff} = 0.935 G_{eff sand}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}G_{eff} = \frac{112200000.0 \text{N}}{\text{m}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Drehfeder Baugrund nach Tabelle 7 und Tabelle 8</p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> L_x</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> L_y</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>k_xx <span class="op">=</span> (G_eff <span class="op">*</span> b<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (<span class="dv">1</span><span class="op">-</span>nu_sand)) <span class="op">*</span> (<span class="fl">0.4</span> <span class="op">*</span> (a<span class="op">/</span>b)<span class="op">+</span><span class="fl">0.1</span>)</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'b'</span>, b.subs(params),</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>, a.subs(params),</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'k_xx'</span>, <span class="st">'G_eff * b**3 / (1-nu_sand) * (0.4 * (a/b)+0.1)'</span>,</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'k_xx'</span>, k_xx.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}b = 15 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}a = 20 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{xx} = \frac{G_{eff} b^{3} \cdot \left(\frac{0.4 a}{b} + 0.1\right)}{1 - \nu_{sand}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{xx} = 3.43 \cdot 10^{11} \text{m} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Multiplikationsfaktor zur Berücksichtigung der Einspannung:</p>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>h_2 <span class="op">=</span> <span class="dv">4</span><span class="op">*</span>unit.m <span class="op">+</span> d<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>h_3 <span class="op">=</span> d</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>h_1 <span class="op">=</span> h_2 <span class="op">-</span> (h_3<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>m_xx <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> sp.Rational(<span class="fl">2.5</span>)<span class="op">*</span>h_3 <span class="op">/</span> b <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>h_3 <span class="op">/</span> b <span class="op">*</span>(h_3<span class="op">/</span>h_2)<span class="op">**</span>(<span class="op">-</span><span class="fl">0.2</span>) <span class="op">*</span> sp.sqrt(b<span class="op">/</span>a))</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'h_1'</span>, h_1.subs(params),</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'h_2'</span>, h_2.subs(params),</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'h_3'</span>, h_3.subs(params),</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'m_xx'</span>,<span class="st">'1 + 2.5*h_3 / b * (1 + 2*h_3 / b *(h_3/h_2)**(-0.2) * sqrt(b/a))'</span>,</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'m_xx'</span>, m_xx.subs(params).evalf(<span class="dv">4</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}h_{1} = 4 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}h_{2} = 4.15 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}h_{3} = 0.3 \text{m}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{xx} = 1 + \frac{2.5 h_{3} \cdot \left(1 + \frac{2 h_{3} \sqrt{\frac{b}{a}}}{b \left(\frac{h_{3}}{h_{2}}\right)^{0.2}}\right)}{b}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}m_{xx} = 1.053\end{equation}\]</span></p>
+</div>
+</div>
+<p>Drehfeder unter Berücksichtigung der Einspannung:</p>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>k_xx <span class="op">=</span> k_xx <span class="op">*</span> m_xx</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'k_xx'</span>, k_xx.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{xx} = 3.61 \cdot 10^{11} \text{m} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+<p>In <a href="#eq-ekv_rayleigh_anteil_u_phi">Gleichung&nbsp;<span>18.19</span></a> eingesetzt:</p>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>u_phi <span class="op">=</span> H<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> k_xx</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'u_varphi'</span>, u_phi.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{\varphi} = \frac{3.99 \cdot 10^{-10} \text{m}}{\text{N}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="biegeverformung-1" class="level5" data-number="18.2.5.2.3">
+<h5 data-number="18.2.5.2.3" class="anchored" data-anchor-id="biegeverformung-1"><span class="header-section-number">18.2.5.2.3</span> Biegeverformung</h5>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>k_biege <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>EI_y_ersatz <span class="op">/</span> H<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>u_B <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>k_biege</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'k_biege'</span>, k_biege.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'u_B'</span>, u_B.subs(params).evalf(<span class="dv">3</span>).simplify())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k_{biege} = \frac{81.4 \text{m} \text{N}}{\text{mm}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{B} = \frac{1.23 \cdot 10^{-8} \text{m}}{\text{N}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="totale-deformation" class="level5" data-number="18.2.5.2.4">
+<h5 data-number="18.2.5.2.4" class="anchored" data-anchor-id="totale-deformation"><span class="header-section-number">18.2.5.2.4</span> Totale Deformation</h5>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>params[F] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>params[u_0] <span class="op">=</span> (u_B <span class="op">+</span> u_g <span class="op">+</span> u_phi).subs(params).simplify()</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u_0'</span>, <span class="st">'u_B + u_g + u_phi'</span>,</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u_0'</span>, u_0.subs(params).evalf(<span class="dv">3</span>).simplify())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{0} = u_{B} + u_{g} + u_{\phi}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{0} = \frac{1.35 \cdot 10^{-8} \text{m}}{\text{N}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Eingesetzt in <a href="#eq-ekv_rayleigh_eigenkreisfreq_drehfeder">Gleichung&nbsp;<span>18.13</span></a>:</p>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>omega_1_squared <span class="op">=</span> F<span class="op">*</span>u_0 <span class="op">/</span> (m_1 <span class="op">*</span> Psi_x.subs(x, H_1)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> m_2 <span class="op">*</span> Psi_x.subs(x, H_2<span class="op">+</span>H_1)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span>m_3 <span class="op">*</span> Psi_x.subs(x, H_3<span class="op">+</span>H_2<span class="op">+</span>H_1)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>omega_1 <span class="op">=</span> sp.sqrt(omega_1_squared)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'omega_1^2'</span>, omega_1_squared.subs(params).evalf(<span class="dv">3</span>).simplify(),</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'omega_1'</span>, omega_1.subs(params).evalf(<span class="dv">3</span>).simplify()</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1}^{2} = \frac{154.0}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{12.4}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>f_1 <span class="op">=</span> omega_1 <span class="op">/</span> <span class="dv">2</span> <span class="op">/</span> sp.pi</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> f_1</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'f_1'</span>, f_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T_1'</span>, T_1.subs(params).simplify().evalf(<span class="dv">3</span>)</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f_{1} = \frac{1.97}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1} = 0.506 \text{s}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="bemessungsspektrum-1" class="level4" data-number="18.2.5.3">
+<h4 data-number="18.2.5.3" class="anchored" data-anchor-id="bemessungsspektrum-1"><span class="header-section-number">18.2.5.3</span> Bemessungsspektrum</h4>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>a_gd <span class="op">=</span> <span class="fl">1.0</span><span class="op">*</span>unit.m <span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>S_d_y <span class="op">=</span> bemessungsspektrum(a_gd, T_1.subs(params).simplify().evalf(<span class="dv">3</span>), params[<span class="st">'q'</span>], params[<span class="st">'gamma_f'</span>], Baugrundklasse<span class="op">=</span><span class="st">'B'</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'S_d_y'</span>, S_d_y.evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S = 1.2\)</span></td>
+<td><span class="math inline">\(T_{B} = 0.08 \text{s}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{C} = 0.35 \text{s}\)</span></td>
+<td><span class="math inline">\(T_{D} = 2.0 \text{s}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a_{gd} = \frac{1.0 \text{m}}{\text{s}^{2}}\)</span></td>
+<td><span class="math inline">\(g = \frac{10.0 \text{m}}{\text{s}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\gamma_{f} = 1.0\)</span></td>
+<td><span class="math inline">\(q = 2.0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{d} = \frac{2.5 S_{} T_{C} a_{gd} \gamma_{f}}{T g q}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}S_{d y} = 0.104\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="gesamt-ersatzkraft-1" class="level4" data-number="18.2.5.4">
+<h4 data-number="18.2.5.4" class="anchored" data-anchor-id="gesamt-ersatzkraft-1"><span class="header-section-number">18.2.5.4</span> Gesamt-Ersatzkraft</h4>
+<p>Das Vorgehen ist analog <a href="#eq-ekv_rayleigh_v_stock">Gleichung&nbsp;<span>18.6</span></a> und Folgenden.</p>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>F_d_y_nach <span class="op">=</span> np.<span class="bu">sum</span>(np.array([m_1, m_2, m_3])<span class="op">*</span>g<span class="op">*</span>S_d_y)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>Red <span class="op">=</span> (<span class="dv">1</span><span class="op">-</span>(F_d_y <span class="op">/</span> F_d_y_nach).subs(params).evalf(<span class="dv">3</span>))<span class="op">*</span><span class="dv">100</span><span class="op">*</span>unit.percent</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'F_d_y_nach'</span>, F_d_y_nach.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Reduktion'</span>, Red)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}F_{d y nach} = 9.78 \cdot 10^{5} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Reduktion = - 15.4 \%\end{equation}\]</span></p>
+</div>
+</div>
+<p>Im Vergleich mit der Lösung ohne Nachgiebigkeit verringert sich die Gesamt-Ersatzkraft um ca. 15 % und folglich die Schnittgrössen ebenfalls. Wenn die Eigenperiode im abfallenden Ast des Spektrums zu liegen kommt, ist die Berücksichtigung der Nachgiebigkeiten eine wirtschaftliche Lösung.</p>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>H_masse_i <span class="op">=</span> np.array([(H_1) <span class="op">*</span> m_1,(H_1<span class="op">+</span>H_2) <span class="op">*</span> m_2,(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3) <span class="op">*</span> m_3])</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>F_y_i <span class="op">=</span> H_masse_i <span class="op">/</span> np.<span class="bu">sum</span>(H_masse_i) <span class="op">*</span> F_d_y_nach</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>F_y_i_dict <span class="op">=</span> {<span class="ss">f'F_y</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>: F_y_i[i].subs(params).evalf(<span class="dv">3</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(F_y_i))}</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(F_y_i_dict)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(F_{y1} = 1.68 \cdot 10^{5} \text{N}\)</span></td>
+<td><span class="math inline">\(F_{y2} = 3.36 \cdot 10^{5} \text{N}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F_{y3} = 4.74 \cdot 10^{5} \text{N}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="schnittgrössen-1" class="level4" data-number="18.2.5.5">
+<h4 data-number="18.2.5.5" class="anchored" data-anchor-id="schnittgrössen-1"><span class="header-section-number">18.2.5.5</span> Schnittgrössen</h4>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Querkraft</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>F_y_i <span class="op">=</span> <span class="bu">list</span>(F_y_i_dict.values())[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>V_max <span class="op">=</span> [F_y_i[<span class="dv">0</span>], F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>],F_y_i[<span class="dv">0</span>]<span class="op">+</span>F_y_i[<span class="dv">1</span>]<span class="op">+</span>F_y_i[<span class="dv">2</span>]][::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>V_x <span class="op">=</span> sp.Piecewise((<span class="op">-</span>np.<span class="bu">sum</span>(V_max).subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&gt;=-</span>H_1.subs(params_plot)))),(V_max[<span class="dv">0</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))), (V_max[<span class="dv">1</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))), (V_max[<span class="dv">2</span>].subs(params)<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Biegemoment</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> sp.integrate(<span class="op">-</span>V_x, x) <span class="op">+</span> C_1</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>C_1_solve <span class="op">=</span> sp.solve(M_x.subs(x, (H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)), C_1)[<span class="dv">0</span>]</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>M_x <span class="op">=</span> M_x.subs(C_1, C_1_solve)</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalkraft</span></span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>unit.m<span class="op">/</span>unit.second<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>N_x <span class="op">=</span> sp.Piecewise(((m_1<span class="op">+</span>m_2<span class="op">+</span>m_3<span class="op">*</span><span class="dv">2</span>).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&gt;=-</span>H_1.subs(params_plot)))),((m_1<span class="op">+</span>m_2<span class="op">+</span>m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;</span><span class="dv">0</span>)<span class="op">&amp;</span>(x<span class="op">&lt;=</span>H_1.subs(params_plot)))),((m_3<span class="op">+</span>m_2).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>H_1.subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot)))),((m_3).subs(params)<span class="op">*</span>g<span class="op">/</span>unit.N, ((x<span class="op">&gt;=</span>(H_1<span class="op">+</span>H_2).subs(params_plot))<span class="op">&amp;</span>(x<span class="op">&lt;=</span>(H_1<span class="op">+</span>H_2<span class="op">+</span>H_3).subs(params_plot)))), (<span class="dv">0</span>,<span class="va">True</span>))</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Numerische Daten generieren</span></span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a>x_array <span class="op">=</span> np.linspace(<span class="bu">float</span>((<span class="op">-</span>H_1<span class="op">-</span><span class="fl">.01</span>).subs(params_plot)), <span class="bu">float</span>((H_1<span class="op">+</span>H_2<span class="op">+</span>H_3<span class="op">+</span><span class="fl">.01</span>).subs(params_plot)), <span class="dv">1000</span>)</span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a>V_x_lamb <span class="op">=</span> sp.lambdify(x, V_x)</span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>V_x_array <span class="op">=</span> V_x_lamb(x_array)</span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a>M_x_lamb <span class="op">=</span> sp.lambdify(x,M_x)</span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a>M_x_array <span class="op">=</span> M_x_lamb(x_array)</span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a>N_x_lamb <span class="op">=</span> sp.lambdify(x,N_x)</span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a>N_x_array <span class="op">=</span> N_x_lamb(x_array)</span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure und Axes erstellen</span></span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-34"><a href="#cb47-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Ersten Plot erstellen</span></span>
+<span id="cb47-35"><a href="#cb47-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-36"><a href="#cb47-36" aria-hidden="true" tabindex="-1"></a>ax1.plot(V_x_array<span class="op">/</span><span class="dv">1000</span>, x_array)</span>
+<span id="cb47-37"><a href="#cb47-37" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$V(x)$'</span>)</span>
+<span id="cb47-38"><a href="#cb47-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-39"><a href="#cb47-39" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb47-40"><a href="#cb47-40" aria-hidden="true" tabindex="-1"></a>ax1.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-41"><a href="#cb47-41" aria-hidden="true" tabindex="-1"></a>ax1.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-42"><a href="#cb47-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-43"><a href="#cb47-43" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb47-44"><a href="#cb47-44" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'$[m]$'</span>)</span>
+<span id="cb47-45"><a href="#cb47-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-46"><a href="#cb47-46" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb47-47"><a href="#cb47-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-48"><a href="#cb47-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-49"><a href="#cb47-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweiten Plot erstellen</span></span>
+<span id="cb47-50"><a href="#cb47-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-51"><a href="#cb47-51" aria-hidden="true" tabindex="-1"></a>ax2.plot(M_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb47-52"><a href="#cb47-52" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$M(x)$'</span>)</span>
+<span id="cb47-53"><a href="#cb47-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-54"><a href="#cb47-54" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb47-55"><a href="#cb47-55" aria-hidden="true" tabindex="-1"></a>ax2.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-56"><a href="#cb47-56" aria-hidden="true" tabindex="-1"></a>ax2.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-57"><a href="#cb47-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-58"><a href="#cb47-58" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'$[kNm]$'</span>)</span>
+<span id="cb47-59"><a href="#cb47-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-60"><a href="#cb47-60" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb47-61"><a href="#cb47-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-62"><a href="#cb47-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-63"><a href="#cb47-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Dritten Plot erstellen</span></span>
+<span id="cb47-64"><a href="#cb47-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-65"><a href="#cb47-65" aria-hidden="true" tabindex="-1"></a>ax3.plot(N_x_array<span class="op">/</span><span class="dv">1000</span>, x_array, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb47-66"><a href="#cb47-66" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'$N(x)$'</span>)</span>
+<span id="cb47-67"><a href="#cb47-67" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">'$[kN]$'</span>)</span>
+<span id="cb47-68"><a href="#cb47-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-69"><a href="#cb47-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-70"><a href="#cb47-70" aria-hidden="true" tabindex="-1"></a><span class="co">## Horizontale Linien</span></span>
+<span id="cb47-71"><a href="#cb47-71" aria-hidden="true" tabindex="-1"></a>ax3.axhline(H_1.subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-72"><a href="#cb47-72" aria-hidden="true" tabindex="-1"></a>ax3.axhline((H_1<span class="op">+</span>H_2).subs(params_plot),linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-73"><a href="#cb47-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-74"><a href="#cb47-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-75"><a href="#cb47-75" aria-hidden="true" tabindex="-1"></a>ax3.axvline(<span class="dv">0</span>,linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb47-76"><a href="#cb47-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-77"><a href="#cb47-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-78"><a href="#cb47-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-79"><a href="#cb47-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots anzeigen</span></span>
+<span id="cb47-80"><a href="#cb47-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-ekv_rayleigh_schnittgroessen_ug_dreh" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ekv_02_files/figure-html/fig-ekv_rayleigh_schnittgroessen_ug_dreh-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.9: Maximale Schnittgrössen erweitert in das UG unter Berücksichtigung der Nachgiebigkeiten</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>R_A_nach <span class="op">=</span> <span class="op">-</span>V_x.subs(x,<span class="op">-</span><span class="dv">3</span>)<span class="op">*</span>unit.N</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>R_B_nach <span class="op">=</span> (V_x.subs(x,<span class="op">-</span><span class="dv">3</span>) <span class="op">-</span> V_x.subs(x,<span class="dv">1</span>)) <span class="op">*</span> unit.N</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'R_A'</span>, R_A_nach,</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'R_B'</span>, R_B_nach)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}R_{A} = 2.26 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}R_{B} = - 3.24 \cdot 10^{6} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="reduktion-der-wandlänge" class="level3" data-number="18.2.6">
+<h3 data-number="18.2.6" class="anchored" data-anchor-id="reduktion-der-wandlänge"><span class="header-section-number">18.2.6</span> Reduktion der Wandlänge</h3>
+<p>Neben der Berücksichtigung der Nachgiebigkeit seitens Fundation und Schubverformungen, hat die Wandlänge einen wesentlichen Einfluss auf Ersatzkräfte. Die <a href="#tbl-ekv_rayleigh_wandlaengen">Tabelle&nbsp;<span>18.2</span></a> zeigt den Einfluss der Wandlänge <span class="math inline">\(L_{w3}\)</span> auf die Erdbebenersatzkräfte. Als obere Grenze gilt die Bedingung aus <span class="citation" data-cites="SIA261_2020">Schweizerischer Ingenieur- und Architektenverein (SIA) (<a href="references.html#ref-SIA261_2020" role="doc-biblioref">2020</a>)</span> Ziff. 16.5.2.1, die Grundschwingzeit darf <span class="math inline">\(4\cdot T_c\)</span> nicht überschreiten.</p>
+<div id="tbl-ekv_rayleigh_wandlaengen" class="anchored">
+<table class="table">
+<caption>Tabelle&nbsp;18.2: Einfluss der Wandlänge auf die Ersatzkräfte und Grundschwingzeit</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><span class="math inline">\(5\)</span> m</th>
+<th style="text-align: left;"><span class="math inline">\(4\)</span> m</th>
+<th style="text-align: left;"><span class="math inline">\(3\)</span> m</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(F_d\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1128.4\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(803.50\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(519.28\)</span> kN</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(F_{3d}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(546.50\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(390.06\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(252.66\)</span> kN</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(F_{2d}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(387.88\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(275.63\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(177.75\)</span> kN</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(F_{1d}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(193.94\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(137.81\)</span> kN</td>
+<td style="text-align: left;"><span class="math inline">\(88.875\)</span> kN</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(T_1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.439\)</span> s</td>
+<td style="text-align: left;"><span class="math inline">\(0.612\)</span> s</td>
+<td style="text-align: left;"><span class="math inline">\(0.939\)</span> s</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>T_C <span class="op">=</span> <span class="fl">0.35</span><span class="op">*</span>unit.second</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>T_1_max <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> T_C</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T_1_max'</span>, <span class="st">'4*T_C'</span>,</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T_1_max'</span>, T_1_max)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1 max} = 4 T_{C}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}T_{1 max} = 1.4 \text{s}\end{equation}\]</span></p>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-SIA269/8" class="csl-entry" role="listitem">
+Schweizerischer Ingenieur- und Architektenverein (SIA). (2017). <em><span>Norm SIA 269/8:2017 Erhaltung von Tragwerken – Erdbeben</span></em> (136. S.).
+</div>
+<div id="ref-SIA261_2020" class="csl-entry" role="listitem">
+Schweizerischer Ingenieur- und Architektenverein (SIA). (2020). <em><span>Norm SIA 261:2020 Einwirkungen auf Tragwerke </span></em> (136. S.).
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ekv_01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ekv_03.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient an einem Sechsmassenschwinger beim Ersatzkraftverfahren</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

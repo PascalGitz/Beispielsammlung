@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Beispielsammlung - 8&nbsp; Beispiel: Gesamtantwort mit Dämpfung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ems_06.html" rel="next">
+<link href="./ems_04.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ems_01.html">Einmassenschwinger</a></li><li class="breadcrumb-item"><a href="./ems_05.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Beispielsammlung</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Rayleigh-Quotient</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 2 Punktmassen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 1 Punktmasse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Beispiel: Einfacher Balken mit konstanter Masse</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Einmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Beispiel: Logarithmisches Dekrement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beispiel: Impulssatz</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Beispiel: Dynamischer Vergrösserungsfaktor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort ohne Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Beispiel: Fourier-Transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beispiel: Balken ohne Tilger{#sec-ems_untilg}</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mehrmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren mit direkt bestimmter Steifigkeitsmatrix{#sec-mms_steif}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren und Nachgiebigkeitsmatrix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem dreistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem Rahmen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Ersatzkraftverfahren</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient an einem Sechsmassenschwinger beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">8.1</span> Aufgabenstellung</a></li>
+  <li><a href="#musterlösung" id="toc-musterlösung" class="nav-link" data-scroll-target="#musterlösung"><span class="header-section-number">8.2</span> Musterlösung</a>
+  <ul class="collapse">
+  <li><a href="#systemsteifigkeit" id="toc-systemsteifigkeit" class="nav-link" data-scroll-target="#systemsteifigkeit"><span class="header-section-number">8.2.1</span> Systemsteifigkeit</a></li>
+  <li><a href="#eigenkreisfrequenz" id="toc-eigenkreisfrequenz" class="nav-link" data-scroll-target="#eigenkreisfrequenz"><span class="header-section-number">8.2.2</span> Eigenkreisfrequenz</a></li>
+  <li><a href="#dynamischer-vergrösserungsfaktor" id="toc-dynamischer-vergrösserungsfaktor" class="nav-link" data-scroll-target="#dynamischer-vergrösserungsfaktor"><span class="header-section-number">8.2.3</span> Dynamischer Vergrösserungsfaktor</a></li>
+  <li><a href="#stationäre-antwort" id="toc-stationäre-antwort" class="nav-link" data-scroll-target="#stationäre-antwort"><span class="header-section-number">8.2.4</span> Stationäre Antwort</a></li>
+  <li><a href="#gesamtantwort" id="toc-gesamtantwort" class="nav-link" data-scroll-target="#gesamtantwort"><span class="header-section-number">8.2.5</span> Gesamtantwort</a></li>
+  <li><a href="#festigkeitsnachweis" id="toc-festigkeitsnachweis" class="nav-link" data-scroll-target="#festigkeitsnachweis"><span class="header-section-number">8.2.6</span> Festigkeitsnachweis</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run style_and_packages.ipynb</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="aufgabenstellung" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">8.1</span> Aufgabenstellung</h2>
+<p>Das System in <a href="#fig-ems_dampf_system">Abbildung&nbsp;<span>8.1</span></a> entspricht dem System in <a href="ems_04.html#fig-ems_ges_system_maschine">Abbildung&nbsp;<span>7.1</span></a>. Ergänzt wurde dies mit einem Dämpfungselement.</p>
+<div id="fig-ems_dampf_system" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ems_gedampft_system.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;8.1: Statisches System</figcaption>
+</figure>
+</div>
+<p>Gesucht:</p>
+<ul>
+<li>Dynamischer Vergrösserungsfaktor <span class="math inline">\(V(\omega)\)</span></li>
+<li>Stationäre Amplitude</li>
+<li>Festigkeitsnachweis der Diagonalen</li>
+</ul>
+<p>Gegeben:</p>
+<ul>
+<li>Alle Stäbe ausser Diagonalen <span class="math inline">\(E\cdot A = \infty\)</span></li>
+<li>Alle Stäbe S355</li>
+</ul>
+<div id="fig-ems_ges_maschine" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ems_werkzeugmaschine.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;8.2: Aufbau der Werkzeugmaschine</figcaption>
+</figure>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>m_tot, E, H, B, Diam, f_yd, m_1, n, e <span class="op">=</span> sp.symbols(<span class="st">'m_tot, E, H, B, \oslash_Diag, f_yd, m_1, n, e'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>F_0, omega, t, zeta <span class="op">=</span> sp.symbols(<span class="st">'F_0, omega, t, zeta'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {              </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          m_tot:<span class="dv">5000</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          E:<span class="dv">210</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span><span class="op">*</span>unit.N<span class="op">/</span>unit.mm<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          H:<span class="dv">4000</span><span class="op">*</span>unit.mm,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>          B:<span class="dv">6000</span><span class="op">*</span>unit.mm,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          Diam:<span class="dv">12</span><span class="op">*</span>unit.mm,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          f_yd:<span class="dv">338</span><span class="op">*</span>unit.N<span class="op">/</span>unit.mm<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>          m_1:<span class="dv">200</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>          n:<span class="dv">150</span><span class="op">/</span>unit.minute,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          e:<span class="fl">0.1</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          zeta:<span class="fl">0.2</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>params_plot <span class="op">=</span> convert.param_value(params)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(params)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="tbl-parameter_gesamt_dampf" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabelle&nbsp;8.1: Parameter der Aufgabenstellung</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(B = 6000 \text{mm}\)</span></td>
+<td><span class="math inline">\(E = \frac{210000 \text{N}}{\text{mm}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H = 4000 \text{mm}\)</span></td>
+<td><span class="math inline">\(\oslash_{Diag} = 12 \text{mm}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(e = 0.1 \text{m}\)</span></td>
+<td><span class="math inline">\(f_{yd} = \frac{338 \text{N}}{\text{mm}^{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(m_{1} = \frac{200 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+<td><span class="math inline">\(m_{tot} = \frac{5000 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n = \frac{150}{\text{minute}}\)</span></td>
+<td><span class="math inline">\(\zeta = 0.2\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="musterlösung" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="musterlösung"><span class="header-section-number">8.2</span> Musterlösung</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>F_t <span class="op">=</span> F_0 <span class="op">*</span> sp.cos(omega<span class="op">*</span>t)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="systemsteifigkeit" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="systemsteifigkeit"><span class="header-section-number">8.2.1</span> Systemsteifigkeit</h3>
+<p>Zur Ermittlung der Eigenkreisfrequenz wird die Steifigkeit des gesamten Systems benötigt.</p>
+<div id="fig-ems_dampf_verform_FW" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_ems_ge_verformung.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;8.3: Verformungszustand des Systems für die Einheitskraft</figcaption>
+</figure>
+</div>
+<p>Das System wird mit einer Einheitskraft belastet. Aufgrund der Eigenschaften der Pendelstäbe (lediglich Normalkräfte) und deren unendlich grossen Dehnsteifigkeit, spielt lediglich die Verformung der Diagonalen eine Rolle. Dazu gilt, dass die Diagonalen nur Zugkräfte aufnehmen können. Das bedeutet, dass letztlich ein Stab aktiv ist für die beschrieben Situation in <a href="#fig-ems_dampf_verform_FW">Abbildung&nbsp;<span>8.3</span></a>.</p>
+<p>Dazu muss die Normalkraft in der Diagonalen bestimmt werden.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> sp.atan(H<span class="op">/</span>B)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Z_Diag <span class="op">=</span> <span class="dv">1000</span><span class="op">*</span>unit.N <span class="op">/</span>sp.cos(alpha)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'alpha'</span>, alpha,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'alpha'</span>, alpha.subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Z_Diag'</span>, Z_Diag,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Z_Diag'</span>,Z_Diag.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\alpha = \operatorname{atan}{\left(\frac{H}{B} \right)}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\alpha = 0.588\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Z_{Diag} = 1000 \sqrt{1 + \frac{H^{2}}{B^{2}}} \text{N}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Z_{Diag} = 1.2 \cdot 10^{3} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Mittels der Arbeitsgleichung lässt sich die Verformung bestimmen. Für die Integration zweier Normalkraftverläufe gilt die folgende Beziehung:</p>
+<p><span id="eq-ems_dampf_deformation"><span class="math display">\[
+u = \frac{1}{EA_{Diag}}  \int_{0}^{l_{Diag}} N_x\bar{N_x} \,dx
+\tag{8.1}\]</span></span></p>
+<p>Länge der Diagonalen:</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>l_Diag <span class="op">=</span> B <span class="op">/</span>sp.cos(alpha)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>A_Diag <span class="op">=</span> sp.pi <span class="op">*</span> Diam<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>u_for_k <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(E<span class="op">*</span>A_Diag) <span class="op">*</span> Z_Diag <span class="op">*</span> Z_Diag<span class="op">/</span>(<span class="dv">1000</span><span class="op">*</span>unit.N) <span class="op">*</span> l_Diag</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">1000</span><span class="op">*</span>unit.N <span class="op">/</span> u_for_k</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'l_Diag'</span>, l_Diag,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'l_Diag'</span>, unit.convert_to(l_Diag.subs(params).evalf(<span class="dv">3</span>), unit.m),)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}l_{Diag} = B \sqrt{1 + \frac{H^{2}}{B^{2}}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}l_{Diag} = 7.21 \text{m}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Querschnittsfläche der Diagonalen:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'A_Diag'</span>, A_Diag,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'A_Diag'</span>, A_Diag.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}A_{Diag} = \frac{\pi \oslash_{Diag}^{2}}{4}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}A_{Diag} = 113.0 \text{mm}^{2}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Deformation der Diagonalen</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'u_k'</span>, u_for_k,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'u_k'</span>, u_for_k.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{k} = \frac{4000 B \left(1 + \frac{H^{2}}{B^{2}}\right)^{\frac{3}{2}} \text{N}}{\pi E \oslash_{Diag}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{k} = 0.439 \text{mm}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Steifigkeit des Systems:</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'k'</span>, <span class="st">'F/u_k'</span>,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'k'</span>, k.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k = \frac{F}{u_{k}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}k = \frac{2.28 \cdot 10^{3} \text{N}}{\text{mm}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenkreisfrequenz" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="eigenkreisfrequenz"><span class="header-section-number">8.2.2</span> Eigenkreisfrequenz</h3>
+<p>Aus der Systemsteifigkeit lässt sich leicht die Eigenkreisfrequenz bestimmen:</p>
+<p><span id="eq-ems_dampf_eigenkreisfrequenz"><span class="math display">\[
+\omega_n =\sqrt{\frac{k}{m}}
+\tag{8.2}\]</span></span></p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>omega_n <span class="op">=</span> sp.sqrt(k<span class="op">/</span>m_tot)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_n'</span>, omega_n,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_n'</span>, omega_n.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{n} = \frac{\sqrt{\pi} \sqrt{\frac{E \oslash_{Diag}^{2}}{B m_{tot} \left(1 + \frac{H^{2}}{B^{2}}\right)^{\frac{3}{2}}}}}{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{n} = \frac{21.4}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="dynamischer-vergrösserungsfaktor" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="dynamischer-vergrösserungsfaktor"><span class="header-section-number">8.2.3</span> Dynamischer Vergrösserungsfaktor</h3>
+<section id="anregungsfunktion" class="level4" data-number="8.2.3.1">
+<h4 data-number="8.2.3.1" class="anchored" data-anchor-id="anregungsfunktion"><span class="header-section-number">8.2.3.1</span> Anregungsfunktion</h4>
+<p>Zur Bestimmung des dynamischen Vergrösserungsfaktor wird die stationäre Verformung benötigt. Diese lässt sich aus der Anfangskraft der Anregungsfunktion ermitteln. Dazu wird diese Funktion benötigt. Wir wissen die Drehzahl <span class="math inline">\(n\)</span> und die Exzentrizität <span class="math inline">\(e\)</span> sowie deren Masse <span class="math inline">\(m_1\)</span>.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> unit.convert_to(n.subs(params),unit.second)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>omega <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>sp.pi<span class="op">*</span>f</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'omega'</span>] <span class="op">=</span> omega.subs(params).simplify()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'f'</span>, <span class="st">'n'</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'f'</span>, f.evalf(<span class="dv">3</span>),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega'</span>, <span class="st">'2*pi*f'</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega'</span>, omega.evalf(<span class="dv">3</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f = n\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f = \frac{2.5}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega = 2 \pi f\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega = \frac{15.7}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+<p>Nun fehlt lediglich die Anfangskraft <span class="math inline">\(F_0\)</span>. Die Fliehkraft <span class="math inline">\(F\)</span> der 2 gegenläufig rotierenden Massen bewirken eine addierende Fliehkraft in horizontaler Richtung zu:</p>
+<p><span id="eq-ems_dampf_anfangskraft"><span class="math display">\[
+F_0 = 2(m_1 \cdot e \cdot \omega^2)
+\tag{8.3}\]</span></span></p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>F_0 <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>(m_1<span class="op">*</span>e<span class="op">*</span>omega<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'F_0'</span>] <span class="op">=</span> F_0.subs(params).simplify()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'F_0'</span>, F_0,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'F_0'</span>, F_0.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}F_{0} = \frac{50 \pi^{2} e m_{1}}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}F_{0} = 9.87 \cdot 10^{3} \text{N}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="statische-deformation" class="level4" data-number="8.2.3.2">
+<h4 data-number="8.2.3.2" class="anchored" data-anchor-id="statische-deformation"><span class="header-section-number">8.2.3.2</span> Statische Deformation</h4>
+<p>Die statische Deformation lässt sich nun leicht anhand der ermittelten Systemsteifigkeit herleiten.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>u_0 <span class="op">=</span> F_0<span class="op">/</span>k</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'u_0'</span>, u_0.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{0} = 4.33 \text{mm}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="vergrösserungsfaktor" class="level4" data-number="8.2.3.3">
+<h4 data-number="8.2.3.3" class="anchored" data-anchor-id="vergrösserungsfaktor"><span class="header-section-number">8.2.3.3</span> Vergrösserungsfaktor</h4>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>V_omega <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sp.sqrt((<span class="dv">1</span><span class="op">-</span>(omega<span class="op">/</span>omega_n)<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (<span class="dv">2</span><span class="op">*</span>zeta<span class="op">*</span>(omega<span class="op">/</span>omega_n))<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'V(omega)'</span>, <span class="st">'1/(sqrt((1-(omega/omega_n)**2)**2 + (2*zeta_*(omega/omega_n))**2))'</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'V(omega)'</span>, V_omega.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{n}^{2}} + \left(- \frac{\omega^{2}}{\omega_{n}^{2}} + 1\right)^{2}}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V{\left(\omega \right)} = 1.83\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="stationäre-antwort" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="stationäre-antwort"><span class="header-section-number">8.2.4</span> Stationäre Antwort</h3>
+<p>Es handelt sich um einen gedämpften Einmassenschwinger mit einer harmonischen Anregungsfunktion. Die Bewegungsgleichung ist die folgende:</p>
+<p><span id="eq-ems_dampf_bewegungsgleichung_inhomo"><span class="math display">\[
+mu''(t)+ cu'(t) + ku(t) = F(t)
+\tag{8.4}\]</span></span></p>
+<p>Dies ist eine inhomogene Differentialgleichung 2. Ordnung. Die Lösung dieser lässt sich in einen partikulären Anteil und in einen homogenen Anteil aufteilen. Der partikuläre Anteil entspricht der stationären Antwort. Der homogene Anteil nennt sich transienter Anteil.</p>
+<p>Anhand des Vergrösserungsfaktor kann die stationäre dynamische Antwort des Systems mit der folgenden Beziehung ermittelt werden.</p>
+<p><span id="eq-ems_dampf_part_loesung"><span class="math display">\[
+u_p = V(\omega)u_0 \cdot \cos{(\omega t)}
+\tag{8.5}\]</span></span></p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>u_p <span class="op">=</span> V_omega <span class="op">*</span> u_0 <span class="op">*</span>sp.cos(omega <span class="op">*</span>t)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'u_p'</span>, u_p.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{p} = 0.00793 \cos{\left(\frac{5 \pi t}{\text{s}} \right)} \text{m}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="gesamtantwort" class="level3" data-number="8.2.5">
+<h3 data-number="8.2.5" class="anchored" data-anchor-id="gesamtantwort"><span class="header-section-number">8.2.5</span> Gesamtantwort</h3>
+<p>Für die Gesamtantwort wird nun noch der homogene Anteil benötigt. Dazu ist die folgende Differentialgleichung zu lösen.</p>
+<p><span id="eq-ems_dampf_bewegungsgleichung_homo"><span class="math display">\[
+mu''(t)+ cu'(t) + ku(t) = 0
+\tag{8.6}\]</span></span></p>
+<p>Als Ansatzfunktion dient die folgende Gleichung:</p>
+<p><span id="eq-ems_dampf_homo_loesung"><span class="math display">\[
+u_h = e^{-\zeta \omega_n t} (A_1\cos{(\omega_d t)} + A_2 \sin{(\omega_d t)})
+\tag{8.7}\]</span></span></p>
+<p>Die Randbedingungen sind in der Aufgabenstellung definiert und sind die folgenden:</p>
+<p><span class="math inline">\(u(t=0)=0\)</span></p>
+<p><span class="math inline">\(u'(t=0)=0\)</span></p>
+<p>Vorsicht, die Randbedingungen gelten für die gesamte Lösung:</p>
+<p><span id="eq-ems_dampf_gesamtloesung"><span class="math display">\[
+u(t) = u_h(t) + u_p(t)
+\tag{8.8}\]</span></span></p>
+<section id="gedämpfte-eigenkreisfrequenz" class="level4" data-number="8.2.5.1">
+<h4 data-number="8.2.5.1" class="anchored" data-anchor-id="gedämpfte-eigenkreisfrequenz"><span class="header-section-number">8.2.5.1</span> Gedämpfte Eigenkreisfrequenz</h4>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>omega_d <span class="op">=</span> omega_n <span class="op">*</span> sp.sqrt(<span class="dv">1</span><span class="op">-</span>zeta<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_d'</span>, <span class="st">'omega_n *sqrt(1-zeta_**2)'</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_d'</span>, omega_d.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{d} = \omega_{n} \sqrt{1 - \zeta_{}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{d} = \frac{20.9}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>A_1, A_2 <span class="op">=</span> sp.symbols(<span class="st">'A_1:3'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>u_h_ansatz <span class="op">=</span> sp.exp(<span class="op">-</span>zeta<span class="op">*</span>omega_n<span class="op">*</span>t)<span class="op">*</span>(A_1 <span class="op">*</span> sp.cos(omega_d<span class="op">*</span>t)<span class="op">+</span>A_2<span class="op">*</span>sp.sin(omega_d<span class="op">*</span>t))</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>randbedingung_1 <span class="op">=</span> (u_h_ansatz<span class="op">+</span>u_p).subs(t,<span class="dv">0</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>randbedingung_2 <span class="op">=</span> sp.diff((u_h_ansatz<span class="op">+</span>u_p),t).subs(t,<span class="dv">0</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>A_solve <span class="op">=</span> sp.solve([randbedingung_1, randbedingung_2], [A_1, A_2], <span class="bu">dict</span><span class="op">=</span><span class="va">True</span>)[<span class="dv">0</span>]</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>u_h <span class="op">=</span> u_h_ansatz.subs(A_solve)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>u_t <span class="op">=</span> u_h <span class="op">+</span> u_p</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>u_t_plot <span class="op">=</span> u_t.subs(params_plot).subs(unit.second, <span class="dv">1</span>)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>u_p_plot <span class="op">=</span> u_p.subs(params_plot).subs(unit.second, <span class="dv">1</span>)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>u_h_plot <span class="op">=</span> u_h.subs(params_plot).subs(unit.second, <span class="dv">1</span>)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>p_1 <span class="op">=</span> sp.plot(u_h_plot, (t,<span class="dv">0</span>,<span class="dv">6</span>), adaptive<span class="op">=</span><span class="va">False</span>, nb_of_points<span class="op">=</span><span class="dv">500</span>, </span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="st">'$t [s]$'</span>,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>        ylabel<span class="op">=</span><span class="st">'$u(t)$ [m]'</span>,</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>        size<span class="op">=</span>(<span class="fl">5.9</span>,<span class="dv">3</span>),show<span class="op">=</span><span class="va">False</span>,label<span class="op">=</span><span class="st">'Transienter Anteil'</span>, legend<span class="op">=</span><span class="va">True</span>, line_color<span class="op">=</span><span class="st">'0.5'</span>)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>p_2 <span class="op">=</span> sp.plot(u_p_plot, (t,<span class="dv">0</span>,<span class="dv">6</span>), adaptive<span class="op">=</span><span class="va">False</span>, nb_of_points<span class="op">=</span><span class="dv">500</span>,show<span class="op">=</span><span class="va">False</span>,label<span class="op">=</span><span class="st">'Stationärer Anteil'</span>, line_color<span class="op">=</span><span class="st">'0.8'</span>)</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>p_3 <span class="op">=</span> sp.plot(u_t_plot, (t,<span class="dv">0</span>,<span class="dv">6</span>), adaptive<span class="op">=</span><span class="va">False</span>, nb_of_points<span class="op">=</span><span class="dv">500</span>,show<span class="op">=</span><span class="va">False</span>,label<span class="op">=</span><span class="st">'Gesamtantwort'</span>)</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>p_1.append(p_2[<span class="dv">0</span>])</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>p_1.append(p_3[<span class="dv">0</span>])</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>p_1.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-ems_dampf_gesamtantwort_ems5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ems_05_files/figure-html/fig-ems_dampf_gesamtantwort_ems5-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;8.4: Gesamtantwort des Systems</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="festigkeitsnachweis" class="level3" data-number="8.2.6">
+<h3 data-number="8.2.6" class="anchored" data-anchor-id="festigkeitsnachweis"><span class="header-section-number">8.2.6</span> Festigkeitsnachweis</h3>
+<p>Aufgrund der maximalen Auslenkung kann die maximale Normalkraft auf der Diagonalen bestimmt werden.</p>
+<section id="maximale-auslenkung" class="level4" data-number="8.2.6.1">
+<h4 data-number="8.2.6.1" class="anchored" data-anchor-id="maximale-auslenkung"><span class="header-section-number">8.2.6.1</span> Maximale Auslenkung</h4>
+<p>Aus dem Plot in <a href="#fig-ems_dampf_gesamtantwort_ems5">Abbildung&nbsp;<span>8.4</span></a> ist die maximale Auslenkung ersichtlich. Die Ermittlung des Zeitpunkts bei einer maximalen Auslenkung wird hier numerisch gelöst.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>t_max_auslenkung <span class="op">=</span> sp.nsolve(sp.diff(u_t_plot,t), t,(<span class="fl">0.3</span>,<span class="fl">0.5</span>))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>u_max <span class="op">=</span> u_t_plot.subs(t,t_max_auslenkung)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'t_max'</span>, (t_max_auslenkung<span class="op">*</span>unit.second).evalf(<span class="dv">2</span>),</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'u_max'</span>, u_max.evalf(<span class="dv">3</span>)<span class="op">*</span>unit.m)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}t_{max} = 0.41 \text{s}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{max} = 0.00855 \text{m}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="maximale-einwirkung" class="level4" data-number="8.2.6.2">
+<h4 data-number="8.2.6.2" class="anchored" data-anchor-id="maximale-einwirkung"><span class="header-section-number">8.2.6.2</span> Maximale Einwirkung</h4>
+<p>Aufgrund der maximalen Amplitude verlängert sich die Diagonale um <span class="math inline">\(\Delta l=u_{max}\)</span>. Die Dehnung des Stabs ist somit die <span class="math inline">\(\frac{\Delta l}{l_{Diag}}\)</span>. Bei linear elastischem Materialverhalten gilt die folgende Beziehung:</p>
+<p><span id="eq-ems_dampf_spannung"><span class="math display">\[
+\sigma = \varepsilon E
+\tag{8.9}\]</span></span></p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> u_max<span class="op">*</span>unit.m <span class="op">/</span> sp.cos(alpha) <span class="op">/</span> l_Diag</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> epsilon<span class="op">*</span>E</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>Nachweis <span class="op">=</span> sigma <span class="op">/</span> f_yd</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'varepsilon'</span>, epsilon.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'sigma'</span>, unit.convert_to(sigma.subs(params).simplify().evalf(<span class="dv">3</span>), unit.mm<span class="op">**</span><span class="dv">2</span>),</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'f_yd'</span>, f_yd.subs(params),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Nachweis'</span>, <span class="st">'sigma / f_yd'</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Nachweis'</span>, Nachweis.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\varepsilon = 0.00142\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\sigma = \frac{299.0 \text{N}}{\text{mm}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}f_{yd} = \frac{338 \text{N}}{\text{mm}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Nachweis = \frac{\sigma}{f_{yd}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Nachweis = 0.885\end{equation}\]</span></p>
+</div>
+</div>
+<p>Die Diagonale bleibt im elastischen Bereich, so dass die linearen Annahmen gültig sind. Der Festigkeitsnachweis für die Diagonale ist erfüllt. Im Weiteren wäre der Grenzzustand der Tragfähigkeit <em>Ermüdung</em> zu prüfen.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ems_04.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort ohne Dämpfung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ems_06.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Beispiel: Fourier-Transformation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

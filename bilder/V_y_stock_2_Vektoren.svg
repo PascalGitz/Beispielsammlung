@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="435.6pt" height="435.6pt" viewBox="0 0 435.6 435.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="327.6pt" height="327.6pt" viewBox="0 0 327.6 327.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2023-08-22T14:08:51.207645</dc:date>
+    <dc:date>2023-09-05T15:23:09.093354</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,100 +21,100 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 435.6 
-L 435.6 435.6 
-L 435.6 0 
+   <path d="M 0 327.6 
+L 327.6 327.6 
+L 327.6 0 
 L 0 0 
-L 0 435.6 
+L 0 327.6 
 z
 " style="fill: none"/>
   </g>
   <g id="axes_1">
    <g id="PathCollection_1">
     <defs>
-     <path id="mf172405482" d="M -3 0 
+     <path id="mfb3dae0e1b" d="M -3 0 
 L 3 0 
 M 0 3 
 L 0 -3 
 " style="stroke: #ff0000; stroke-width: 1.5"/>
     </defs>
-    <g clip-path="url(#p071cd4541d)">
-     <use xlink:href="#mf172405482" x="110.275675" y="79.237049" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
-     <use xlink:href="#mf172405482" x="270.315552" y="361.660362" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
-     <use xlink:href="#mf172405482" x="72.619233" y="220.448706" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
-     <use xlink:href="#mf172405482" x="373.870767" y="107.47938" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
+    <g clip-path="url(#pb489f8646e)">
+     <use xlink:href="#mfb3dae0e1b" x="82.934598" y="59.5915" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
+     <use xlink:href="#mfb3dae0e1b" x="203.295167" y="271.992504" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
+     <use xlink:href="#mfb3dae0e1b" x="54.614465" y="165.792002" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
+     <use xlink:href="#mfb3dae0e1b" x="281.175535" y="80.8316" style="fill: #ff0000; stroke: #ff0000; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="patch_2">
-    <path d="M 78.267699 79.237049 
-L 91.447454 76.412816 
-L 91.447454 79.227635 
-L 110.275675 79.227635 
-L 110.275675 79.246463 
-L 91.447454 79.246463 
-L 91.447454 82.061282 
+    <path d="M 58.862485 59.5915 
+L 68.774532 57.46749 
+L 68.774532 59.58442 
+L 82.934598 59.58442 
+L 82.934598 59.59858 
+L 68.774532 59.59858 
+L 68.774532 61.71551 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 302.323528 361.660362 
-L 289.143773 364.484595 
-L 289.143773 361.669776 
-L 270.315552 361.669776 
-L 270.315552 361.650948 
-L 289.143773 361.650948 
-L 289.143773 358.836129 
+    <path d="M 227.367281 271.992504 
+L 217.455234 274.116514 
+L 217.455234 271.999584 
+L 203.295167 271.999584 
+L 203.295167 271.985424 
+L 217.455234 271.985424 
+L 217.455234 269.868494 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 72.619233 188.44073 
-L 75.443466 201.620485 
-L 72.628647 201.620485 
-L 72.628647 220.448706 
-L 72.609819 220.448706 
-L 72.609819 201.620485 
-L 69.795 201.620485 
+    <path d="M 54.614465 141.719888 
+L 56.738475 151.631935 
+L 54.621545 151.631935 
+L 54.621545 165.792002 
+L 54.607385 165.792002 
+L 54.607385 151.631935 
+L 52.490455 151.631935 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 373.870767 75.471405 
-L 376.695 88.65116 
-L 373.880181 88.65116 
-L 373.880181 107.47938 
-L 373.861353 107.47938 
-L 373.861353 88.65116 
-L 371.046534 88.65116 
+    <path d="M 281.175535 56.759486 
+L 283.299545 66.671533 
+L 281.182615 66.671533 
+L 281.182615 80.8316 
+L 281.168455 80.8316 
+L 281.168455 66.671533 
+L 279.051525 66.671533 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ffa500; stroke: #ffa500; stroke-width: 3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 170.271242 222.433011 
-Q 168.223904 233.898474 175.665944 235.81763 
-L 176.127909 234.026237 
-Q 178.526562 235.746113 183.626507 235.91442 
-Q 179.050219 237.809398 175.129065 237.899519 
-L 175.59103 236.108126 
-Q 167.879687 234.119522 169.975914 222.380276 
-L 170.271242 222.433011 
+    <path d="M 128.009265 167.780371 
+Q 127.044988 173.86081 129.802058 176.170822 
+L 130.990175 174.752768 
+Q 131.851239 177.155952 137.612382 177.505372 
+Q 132.525917 179.576169 128.421272 177.818831 
+L 129.60939 176.400777 
+Q 126.722077 173.981641 127.712968 167.733383 
+L 128.009265 167.780371 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ff0000; stroke: #ff0000; stroke-linecap: round"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ff0000; stroke: #ff0000; stroke-linecap: round"/>
    </g>
    <g id="patch_7">
-    <path d="M 185.588558 188.44073 
-L 188.412791 201.620485 
-L 185.597972 201.620485 
-L 185.597972 220.448706 
-L 185.579144 220.448706 
-L 185.579144 201.620485 
-L 182.764325 201.620485 
+    <path d="M 139.574866 141.719888 
+L 141.698876 151.631935 
+L 139.581946 151.631935 
+L 139.581946 165.792002 
+L 139.567786 165.792002 
+L 139.567786 151.631935 
+L 137.450856 151.631935 
 z
-" clip-path="url(#p071cd4541d)" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3; stroke-linejoin: miter"/>
+" clip-path="url(#pb489f8646e)" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- 78.928 kN -->
-    <g style="fill: #ffa500" transform="translate(91.447454 69.822939) scale(0.12 -0.12)">
+    <g style="fill: #ffa500" transform="translate(68.774532 52.511466) scale(0.12 -0.12)">
      <defs>
       <path id="URWPalladioL-Roma-37" d="M 358 83 
 L 416 0 
@@ -286,7 +286,7 @@ z
    </g>
    <g id="text_2">
     <!-- 78.768 kN -->
-    <g style="fill: #ffa500" transform="translate(289.143773 352.246252) scale(0.12 -0.12)">
+    <g style="fill: #ffa500" transform="translate(217.455234 264.91247) scale(0.12 -0.12)">
      <defs>
       <path id="URWPalladioL-Roma-36" d="M 2662 4287 
 L 2426 4396 
@@ -321,7 +321,7 @@ z
    </g>
    <g id="text_3">
     <!-- 296.704 kN -->
-    <g style="fill: #ffa500" transform="translate(82.033344 201.620485) scale(0.12 -0.12)">
+    <g style="fill: #ffa500" transform="translate(61.694498 151.631935) scale(0.12 -0.12)">
      <defs>
       <path id="URWPalladioL-Roma-30" d="M 1683 4416 
 C 691 4416 186 3628 186 2076 
@@ -381,7 +381,7 @@ z
    </g>
    <g id="text_4">
     <!-- 183.648 kN -->
-    <g style="fill: #ffa500" transform="translate(383.284877 88.65116) scale(0.12 -0.12)">
+    <g style="fill: #ffa500" transform="translate(288.255569 66.671533) scale(0.12 -0.12)">
      <defs>
       <path id="URWPalladioL-Roma-31" d="M 429 3571 
 L 493 3571 
@@ -446,7 +446,7 @@ z
    </g>
    <g id="text_5">
     <!-- 2761.7 kNm -->
-    <g style="fill: #ff0000" transform="translate(147.932117 258.105147) scale(0.12 -0.12)">
+    <g style="fill: #ff0000" transform="translate(111.254732 194.112136) scale(0.12 -0.12)">
      <defs>
       <path id="URWPalladioL-Roma-6d" d="M 115 2579 
 L 352 2579 
@@ -508,7 +508,7 @@ z
    </g>
    <g id="text_6">
     <!-- 482.8 kN -->
-    <g style="fill: #ff0000" transform="translate(204.416779 201.620485) scale(0.12 -0.12)">
+    <g style="fill: #ff0000" transform="translate(153.734933 151.631935) scale(0.12 -0.12)">
      <use xlink:href="#URWPalladioL-Roma-34" transform="scale(0.996264)"/>
      <use xlink:href="#URWPalladioL-Roma-38" transform="translate(49.8132 0) scale(0.996264)"/>
      <use xlink:href="#URWPalladioL-Roma-32" transform="translate(99.626401 0) scale(0.996264)"/>
@@ -521,8 +521,8 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p071cd4541d">
-   <rect x="54.45" y="61.020745" width="337.59" height="317.914509"/>
+  <clipPath id="pb489f8646e">
+   <rect x="40.95" y="45.891635" width="253.89" height="239.09273"/>
   </clipPath>
  </defs>
 </svg>

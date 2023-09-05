@@ -1,10 +1,10 @@
-@book{sia260-2013,
-  title = {Norm {{SIA}} 260:2013 {{Grundlagen}} Der {{Projektierung}} von {{Tragwerken}}},
-  author = {{SIA}},
-  date = {2013},
+@Book{SIA2013_beispiele,
+  author    = {{SIA}},
   publisher = {{Schweizerischer Ingenieur- und Architektenverein}},
-  keywords = {normen},
-  pagetotal = {44 S.}
+  title     = {Norm {{SIA}} 260:2013 {{Grundlagen}} Der {{Projektierung}} von {{Tragwerken}}},
+  date      = {2013},
+  keywords  = {normen},
+  pagetotal = {44 S.},
 }
 
 @book{sia261-2014,
@@ -115,12 +115,6 @@
   modificationdate = {2012-07-10T00:00:00},
   owner            = {cspathel},
   pages            = {136},
-}
-
-@Book{,
-  author = {Schweizerischer Ingenieur- und Architektenverein (SIA)},
-  title  = {Grundlagen der Projektierung von Tragwerken Einwirkungen auf Tragwerke},
-  isbn   = {978-3-908483-60-1},
 }
 
 @Book{Dupraz2004,

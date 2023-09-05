@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Beispielsammlung - 13&nbsp; Beispiel: Balken mit Tilger{#sec-tilger}</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./mms_04.html" rel="next">
+<link href="./mms_01.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mms_02.html">Mehrmassenschwinger</a></li><li class="breadcrumb-item"><a href="./mms_03.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Beispielsammlung</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Rayleigh-Quotient</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 2 Punktmassen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beispiel: Kragarm mit 1 Punktmasse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rayleigh_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Beispiel: Einfacher Balken mit konstanter Masse</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Einmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Beispiel: Logarithmisches Dekrement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beispiel: Impulssatz</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Beispiel: Dynamischer Vergrösserungsfaktor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort ohne Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Beispiel: Gesamtantwort mit Dämpfung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Beispiel: Fourier-Transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ems_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beispiel: Balken ohne Tilger{#sec-ems_untilg}</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Mehrmassenschwinger</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren mit direkt bestimmter Steifigkeitsmatrix{#sec-mms_steif}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren und Nachgiebigkeitsmatrix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem dreistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem Rahmen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mms_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem zweistöckigen Gebäude</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Ersatzkraftverfahren</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Beispiel: Unsymmetrisch angeordnete Wandscheiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient und Fundamentsteifigkeit beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ekv_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Beispiel: Rayleigh-Quotient an einem Sechsmassenschwinger beim Ersatzkraftverfahren</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">13.1</span> Aufgabenstellung</a></li>
+  <li><a href="#musterlösung" id="toc-musterlösung" class="nav-link" data-scroll-target="#musterlösung"><span class="header-section-number">13.2</span> Musterlösung</a>
+  <ul class="collapse">
+  <li><a href="#bemerkung-tilgerauslegung" id="toc-bemerkung-tilgerauslegung" class="nav-link" data-scroll-target="#bemerkung-tilgerauslegung"><span class="header-section-number">13.2.1</span> Bemerkung Tilgerauslegung</a></li>
+  <li><a href="#steifigkeitsmatrix-mathbfk" id="toc-steifigkeitsmatrix-mathbfk" class="nav-link" data-scroll-target="#steifigkeitsmatrix-mathbfk"><span class="header-section-number">13.2.2</span> Steifigkeitsmatrix <span class="math inline">\(\mathbf{K}\)</span></a></li>
+  <li><a href="#eigenvektoren" id="toc-eigenvektoren" class="nav-link" data-scroll-target="#eigenvektoren"><span class="header-section-number">13.2.3</span> Eigenvektoren</a></li>
+  <li><a href="#modale-analyse" id="toc-modale-analyse" class="nav-link" data-scroll-target="#modale-analyse"><span class="header-section-number">13.2.4</span> Modale Analyse</a></li>
+  <li><a href="#stationäre-antwort" id="toc-stationäre-antwort" class="nav-link" data-scroll-target="#stationäre-antwort"><span class="header-section-number">13.2.5</span> Stationäre Antwort</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Beispiel: Balken mit Tilger{#sec-tilger}</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run style_and_packages.ipynb</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="aufgabenstellung" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">13.1</span> Aufgabenstellung</h2>
+<p>Das Beispiel ist die Weiterführung der Aufgabe in <span class="quarto-unresolved-ref">?sec-ems_untilg</span>. Ein einfacher Balken mit einer Einzelmasse, welcher in dieser Aufgabe mit Tilger ausgestattet ist, ist in <a href="#fig-mms_tilg_tilger">Abbildung&nbsp;<span>13.1</span></a> dargestellt. Die Masse erfährt eine dynamische Einwirkung durch die Funktion <span class="math inline">\(F(t)\)</span>.</p>
+<div id="fig-mms_tilg_tilger" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_mms_tilg_system.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;13.1: Statisches System des Balkens mit Tilger</figcaption>
+</figure>
+</div>
+<p>Gesucht:</p>
+<ul>
+<li>Normierte Eigenform</li>
+<li>Maximale dynamische Verformung mittels stationärer Lösung</li>
+<li>Maximale dynamische Beschleunigung mittels stationärer Lösung</li>
+</ul>
+<p>Gegeben:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>E, I, m_H, m_T, k_T, L, F_0, omega, delta_11, delta_12 <span class="op">=</span> sp.symbols(<span class="st">'E, I, m_H, m_T, k_T, L, F_0, omega, delta_11, delta_12'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> sp.symbols(<span class="st">'t'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>k_T, k_H <span class="op">=</span> sp.symbols(<span class="st">'k_T, k_H'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>omega_n <span class="op">=</span>sp.symbols(<span class="st">'omega_n'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>phi_11, phi_21, phi_12, phi_22 <span class="op">=</span> sp.symbols(<span class="st">'phi_11, phi_21, phi_12, phi_22'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {E: <span class="dv">200</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span> <span class="op">*</span>unit.N<span class="op">/</span>unit.mm<span class="op">**</span><span class="dv">2</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          I:<span class="dv">2</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">8</span><span class="op">*</span>unit.mm<span class="op">**</span><span class="dv">4</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          m_H:<span class="dv">2000</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          m_T:<span class="dv">150</span><span class="op">*</span>unit.N<span class="op">*</span>unit.second<span class="op">**</span><span class="dv">2</span><span class="op">/</span>unit.m,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>          k_T:<span class="dv">90</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span><span class="op">*</span>unit.N<span class="op">/</span>unit.m,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          L:<span class="dv">5</span><span class="op">*</span>unit.m,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          F_0:<span class="fl">0.8</span><span class="op">*</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span><span class="op">*</span>unit.N,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>          omega:<span class="fl">12.6</span><span class="op">/</span>unit.second,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>          phi_11:<span class="dv">1</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          phi_12:<span class="dv">1</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          zeta:<span class="fl">0.0</span>         </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>render.dict_to_table(params)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="tbl-parameter_mms4" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabelle&nbsp;13.1: Parameter der Aufgabenstellung</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(E = \frac{200000 \text{N}}{\text{mm}^{2}}\)</span></td>
+<td><span class="math inline">\(F_{0} = 800.0 \text{N}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(I = 200000000 \text{mm}^{4}\)</span></td>
+<td><span class="math inline">\(L = 5 \text{m}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(k_{T} = \frac{90000 \text{N}}{\text{m}}\)</span></td>
+<td><span class="math inline">\(m_{H} = \frac{2000 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(m_{T} = \frac{150 \text{N} \text{s}^{2}}{\text{m}}\)</span></td>
+<td><span class="math inline">\(\omega = \frac{12.6}{\text{s}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\phi_{11} = 1\)</span></td>
+<td><span class="math inline">\(\phi_{12} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\zeta = 0.0\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+F(t) = F_0 \cdot \sin(\omega\cdot t) = 0.8 \text{kN} \cdot (12.6 \frac{\text{rad}}{\text{s}}\cdot t)
+\]</span></p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="musterlösung" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="musterlösung"><span class="header-section-number">13.2</span> Musterlösung</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>F_t <span class="op">=</span> F_0 <span class="op">*</span> sp.sin(omega<span class="op">*</span>t)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="bemerkung-tilgerauslegung" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="bemerkung-tilgerauslegung"><span class="header-section-number">13.2.1</span> Bemerkung Tilgerauslegung</h3>
+<p>Die Auslegung des Tilgers kann folgender massen geschehen:</p>
+<ul>
+<li>Tilgermasse <span class="math inline">\(5\%\)</span> von der Masse des Hauptträgers.</li>
+<li>Optimale Frequenz bestimmen: <span id="eq-mms_tilg_optimale_frequenz"><span class="math display">\[
+f_{T,opt} =\frac{f_H}{1+\frac{m_T}{m_H}}
+\tag{13.1}\]</span></span></li>
+<li>Daraus die optimale Steifigkeit bestimmen: <span id="eq-mms_tilg_optimale_steif"><span class="math display">\[
+k_{T,opt} = (2 \pi f_{T,opt})^2
+\tag{13.2}\]</span></span></li>
+</ul>
+</section>
+<section id="steifigkeitsmatrix-mathbfk" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="steifigkeitsmatrix-mathbfk"><span class="header-section-number">13.2.2</span> Steifigkeitsmatrix <span class="math inline">\(\mathbf{K}\)</span></h3>
+<div id="fig-mms_tilg_auslenkung_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_mms_tilg_auslenk2.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;13.2: Verformungen am ersten Freiheitsgrad</figcaption>
+</figure>
+</div>
+<p>Wichtig dabei sind die Richtungen der Kräfte. Als Denkstütze gilt folgendes:</p>
+<ul>
+<li>Der Auslenkung um <span class="math inline">\(u\)</span> wirkt die Federkraft entgegen, welche <span class="math inline">\(k u\)</span> entspricht.</li>
+<li>Zusätzlich wirkt die Trägheitskraft der Auslenkung entgegen, welche <span class="math inline">\(m u''\)</span> entspricht.</li>
+<li>Nach der Betrachtung des ausgelenkten Punkts, kann mittels <em>Actio-Reactio</em>-Prinzip das “<em>Stockwerk</em>” ins Gleichgewicht gebracht werden.</li>
+<li>Vorzeichen sind gegen der Bewegungsrichtig positiv.</li>
+</ul>
+<div id="fig-mms_tilg_auslenkung_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="bilder/aufgabe_mms_tilg_auslenk1.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;13.3: Verformungen am zweiten Freiheitsgrad</figcaption>
+</figure>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'k_H'</span>] <span class="op">=</span> (<span class="dv">48</span> <span class="op">*</span> E<span class="op">*</span>I <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>L)<span class="op">**</span><span class="dv">3</span>).subs(params).simplify()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> sp.Matrix([[k_H <span class="op">+</span> k_T, <span class="op">-</span>k_T],[<span class="op">-</span>k_T, k_T]])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>), K,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>), K.subs(params),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K} = \left[\begin{matrix}k_{H} + k_{T} &amp; - k_{T}\\- k_{T} &amp; k_{T}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K} = \left[\begin{matrix}\frac{2010000 \text{N}}{\text{m}} &amp; - \frac{90000 \text{N}}{\text{m}}\\- \frac{90000 \text{N}}{\text{m}} &amp; \frac{90000 \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenvektoren" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="eigenvektoren"><span class="header-section-number">13.2.3</span> Eigenvektoren</h3>
+<section id="massenmatrix-mathbfm" class="level4" data-number="13.2.3.1">
+<h4 data-number="13.2.3.1" class="anchored" data-anchor-id="massenmatrix-mathbfm"><span class="header-section-number">13.2.3.1</span> Massenmatrix <span class="math inline">\(\mathbf{M}\)</span></h4>
+<p>Die Massenmatrix folgt dem gleichen Aufbau der Steifigkeitsmatrix. Es gelten die gleichen Vorzeichenregelungen. Die Einträge beziehen sich auf <a href="#fig-mms_tilg_auslenkung_2">Abbildung&nbsp;<span>13.3</span></a> und <a href="#fig-mms_tilg_auslenkung_1">Abbildung&nbsp;<span>13.2</span></a>.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> sp.Matrix([[m_H, <span class="dv">0</span>],[<span class="dv">0</span>, m_T]])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>), M,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>), M.subs(params))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M} = \left[\begin{matrix}m_{H} &amp; 0\\0 &amp; m_{T}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M} = \left[\begin{matrix}\frac{2000 \text{N} \text{s}^{2}}{\text{m}} &amp; 0\\0 &amp; \frac{150 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenkreisfrequenzen" class="level4" data-number="13.2.3.2">
+<h4 data-number="13.2.3.2" class="anchored" data-anchor-id="eigenkreisfrequenzen"><span class="header-section-number">13.2.3.2</span> Eigenkreisfrequenzen</h4>
+<p>Bei einem Mehrmassenschwinger gibt es entsprechend den Freiheitsgraden Eigenkreisfrequenzen <span class="math inline">\(\omega_n\)</span>. Diese lassen sich anhand folgender Gleichung bestimmen:</p>
+<p><span id="eq-mms_tilg_eigenkreisfrequenzen"><span class="math display">\[
+\det{[\mathbf{K}-\omega_n^2 \mathbf{M}]=0}
+\tag{13.3}\]</span></span></p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>eq_omega <span class="op">=</span> sp.det(K<span class="op">-</span>omega_n<span class="op">**</span><span class="dv">2</span><span class="op">*</span>M)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>omega_n_solve <span class="op">=</span> sp.solve(eq_omega, omega_n)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>omega_1 <span class="op">=</span> omega_n_solve[<span class="dv">1</span>]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>omega_2 <span class="op">=</span> omega_n_solve[<span class="dv">3</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2'</span>, omega_2.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{23.3}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2} = \frac{32.6}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="eigenvektoren-mathbfphi" class="level4" data-number="13.2.3.3">
+<h4 data-number="13.2.3.3" class="anchored" data-anchor-id="eigenvektoren-mathbfphi"><span class="header-section-number">13.2.3.3</span> Eigenvektoren <span class="math inline">\(\mathbf{\phi}\)</span></h4>
+<p><span id="eq-mms_tilg_eigenvek"><span class="math display">\[
+\phi_n = \begin{bmatrix}
+\phi_{1n}\\
+\phi_{2n}
+\end{bmatrix}
+\tag{13.4}\]</span></span> <span id="eq-mms_tilg_eigenvek_eq"><span class="math display">\[
+[\mathbf{K}-\omega_n^2 \mathbf{M}]\cdot \begin{bmatrix}
+\phi_{1n}\\
+\phi_{2n}
+\end{bmatrix}
+=0 \tag{13.5}\]</span></span></p>
+<p>Dazu ist die entsprechende Normierung aus der Aufgabenstellung zu berücksichtigen.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>phi_1 <span class="op">=</span> sp.Matrix([[phi_11], [phi_21]])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>phi_21 <span class="op">=</span> <span class="bu">list</span>(sp.solve((K<span class="op">-</span>omega_1<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_1, phi_21).values())[<span class="dv">0</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_21'</span>] <span class="op">=</span> phi_21.subs(params).simplify() </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.simplify((K<span class="op">-</span>omega_1<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_1),sp.Matrix([[<span class="dv">0</span>],[<span class="dv">0</span>]]),</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_1'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(phi_1.subs(params)).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}\frac{- k_{T} m_{T} \phi_{21} + \frac{\phi_{11} \left(- k_{T} m_{H} + m_{T} \left(k_{H} + k_{T}\right) + \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{T}}\\\frac{- k_{T} m_{H} \phi_{11} + \frac{\phi_{21} \left(k_{T} m_{H} - m_{T} \left(k_{H} + k_{T}\right) + \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1} = \left[\begin{matrix}1.0\\10.3\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>phi_2 <span class="op">=</span> sp.Matrix([[phi_12], [phi_22]])</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>phi_22 <span class="op">=</span> <span class="bu">list</span>(sp.solve((K<span class="op">-</span>omega_2<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_2, phi_22).values())[<span class="dv">0</span>]</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>params[<span class="st">'phi_22'</span>] <span class="op">=</span> phi_22.subs(params).simplify() </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.simplify((K<span class="op">-</span>omega_2<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>M)<span class="op">*</span>phi_2),sp.Matrix([[<span class="dv">0</span>],[<span class="dv">0</span>]]),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(phi_2.subs(params)).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}\frac{- k_{T} m_{T} \phi_{22} + \frac{\phi_{12} \left(- k_{T} m_{H} + m_{T} \left(k_{H} + k_{T}\right) - \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{T}}\\\frac{- k_{T} m_{H} \phi_{12} + \frac{\phi_{22} \left(k_{T} m_{H} - m_{T} \left(k_{H} + k_{T}\right) - \sqrt{k_{H}^{2} m_{T}^{2} - 2 k_{H} k_{T} m_{H} m_{T} + 2 k_{H} k_{T} m_{T}^{2} + k_{T}^{2} m_{H}^{2} + 2 k_{T}^{2} m_{H} m_{T} + k_{T}^{2} m_{T}^{2}}\right)}{2}}{m_{H}}\end{matrix}\right] = \left[\begin{matrix}0\\0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2} = \left[\begin{matrix}1.0\\-1.3\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="orthogonalitätsbedingung" class="level4" data-number="13.2.3.4">
+<h4 data-number="13.2.3.4" class="anchored" data-anchor-id="orthogonalitätsbedingung"><span class="header-section-number">13.2.3.4</span> Orthogonalitätsbedingung</h4>
+<p>Zur Entkoppelung des Systems wird die Orthogonalität der Eigenvektoren kontrolliert. Siehe <a href="mms_01.html#sec-mms_nach_ortho"><span>Kapitel&nbsp;12.2.2.4</span></a> für eine ausführliche Erklärung.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_1.T<span class="op">*</span>M<span class="op">*</span>phi_1).subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_2.T<span class="op">*</span>M<span class="op">*</span>phi_2).subs(params).evalf(<span class="dv">3</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_2.T<span class="op">*</span>M<span class="op">*</span>phi_1)).subs(params).evalf(<span class="dv">7</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'M'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),(phi_1.T<span class="op">*</span>M<span class="op">*</span>phi_2).subs(params).evalf(<span class="dv">7</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{M} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{1.79 \cdot 10^{4} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{M} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{2.25 \cdot 10^{3} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{M} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{6.103516 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{M} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{6.103516 \cdot 10^{-5} \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Es ist eine kleine numerische Differenz zu erkennen welche nicht relevant sind.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_1.T<span class="op">*</span>K<span class="op">*</span>phi_1).subs(params)).evalf(<span class="dv">3</span>),</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_2.T<span class="op">*</span>K<span class="op">*</span>phi_2).subs(params)).evalf(<span class="dv">3</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_2.T<span class="op">*</span>K<span class="op">*</span>phi_1).subs(params)).evalf(<span class="dv">3</span>),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'phi_1'</span>,<span class="dv">2</span>,<span class="dv">1</span>).T<span class="op">*</span>sp.MatrixSymbol(<span class="st">'K'</span>, <span class="dv">2</span>,<span class="dv">2</span>)<span class="op">*</span>sp.MatrixSymbol(<span class="st">'phi_2'</span>,<span class="dv">2</span>,<span class="dv">1</span>),sp.simplify((phi_1.T<span class="op">*</span>K<span class="op">*</span>phi_2).subs(params)).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{K} \mathbf{\phi}_{1} = \left[\begin{matrix}\frac{9.7 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{K} \mathbf{\phi}_{2} = \left[\begin{matrix}\frac{2.39 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{2}^{T} \mathbf{K} \mathbf{\phi}_{1} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\phi}_{1}^{T} \mathbf{K} \mathbf{\phi}_{2} = \left[\begin{matrix}0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="modale-analyse" class="level3" data-number="13.2.4">
+<h3 data-number="13.2.4" class="anchored" data-anchor-id="modale-analyse"><span class="header-section-number">13.2.4</span> Modale Analyse</h3>
+<p>Die Bewegungsgleichung für einen ungedämpften, periodisch, harmonisch angeregten Mehrmassenschwinger lässt sich folgend beschreiben:</p>
+<p><span id="eq-mms_tilg_bewegungsgleichung_nohomo"><span class="math display">\[
+\mathbf{M u''(t) + K u = F(t)}
+\tag{13.6}\]</span></span></p>
+<p>Die Matrix-Gleichung beschreibt ein System aus Differentialgleichungen. Die Modale Analyse zielt darauf ab, diese zu entkoppeln. Bezogen auf den Mehrmassenschwinger heisst eine Entkoppelung, dass diese in Einmassenschwinger aufgeteilt werden. Dies wird nun schrittweise durchgeführt.</p>
+<section id="modal--und-spektralmatrix" class="level4" data-number="13.2.4.1">
+<h4 data-number="13.2.4.1" class="anchored" data-anchor-id="modal--und-spektralmatrix"><span class="header-section-number">13.2.4.1</span> Modal- und Spektralmatrix</h4>
+<p>Mittels der Modal- und Spektralmatrix können die generalisierten Grössen ermittelt werden. Diese sind die Eigenschaften der einzelnen Einmassenschwinger. Die generalisierten Werte besitzen keine physikalische Bedeutung, sie sind abhängig von der Wahl der Eigenvektoren, welche bekanntlich von der Normierung abhängen.</p>
+<p>Anhand der Bewegungsgleichung können die generalisierten Grössen bestimmt werden, es gilt:</p>
+<p><span class="math display">\[\Phi^T M \Phi u''(t) + \Phi^T K \Phi u(t) = \Phi^T F(t)\]</span></p>
+<p><span class="math display">\[M^*u''(t) + K^* u(t) = F^* (t)\]</span></p>
+<p>Alle <span class="math inline">\(N\)</span>-Eigenwerte und alle <span class="math inline">\(N\)</span>-Eigenvektoren können kompakt mit Matrizen ausgedrückt werden:</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Phi <span class="op">=</span> sp.Matrix([[phi_1, phi_2]])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Omega <span class="op">=</span> sp.Matrix([[omega_1, <span class="dv">0</span>],[<span class="dv">0</span>, omega_2]])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Modalmatrix'</span>, <span class="st">'Phi'</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'Phi'</span>, <span class="dv">2</span>, <span class="dv">2</span>), Phi.subs(params).evalf(<span class="dv">4</span>),</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Spektralmatrix'</span>, <span class="st">'Omega^2'</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'Omega^2'</span>, <span class="dv">2</span>, <span class="dv">2</span>), (Omega<span class="op">**</span><span class="dv">2</span>).subs(params).evalf(<span class="dv">4</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Modalmatrix = \Phi\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Phi} = \left[\begin{matrix}1.0 &amp; 1.0\\10.3 &amp; -1.295\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}Spektralmatrix = \Omega^{2}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{\Omega}^{2} = \left[\begin{matrix}\frac{541.7}{\text{s}^{2}} &amp; 0\\0 &amp; \frac{1063.0}{\text{s}^{2}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="generalisierte-grössen" class="level4" data-number="13.2.4.2">
+<h4 data-number="13.2.4.2" class="anchored" data-anchor-id="generalisierte-grössen"><span class="header-section-number">13.2.4.2</span> Generalisierte Grössen</h4>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>M_star <span class="op">=</span> Phi.T <span class="op">*</span> M <span class="op">*</span> Phi</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>K_star <span class="op">=</span> Phi.T <span class="op">*</span> K <span class="op">*</span> Phi</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>F_t_matrix <span class="op">=</span> sp.Matrix([[F_t],[<span class="dv">0</span>]])</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>F_t_star <span class="op">=</span> Phi.T <span class="op">*</span> F_t_matrix</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>render.eq_display(sp.MatrixSymbol(<span class="st">'M^\star'</span>, <span class="dv">2</span>,<span class="dv">2</span>),sp.simplify(M_star.subs(params)).evalf(<span class="dv">5</span>),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'K^\star'</span>, <span class="dv">2</span>,<span class="dv">2</span>),sp.simplify(K_star.subs(params)).evalf(<span class="dv">5</span>),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'F(t)'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(F_t_matrix.subs(params)).evalf(<span class="dv">5</span>),</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>                  sp.MatrixSymbol(<span class="st">'F(t)^\star'</span>, <span class="dv">2</span>,<span class="dv">1</span>),sp.simplify(F_t_star.subs(params)).evalf(<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{M}^{\star} = \left[\begin{matrix}\frac{17898.0 \text{N} \text{s}^{2}}{\text{m}} &amp; 0\\0 &amp; \frac{2251.6 \text{N} \text{s}^{2}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{K}^{\star} = \left[\begin{matrix}\frac{9.6959 \cdot 10^{6} \text{N}}{\text{m}} &amp; 0\\0 &amp; \frac{2.3941 \cdot 10^{6} \text{N}}{\text{m}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{F(t)} = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\0\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\mathbf{F(t)}^{\star} = \left[\begin{matrix}800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\\800.0 \sin{\left(\frac{12.6 t}{\text{s}} \right)} \text{N}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="kontrolle-der-modalen-transformation" class="level4" data-number="13.2.4.3">
+<h4 data-number="13.2.4.3" class="anchored" data-anchor-id="kontrolle-der-modalen-transformation"><span class="header-section-number">13.2.4.3</span> Kontrolle der modalen Transformation</h4>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>omega_1_kontrolle <span class="op">=</span> sp.sqrt(K_star[<span class="dv">0</span>] <span class="op">/</span> M_star[<span class="dv">0</span>])</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>omega_2_kontrolle <span class="op">=</span> sp.sqrt(K_star[<span class="dv">3</span>] <span class="op">/</span> M_star[<span class="dv">3</span>])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'omega_1'</span>, omega_1.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_1_modal'</span>, omega_1_kontrolle.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2'</span>, omega_2.subs(params).simplify().evalf(<span class="dv">4</span>),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'omega_2_modal'</span>, omega_2_kontrolle.subs(params).simplify().evalf(<span class="dv">4</span>))</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1} = \frac{23.3}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{1 modal} = \frac{23.3}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2} = \frac{32.61}{\text{s}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\omega_{2 modal} = \frac{32.61}{\text{s}}\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+<section id="modale-höhen" class="level4" data-number="13.2.4.4">
+<h4 data-number="13.2.4.4" class="anchored" data-anchor-id="modale-höhen"><span class="header-section-number">13.2.4.4</span> Modale Höhen</h4>
+<p>Die modalen Höhen bestimmen sich aus <a href="#eq-mms_tilg_modale_hoehe">Gleichung&nbsp;<span>13.7</span></a>:</p>
+<p><span id="eq-mms_tilg_modale_hoehe"><span class="math display">\[
+H_n = \frac{L_n^\theta}{L_n}
+\tag{13.7}\]</span></span></p>
+<p><span id="eq-mms_tilg_L_n"><span class="math display">\[
+L_n = \phi_n^T \cdot \mathbf{M 1}
+\tag{13.8}\]</span></span></p>
+<p><span id="eq-mms_tilg_L_n_theta"><span class="math display">\[
+L_n^\theta = \sum_{j=1}^N H_j \cdot m_j \cdot \phi_{jn}
+\tag{13.9}\]</span></span></p>
+<p><u>Wie sind modale Höhen mit diesem Beispiel zu bestimmen?</u></p>
+</section>
+</section>
+<section id="stationäre-antwort" class="level3" data-number="13.2.5">
+<h3 data-number="13.2.5" class="anchored" data-anchor-id="stationäre-antwort"><span class="header-section-number">13.2.5</span> Stationäre Antwort</h3>
+<p>Die stationäre Antwort wird mittels des Vergrösserungsfaktors bestimmt.</p>
+<p>Die entkoppelte Differentialgleichung ist nun die folgende:</p>
+<p><span id="eq-mms_tilger_erste_bewegungsgleichung"><span class="math display">\[
+m^\star_1 q_1''(t) + k^\star_1 q_1(t) = F^\star_1(t) = F^\star_1 \sin(\omega t)
+\tag{13.10}\]</span></span></p>
+<p><span id="eq-mms_tilger_zweite_bewegungsgleichung"><span class="math display">\[
+m^\star_2 q_2''(t) + k^\star_2 q_2(t) = F^\star_2(t) = F^\star_2 \sin(\omega t)
+\tag{13.11}\]</span></span></p>
+<p>Lösen lässt sich dies mit dem bekannten Ansatz:</p>
+<p><span id="eq-mms_tilger_ansatzfunktion"><span class="math display">\[
+q_n(t) = A_n \sin(\omega t) + B_n \cos(\omega)
+\tag{13.12}\]</span></span></p>
+<p>Hier wird jedoch mit dem Vorgehen des Vergrösserungsfaktors verfahren:</p>
+<section id="verformung" class="level4" data-number="13.2.5.1">
+<h4 data-number="13.2.5.1" class="anchored" data-anchor-id="verformung"><span class="header-section-number">13.2.5.1</span> Verformung</h4>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> sp.symbols(<span class="st">'zeta'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>V_1_omega <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sp.sqrt((<span class="dv">1</span><span class="op">-</span>(omega<span class="op">/</span>omega_1)<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (<span class="dv">2</span><span class="op">*</span>zeta<span class="op">*</span>(omega<span class="op">/</span>omega_1))<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>q_1_stat <span class="op">=</span> F_0 <span class="op">/</span> K_star[<span class="dv">0</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>q_1_max <span class="op">=</span> q_1_stat<span class="op">*</span>V_1_omega</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'V_1(omega)'</span>, <span class="st">'1/(sqrt((1-(omega/omega_1)**2)**2 + (2*zeta_*(omega/omega_1))**2))'</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'V_1(omega)'</span>, V_1_omega.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_1_stat'</span>, unit.convert_to(q_1_stat.subs(params).simplify().evalf(<span class="dv">3</span>), unit.mm),</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_1_max'</span>, <span class="st">'q_1_stat * V_1(omega)'</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_1_max'</span>, unit.convert_to(q_1_max.subs(params).simplify().evalf(<span class="dv">3</span>), unit.mm),)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{1}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{1}^{2}} + \left(- \frac{\omega^{2}}{\omega_{1}^{2}} + 1\right)^{2}}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{1}{\left(\omega \right)} = 1.41\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{1 stat} = 0.0825 \text{mm}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{1 max} = q_{1 stat} V_{1}{\left(\omega \right)}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{1 max} = 0.117 \text{mm}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>V_2_omega <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sp.sqrt((<span class="dv">1</span><span class="op">-</span>(omega<span class="op">/</span>omega_2)<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (<span class="dv">2</span><span class="op">*</span>zeta<span class="op">*</span>(omega<span class="op">/</span>omega_2))<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>q_2_stat <span class="op">=</span> F_0 <span class="op">/</span> K_star[<span class="dv">3</span>]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>q_2_max <span class="op">=</span> q_2_stat<span class="op">*</span>V_2_omega</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'V_2(omega)'</span>, <span class="st">'1/(sqrt((1-(omega/omega_2)**2)**2 + (2*zeta_*(omega/omega_2))**2))'</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'V_2(omega)'</span>, V_2_omega.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_2_stat'</span>, unit.convert_to(q_2_stat.subs(params).simplify().evalf(<span class="dv">3</span>), unit.mm),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_2_max'</span>, <span class="st">'q_2_stat * V_2(omega)'</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'q_2_max'</span>, unit.convert_to(q_2_max.subs(params).simplify().evalf(<span class="dv">3</span>), unit.mm))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{2}{\left(\omega \right)} = \frac{1}{\sqrt{\frac{4 \omega^{2} \zeta_{}^{2}}{\omega_{2}^{2}} + \left(- \frac{\omega^{2}}{\omega_{2}^{2}} + 1\right)^{2}}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{2}{\left(\omega \right)} = 1.18\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{2 stat} = 0.334 \text{mm}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{2 max} = q_{2 stat} V_{2}{\left(\omega \right)}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}q_{2 max} = 0.393 \text{mm}\end{equation}\]</span></p>
+</div>
+</div>
+<section id="effektive-deformation" class="level5" data-number="13.2.5.1.1">
+<h5 data-number="13.2.5.1.1" class="anchored" data-anchor-id="effektive-deformation"><span class="header-section-number">13.2.5.1.1</span> Effektive Deformation</h5>
+<p>Die effektiven Grössen resultieren durch Multiplikation mit dem Eigenvektor. Für die erste Eigenkreisfrequenz:</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>u_1_stat <span class="op">=</span> q_1_max<span class="op">*</span>phi_1</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>u_2_stat <span class="op">=</span> q_2_max<span class="op">*</span>phi_2</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>u_stat <span class="op">=</span> u_1_stat <span class="op">+</span> u_2_stat</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">"u_1_stat"</span>,<span class="st">"q_1_max*phi_1"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="st">'Matrix([[u_11stat],[u_21stat]])'</span>,unit.convert_to(u_1_stat.subs(params).evalf(<span class="dv">3</span>),unit.mm))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{1 stat} = \phi_{1} q_{1 max}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}u_{11stat}\\u_{21stat}\end{matrix}\right] = \left[\begin{matrix}0.117 \text{mm}\\1.2 \text{mm}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Sowie für die zweite Eigenkreisfrequenz:</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">"u_2_stat"</span>,<span class="st">"q_2_max*phi_2"</span>,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="st">'Matrix([[u_12stat],[u_22stat]])'</span>,unit.convert_to(u_2_stat.subs(params).evalf(<span class="dv">3</span>),unit.mm))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{2 stat} = \phi_{2} q_{2 max}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}u_{12stat}\\u_{22stat}\end{matrix}\right] = \left[\begin{matrix}0.393 \text{mm}\\- 0.509 \text{mm}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+<p>Durch Addition der beiden Verformungen: <u>Sollte hier die SRSS-Regel verwendet werden?</u></p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">"u_stat"</span> , <span class="st">"u_1_stat + u_2_stat"</span>,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="st">'Matrix([[u_1max],[u_2max]])'</span>,unit.convert_to(u_stat.subs(params).evalf(<span class="dv">3</span>),unit.mm))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}u_{stat} = u_{1 stat} + u_{2 stat}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}u_{1max}\\u_{2max}\end{matrix}\right] = \left[\begin{matrix}0.51 \text{mm}\\0.693 \text{mm}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="beschleunigung" class="level4" data-number="13.2.5.2">
+<h4 data-number="13.2.5.2" class="anchored" data-anchor-id="beschleunigung"><span class="header-section-number">13.2.5.2</span> Beschleunigung</h4>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>V_a1_omega <span class="op">=</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> omega_1<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> V_1_omega</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>q_2_1_max <span class="op">=</span>  F_0 <span class="op">/</span> M_star[<span class="dv">0</span>] <span class="op">*</span> V_a1_omega</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">"V_a1_omega"</span> , <span class="st">"omega**2 / omega_1**2 * V_1_omega"</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="st">'V_a1(omega)'</span>, V_a1_omega.subs(params).simplify().evalf(<span class="dv">3</span>),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Derivative(q_max,t,2)'</span>, q_2_1_max.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{a1 \omega} = \frac{V_{1 \omega} \omega^{2}}{\omega_{1}^{2}}\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{a1}{\left(\omega \right)} = 0.415\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0185 \text{m}}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>V_a2_omega <span class="op">=</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> omega_2<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> V_2_omega</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>q_2_2_max <span class="op">=</span>  F_0 <span class="op">/</span> M_star[<span class="dv">3</span>] <span class="op">*</span> V_a2_omega</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'V_a2(omega)'</span>, V_a2_omega.subs(params).simplify().evalf(<span class="dv">3</span>),<span class="st">'Derivative(q_max,t,2)'</span>, q_2_2_max.subs(params).simplify().evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}V_{a2}{\left(\omega \right)} = 0.176\end{equation}\]</span></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\frac{d^{2}}{d t^{2}} q_{max} = \frac{0.0624 \text{m}}{\text{s}^{2}}\end{equation}\]</span></p>
+</div>
+</div>
+<section id="effektive-beschleunigung" class="level5" data-number="13.2.5.2.1">
+<h5 data-number="13.2.5.2.1" class="anchored" data-anchor-id="effektive-beschleunigung"><span class="header-section-number">13.2.5.2.1</span> Effektive Beschleunigung</h5>
+<p>Gleiches Vorgehen wie bei der Deformation.</p>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>u_2_1_stat <span class="op">=</span> q_2_1_max<span class="op">*</span>phi_1</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>u_2_2_stat <span class="op">=</span> q_2_2_max<span class="op">*</span>phi_2</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>u_2_stat <span class="op">=</span> u_2_1_stat <span class="op">+</span> u_2_2_stat</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>render.eq_display(<span class="st">'Matrix([[Derivative(u_1max,t,2)],[Derivative(u_2max,t,2)]])'</span>,u_2_stat.subs(params).evalf(<span class="dv">3</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><span class="math display">\[\begin{equation}\left[\begin{matrix}\frac{d^{2}}{d t^{2}} u_{1max}\\\frac{d^{2}}{d t^{2}} u_{2max}\end{matrix}\right] = \left[\begin{matrix}\frac{0.0809 \text{m}}{\text{s}^{2}}\\\frac{0.11 \text{m}}{\text{s}^{2}}\end{matrix}\right]\end{equation}\]</span></p>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./mms_01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Beispiel: Eigenvektoren und Nachgiebigkeitsmatrix</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./mms_04.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Beispiel: Antwortspektrenverfahren an einem dreistöckigen Gebäude</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
