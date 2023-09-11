@@ -52,7 +52,7 @@ format:
     execute:
       echo: false
       warning: false
-    csl: apa-eu.csl
+    csl: diabetologia.csl
     link-citations: True
     tbl-colwidths: [50,50]
     include-in-header:
@@ -61,7 +61,7 @@ format:
   html:
     fig-format: svg
     lang: de
-    csl: apa-eu.csl
+    csl: diabetologia.csl
     link-citations: True
     tbl-colwidths: [50,50]
 

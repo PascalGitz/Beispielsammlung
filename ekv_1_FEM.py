@@ -70,9 +70,11 @@ def FEM_ersatzstab(hoehen, kraefte, Ersatzsteifigkeit):
         } 
     Section(1,name='Basic', material_no=1, params= section_params)
     
+    last_node_id = len(hoehen)
+    
     for hoehe in enumerate(hoehen):
         Node(hoehe[0]+1, hoehe[1], 0.0,0.0)
-        
+
     for i in range(len(hoehen)-1):
         Member(i+1, i+1, i+2, 0.0, 1, 1)
     
@@ -88,11 +90,11 @@ def FEM_ersatzstab(hoehen, kraefte, Ersatzsteifigkeit):
 
 
     Calculate_all()
-    Deformation_Node_4 = ResultTables.NodesDeformations(loading_no=1, object_no=4)
+    Deformation_last_Node = ResultTables.NodesDeformations(loading_no=1, object_no=last_node_id)
     
     
     Model.clientModel.service.finish_modification()
-    return Deformation_Node_4
+    return Deformation_last_Node
 
 FEM_ersatzstab(hoehen=hoehen, kraefte= kraefte, Ersatzsteifigkeit=Ersatzsteifigkeit)
 
