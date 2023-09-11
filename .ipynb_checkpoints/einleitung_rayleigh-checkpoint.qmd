@@ -1,3 +1,0 @@
-# Rayleigh-Quotient
-
-Der Rayleigh-Quotient bietet eine einfache Abschätzung der Grundfrequenz. Mit wenig rechenaufwand können FEM-Berechnungen plausibilisiert werden.
